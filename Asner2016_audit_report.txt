@@ -1,0 +1,333 @@
+# AUDIT REPORT
+
+**Paper:** 10.1088/1748-9326/aa7dab (Asner & Tupayachi 2016)
+**Extraction file:** asner2016_extraction.csv
+**Audit tasks performed:** Tasks 1–5, plus ontology revision recommendations
+**Sensitivity:** Comprehensive
+**Rows audited:** 30 (plus header)
+**Total issues found:** 27 (across all tasks; comprehensive sensitivity, so includes borderline cases)
+
+---
+
+## 1. FLAG REVIEW
+
+No `[FLAG]` or `[UNVERIFIED]` tags were found in any cell of the extraction. The extractor's discussion in chat noted several judgement calls (decomposition of multi-target abstract claim, the R²=0.43 correlation, source locus calls for the introduction's causal factors), but none were marked inline with `[FLAG]` as the extraction prompt instructs.
+
+**This itself is a finding.** The extraction prompt requires `[FLAG]` prefixes on uncertain entries. The extractor's chat narrative reveals at least four entries that warranted `[FLAG]` but did not receive one — notably Rows 11 (synthesised source with no citation), 7 (rel_valence=Non-linear with rel_exists=Yes for what is arguably a compound claim), 24 (rel_uncertainty=Possible based on hedging), and 26 (rel_direction=Non-directional vs. V1→V2). These should ideally have been flagged in-line. See Tasks 3 and 4 for substantive issues.
+
+---
+
+## 2. CONTROLLED VOCABULARY CONSISTENCY
+
+All controlled vocabulary fields contain only permitted values per the schema (verified programmatically across all 14 controlled-vocab fields × 30 rows = 420 cells). No non-permitted values found.
+
+The following are **inconsistent codings** — same/near-same concept coded differently across rows:
+
+### Issue 2.1 — Same v1_raw concept coded with two different `v1_code` values
+- **Field:** v1_code
+- **Rows affected:** 6, 7, 23 vs. 24, 25
+- **Issue type:** Inconsistent coding
+- **Values found:**
+  - Rows 6, 7, 23: `"Anti-mining legal decrees and enforcement"` (v1_raw = "2012 government decrees and enforcement actions" / "2012 government action" / "government legal decrees and police actions")
+  - Rows 24, 25: `"Anti-mining interdictions and enforcement"` (v1_raw = "interdictions" / "police action")
+- **Suggested resolution:** These refer to the same underlying intervention class. Either harmonise to a single code (e.g. "Anti-mining enforcement actions") or, if the distinction between *legal/legislative decrees* and *physical interdictions* is intended to be kept, document the distinction explicitly in the ontology and apply consistently. Rows 23 and 24 in particular discuss the same body of action and should either both be split or both be merged.
+
+### Issue 2.2 — Same v1_raw entity coded with two different `v1_entity_type` values
+- **Field:** v1_entity_type
+- **Rows affected:** 8, 9 vs. 26
+- **Issue type:** Inconsistent coding
+- **Values found:**
+  - Rows 8, 9: `"Gold market price"` coded as `Context`
+  - Row 26: `"Gold market price"` (v1_raw "reported gold market prices") coded as `Exposure`
+- **Suggested resolution:** Choose one PECO role for gold price across the paper. Given that gold price is treated as an upstream variable acting on mining rate in all three rows, `Exposure` is the more defensible category (per the schema definition: "naturally occurring or background condition the population is exposed to"). Recommend recoding Rows 8–9 to `Exposure`.
+
+### Issue 2.3 — Inconsistent v1_domain for "miner political organization"
+- **Field:** v1_domain
+- **Rows affected:** 12 vs. 13
+- **Issue type:** Inconsistent coding
+- **Values found:**
+  - Row 12: `"Miner political organization"` coded `v2_domain = Social`
+  - Row 13: `"Miner political organization"` coded `v1_domain = Governance`
+- **Suggested resolution:** Same concept appears as outcome in Row 12 and exposure in Row 13. Domain should be stable across these. Recommend harmonising — `Social` is more defensible as the organisation is a grassroots phenomenon rather than formal governance.
+
+### Issue 2.4 — V2 forest-loss codes split by geographic scope rather than concept
+- **Field:** v2_code
+- **Rows affected:** 14, 15 vs. 17, 18 vs. 19
+- **Issue type:** Inconsistent coding (potentially deliberate)
+- **Values found:**
+  - Rows 14, 15: `"Forest loss"` (regional)
+  - Rows 17, 18: `"Forest loss in Tambopata National Reserve"`
+  - Row 19: `"Forest loss in Tambopata buffer zone"`
+- **Suggested resolution:** This appears to be a deliberate choice to embed geographic scope into the `v2_code`. However, the schema already has `geographic_scope_raw` and `geographic_scope_code` fields specifically for this purpose. The current approach inflates the code vocabulary with geographically-qualified variants that should be a single code (`"Forest loss"`) disambiguated by the scope fields. Recommend collapsing to one `v2_code` and using scope fields for spatial disambiguation. This will materially improve cross-paper aggregability.
+
+### Issue 2.5 — Two near-identical v2_code values
+- **Field:** v2_code
+- **Rows affected:** 5 vs. 27
+- **Issue type:** Inconsistent coding
+- **Values found:**
+  - Row 5: `"Human health"`
+  - Row 27: `"Human health and environment"`
+- **Suggested resolution:** Row 27's `v2_raw` is the conjunction "human health and the environment". Per the prompt's decomposition rule, this should arguably have been split into two pairwise relationships (mercury/cyanide → human health; mercury/cyanide → environment) — see Task 4. If kept as a single row, the compound code is internally consistent; but cross-row aggregation will treat "human health" and "human health and environment" as distinct concepts.
+
+### Issue 2.6 — Two near-identical v2_code values for downstream impacts
+- **Field:** v2_code
+- **Rows affected:** 21 vs. 30
+- **Issue type:** Inconsistent coding (potentially borderline)
+- **Values found:**
+  - Row 21: `"Mercury-laden water and sediment pollution"`
+  - Row 30: `"Downstream/downriver ecosystems"`
+- **Suggested resolution:** Both refer to downstream pollution from mining. Row 21 is more specific to the mercury mechanism; Row 30 is a broader ecosystem-level claim. Acceptable to keep separate, but flag for the human reviewer to confirm whether they should be unified or whether the conceptual distinction is real.
+
+### Issue 2.7 — Multiple v2_code values for "miners" outcome
+- **Field:** v2_code
+- **Rows affected:** 24, 25
+- **Issue type:** Borderline inconsistent coding
+- **Values found:**
+  - Row 24: `"Active miners in buffer zone"`
+  - Row 25: `"Miner mobility and return"`
+- **Suggested resolution:** These code two genuinely different aspects of the same paper passage (eradication of miners vs. their return). Acceptable as separate codes, but related — flag for reviewer.
+
+---
+
+## 3. RAW-TO-CODE ALIGNMENT
+
+### Issue 3.1 — Row 6 | rel_direction & rel_valence
+- **Raw text:** "gold mining has continued despite numerous 2012 government decrees and enforcement actions against it"
+- **Coded values:** `rel_exists=No`, `rel_direction=V1→V2`, `rel_valence=Indeterminate`
+- **Issue:** The raw text claims an *expected* relationship (decrees → reduced mining) failed to materialise. Coding this as `rel_exists=No` with `rel_valence=Indeterminate` is internally inconsistent — if the relationship does not exist, the valence is *moot*, but the schema currently forces a value. The combination is defensible but the audit should note that the schema does not handle "intended-but-failed intervention" claims cleanly. See ontology recommendations.
+- **Suggested value:** Keep as is, but flag for the reviewer; consider adding a note in `rel_exists_note` like "Paper claims decrees did not produce intended effect on mining" (which the extractor did add — confirms intent).
+
+### Issue 3.2 — Row 7 | rel_valence
+- **Raw text:** "A temporary downward inflection... was followed by a near doubling of the deforestation rate"
+- **Coded values:** `rel_valence=Non-linear`
+- **Issue:** Defensible but borderline. `Non-linear` per the schema means "the relationship changes direction or is described as non-monotonic". A temporary downward inflection followed by doubling does meet that test. However, this row arguably encodes *two* relationships (decrees → temporary decrease; absence/relaxation of decrees → rebound increase). Per the prompt's decomposition rule, it should have been split.
+- **Suggested value:** Either split into two rows (Time t1: decree → decrease; Time t2: rebound → increase), or keep with `Non-linear` and add note in `rel_exists_note`.
+
+### Issue 3.3 — Row 8 | rel_uncertainty_code
+- **Raw text:** "the 2008 global recession bolstered gold prices"
+- **Coded values:** `rel_uncertainty_code=Asserted`, `rel_uncertainty_raw="Not reported"`
+- **Issue:** The verb "bolstered" is direct/unhedged, so `Asserted` is correct. But `rel_uncertainty_raw="Not reported"` is misleading — the raw hedging language IS "bolstered" (i.e. assertion language). Suggest using "bolstered" or leaving the field empty/Not applicable rather than "Not reported", which implies the field couldn't be coded.
+- **Suggested value:** `rel_uncertainty_raw="bolstered"` (the assertive verb itself) or "No hedging present".
+
+### Issue 3.4 — Row 9 | rel_uncertainty_code
+- **Raw text:** "multiple factors have propelled increasing levels of informal... gold mining. First, the 2008 global recession bolstered gold prices"
+- **Coded values:** `rel_uncertainty_code=Probable`, `rel_uncertainty_raw="Not reported"`
+- **Issue:** The text uses the assertive verb "propelled" with no hedging. `Probable` is a downgrade not warranted by the source text. The extractor's note ("Bolstered prices listed as one of multiple causal factors") suggests the downgrade reflects the *plurality of causes* rather than authorial hedging — but that's not what `rel_uncertainty_code` captures. The schema definition is "the certainty level expressed by the authors", not the distinctness of the causal channel. The correct code is `Asserted`.
+- **Suggested value:** `rel_uncertainty_code=Asserted`.
+
+### Issue 3.5 — Row 9 | rel_conditionality_code
+- **Raw text:** "Not reported" (in `rel_conditionality_raw`)
+- **Coded values:** `rel_conditionality_code=Temporal`
+- **Issue:** If `rel_conditionality_raw` is "Not reported", then `rel_conditionality_code=Temporal` is unsupported. The most defensible code when no condition is stated is `Unconditional`. The "post-2008" temporal scope appears in the *temporal_scope* field, which is the correct location for this information.
+- **Suggested value:** `rel_conditionality_code=Unconditional`.
+
+### Issue 3.6 — Row 11 | rel_conditionality_code
+- **Raw text:** "Not reported" (in `rel_conditionality_raw`)
+- **Coded values:** `rel_conditionality_code=Spatial`
+- **Issue:** Same problem as 3.5 — if no conditionality is reported in the raw, the code should be `Unconditional`. The spatial information ("Andean → lowland Amazon") is captured in `geographic_scope_raw`/`population_raw`.
+- **Suggested value:** `rel_conditionality_code=Unconditional`.
+
+### Issue 3.7 — Row 11 | source_locus
+- **Raw text:** No citation in the paragraph as printed; the introduction states "there continues to be out-migration of people from Andean regions" without a citation.
+- **Coded values:** `source_locus=Synthesised from multiple sources`, `source_citation_raw="Not reported"`
+- **Issue:** "Synthesised from multiple sources" implies the claim draws on multiple prior studies. There is no evidence in the text of multiple synthesised sources — the claim is simply uncited. More defensible options: `Original to this study` (treating the uncited claim as authorial assertion), or a "Not reported" entry. The current code overstates the evidentiary basis.
+- **Suggested value:** Either `Original to this study` (most parsimonious) or flag for reviewer adjudication. Strongly recommend the schema add a "Uncited assertion" or equivalent value.
+
+### Issue 3.8 — Row 14 | source_locus / paper_section
+- **Raw text:** Cited material: "Asner et al (2013) provided the first high-resolution accounting... reported a 400% increase..."
+- **Coded values:** `paper_section=Introduction`, `source_locus=Cited from prior work`
+- **Issue:** Correct, but worth flagging that this is the same lead author's *prior work*. The schema does not distinguish self-citation from external citation. If self-citation matters for downstream interpretation (e.g. weighing independence of evidence), this should be a flag. No code change required.
+- **Suggested value:** No change; flag for ontology consideration.
+
+### Issue 3.9 — Row 22 | v2_code & v1_domain mismatch
+- **Raw text:** v2_raw "the region, its protected areas, and thousands of species including humans"
+- **Coded values:** `v2_code="Regional ecosystems and human populations"`, `v2_domain=Environmental`
+- **Issue:** The compound code "Regional ecosystems and human populations" spans both Environmental and Social domains. Coding it as `Environmental` only loses the human/social component. Per the prompt's decomposition rule, this should have been split into two pairwise relationships (mining → ecosystems; mining → humans). See Task 4.
+- **Suggested value:** Split row, or recode `v2_domain` to a value that captures both (no such value exists in current schema — see ontology recommendations).
+
+### Issue 3.10 — Row 23 | rel_valence & rel_exists
+- **Raw text:** "gold mining has continued to increase... despite numerous government legal decrees and police actions"
+- **Coded values:** `rel_exists=No`, `rel_valence=Indeterminate`
+- **Issue:** Same structural problem as Row 6. The relationship between V1 (decrees) and V2 (mining extent) is claimed *not* to exist as intended. `rel_exists=No` is correct, but again `rel_valence=Indeterminate` is forced because the schema requires a value. The effect_raw field captures "40% increase since 2012", which is the magnitude of the *failure* (i.e. mining grew despite decrees) — this is potentially confusing because effect_magnitude=40 reads like a positive effect of the intervention. Strongly recommend a note in `rel_exists_note` clarifying the direction.
+- **Suggested value:** Keep coding; the extractor did add the explanatory note. Reviewer should verify that downstream consumers will not misinterpret `effect_magnitude=40` as a positive intervention effect.
+
+### Issue 3.11 — Row 24 | source_locus
+- **Raw text:** "the interdictions that are said to have eradicated 90% of miners in the buffer zone in 2012–2013"
+- **Coded values:** `source_locus=Cited from prior work`, `source_citation_raw="Not reported"`
+- **Issue:** "Are said to have" indicates the claim comes from outside the present analysis, but no specific citation is given. `Cited from prior work` with `source_citation_raw="Not reported"` is internally inconsistent — if it is cited, the citation should be findable; if no citation is findable, "Cited from prior work" is overstating. More defensible: this is best coded as a contextual/reported claim with a note.
+- **Suggested value:** Consider adding a "Reported without citation" value to source_locus, or use the closest existing value with a clear note.
+
+### Issue 3.12 — Row 26 | rel_direction
+- **Raw text:** "reported gold market prices are correlated with mining rates on interannual timescales (R²=0.43; p<0.05)"
+- **Coded values:** `rel_direction=Non-directional`
+- **Issue:** Defensible, since "correlated with" is symmetric. However, the surrounding context ("we found it difficult to assess causality...however, reported gold market prices are correlated...") clearly *implies* the authors view price as the driver. Could equally be coded `Indeterminate` (direction cannot be confidently established). Both are defensible — flag for reviewer.
+- **Suggested value:** No change required, but reviewer should adjudicate `Non-directional` vs `Indeterminate`.
+
+### Issue 3.13 — Row 26 | rel_uncertainty_code
+- **Raw text:** "we found it difficult to assess causality behind the inter-annual fluctuations... however, reported gold market prices are correlated with mining rates"
+- **Coded values:** `rel_uncertainty_code=Asserted`
+- **Issue:** The authors explicitly hedge causal interpretation in the surrounding sentence ("difficult to assess causality"). The correlation itself is asserted (R² and p reported), but any causal/directional reading should be at most `Possible`. Given the row codes a `Non-directional` correlation, `Asserted` is defensible for the *correlation* claim, but the broader pattern is that the authors are explicitly avoiding causal commitment. Reviewer should adjudicate.
+- **Suggested value:** Flag — defensible as `Asserted` at the level of correlation; would be `Possible` or `Speculative` if recoded as directional.
+
+### Issue 3.14 — Row 28 | rel_direction & rel_valence
+- **Raw text:** "There are also no known examples of large-scale restoration successes on previously mined landscapes"
+- **Coded values:** `rel_direction=V1→V2`, `rel_valence=Indeterminate`, `rel_exists=No`
+- **Issue:** The claim is about absence of evidence for a relationship between two variables (post-mining landscape state → restoration success). `rel_exists=No` is correct (the paper claims no positive cases exist). `rel_direction=V1→V2` is defensible. `rel_valence=Indeterminate` is forced. Same structural problem as Rows 6 and 23.
+- **Suggested value:** Keep, but see ontology recommendations.
+
+### Issue 3.15 — Row 31 | v1_code vs. rel_raw
+- **Raw text:** "gold mining in tropical forested regions continues to rise globally"
+- **Coded values:** `v1=gold mining`, `v2=tropical forest area`, `rel_valence=Negative`
+- **Issue:** The paper sentence is about the global rise of mining, not directly about the effect of mining on forest area. The extractor inferred the V1→V2 negative effect on forest area from the surrounding sentences ("similar consequences as observed in Madre de Dios"). This is defensible but the rel_raw does not directly support the V1→V2 forest-loss valence. The strict reading would be V1=gold mining, V2=gold mining global extent (V1→V1 trivial). The relational framing was supplied by the extractor.
+- **Suggested value:** Either (a) accept with a note that the negative valence is inferred from context, or (b) recode rel_raw to include the surrounding sentence "with similar consequences as observed in Madre de Dios" so that the negative valence is supported by quoted text.
+
+### Issue 3.16 — Multiple rows | method_type for cited material
+- **Rows affected:** 2, 3, 4, 5, 8, 9, 12, 13, 20, 21, 27, 28, 29, 31
+- **Issue:** Multiple rows code `method_type=Review` with `method_raw="Not reported"`. The schema defines Review as "systematic or narrative review of prior literature". Asner & Tupayachi 2016 is not a review paper. The `Review` coding appears to be used as a default for "this claim is cited from prior work" — but that's what `source_locus` captures, and `method_type` should describe how the *original* finding was generated. Without access to the cited paper, the method type is unknowable from this paper alone.
+- **Suggested value:** When `method_raw="Not reported"`, `method_type` should also be "Not reported" (the schema does not currently include this as a permitted value — see ontology recommendations). Using `Review` as a default for "cited claim, method unknown" muddles the field.
+
+### Issue 3.17 — Row 7 | population_code & geographic_scope alignment
+- **Raw text:** population_raw "Madre de Dios region"; geographic_scope_raw "Madre de Dios region"
+- **Coded values:** `population_code=Terrestrial ecosystem`, `geographic_scope_code=Region`
+- **Issue:** Defensible, but worth checking — the paper is also concerned with the Tambopata buffer zone watershed and downstream rivers. Several rows code `Terrestrial ecosystem` where the reasoning is forest-loss-centric, but mercury claims (Rows 21, 27) appropriately code `Freshwater ecosystem` or `Mixed`. Internally consistent within rows.
+- **Suggested value:** No change.
+
+### Issue 3.18 — Row 27 | population_code
+- **Raw text:** population_raw "Human populations and ecosystems"; v2 "human health and the environment"
+- **Coded values:** `population_code=Mixed`
+- **Issue:** Correct. Worth noting as a positive instance — the extractor used `Mixed` appropriately for compound human+ecological targets.
+
+### Issue 3.19 — Row 12 | source_locus
+- **Raw text:** "social and economic pressure to prospect for gold has led to increased organization among miners, supported by local and regional political leaders, which has protected miner activities (Fraser 2009)"
+- **Coded values:** `source_locus=Cited from prior work`, `source_citation_raw="(Fraser 2009)"`
+- **Issue:** Correct, but the citation (Fraser 2009) sits at the end of a multi-clause sentence. The extractor split this sentence into two rows (12 and 13), both citing Fraser 2009. Defensible, but there is some ambiguity in the source paper about whether Fraser 2009 supports both clauses or only one. Flag for reviewer.
+- **Suggested value:** No change; flag for reviewer.
+
+---
+
+## 4. RELATIONSHIP COMPLETENESS
+
+The extractor's chat narrative explicitly noted likely under-extraction (Option B preference for false negatives). Several relationships in the paper appear to meet the scope criteria but are not extracted. Under comprehensive sensitivity, I report all candidates:
+
+### Missing 4.1 — Forest carbon stocks claim (Discussion)
+- **Section:** Methods/Discussion
+- **Verbatim text:** "Forests of the Tambopata National Reserve contain some of the highest biomass stocks in the western Amazon"
+- **Suggested V1:** "Forests of the Tambopata National Reserve" / Forest type (Population/Context, Environmental)
+- **Suggested V2:** "biomass stocks" / Forest carbon stocks (Outcome, Environmental)
+- **Suggested direction:** Non-directional (descriptive characterisation)
+- **Note:** Borderline — descriptive rather than relational. Cited to Asner et al 2014. Probably omittable under Option B but noted under comprehensive sensitivity.
+
+### Missing 4.2 — Watershed/freshwater resource claim (Introduction)
+- **Section:** Introduction
+- **Verbatim text:** "the watershed is a key freshwater resource for communities downstream of the Reserve, including into Brazil"
+- **Suggested V1:** "watershed" / Tambopata watershed (Context, Environmental)
+- **Suggested V2:** "communities downstream of the Reserve" / Downstream human communities (Population, Social)
+- **Suggested direction:** V1→V2
+- **Note:** Cited to Thieme et al 2007. Borderline — describes a service relationship, not a causal one.
+
+### Missing 4.3 — Mining-within-Reserve direct impact claim (Introduction)
+- **Section:** Introduction
+- **Verbatim text:** "Gold mining within the Reserve, and within its ecological buffer zone immediately to the north of the Reserve, directly impact these resources"
+- **Suggested V1:** "Gold mining within the Reserve" / Gold mining (Intervention, Economic)
+- **Suggested V2:** "these resources" (biodiversity, biomass, watershed) / Reserve resources (Outcome, Environmental)
+- **Suggested direction:** V1→V2, Negative
+- **Note:** Direct claim, original to this study (no citation). Should arguably be extracted as a separate row distinct from the regional and reserve-specific rows already present (Rows 17–18).
+
+### Missing 4.4 — Tambopata Reserve was previously protected (Methods)
+- **Section:** Methods
+- **Verbatim text:** "The Reserve and buffer zone were declared in 2000... originally assigned to protect biodiversity and water resources"
+- **Suggested V1:** "Reserve designation" / Protected area designation (Intervention, Governance)
+- **Suggested V2:** "biodiversity and water resources" (Outcome, Environmental)
+- **Suggested direction:** V1→V2, Positive (intended)
+- **Note:** Probably out of scope — descriptive of the Reserve's purpose rather than a finding.
+
+### Missing 4.5 — Miner organisation political protection claim was already extracted but should arguably be split
+- **Section:** Introduction (already in Row 13)
+- **Note:** Row 13 collapses two relationships: (i) miner organisation → protection of activities; (ii) political leader support → miner organisation effectiveness. These could be decomposed.
+
+### Missing 4.6 — Compound abstract claim mining → human/species threats already extracted in Row 22 but not decomposed
+- **Section:** Discussion (already in Row 22)
+- **Verbatim text:** "Mining thus represents a direct and ecologically extreme threat to the region, its protected areas, and thousands of species including humans"
+- **Note:** Per the prompt's decomposition rule, Row 22 should be split into separate rows for (a) mining → species, (b) mining → humans, (c) mining → protected areas. Currently coded as a single Environmental-domain row with `v2_code="Regional ecosystems and human populations"`.
+
+### Missing 4.7 — Mining presents worse case than cattle ranching (Discussion)
+- **Section:** Discussion (partially in Row 29)
+- **Verbatim text:** "Compared to other drivers of deforestation, such as cattle ranching, mining presents a worse case ecological scenario"
+- **Suggested V1:** "Cattle ranching" / Cattle ranching (Intervention, Economic)
+- **Suggested V2:** "ecological scenario" (Outcome, Environmental)
+- **Suggested direction:** Implicitly less negative than mining (comparative claim)
+- **Note:** This is a comparative claim that does not fit cleanly as a single V1→V2 row but does establish a relational ordering. Row 29 captures the mining→forest claim but loses the comparative element. Under comprehensive sensitivity, recommend extracting cattle ranching → forest impacts as a separate row to capture the comparison.
+
+### Missing 4.8 — Asner et al 2013 small mine size finding (Introduction)
+- **Section:** Introduction
+- **Verbatim text:** "more than 50% of gold mines were small (<1 ha) clandestine operations often hidden from main river ways"
+- **Note:** Descriptive rather than relational. Probably out of scope.
+
+### Missing 4.9 — Mining-related deforestation in buffer zone as a proportion of regional total (Results)
+- **Section:** Results
+- **Verbatim text:** "Mining-related deforestation in the buffer zone accounted for 44% of total mining throughout Madre de Dios since 1999"
+- **Suggested V1:** "Tambopata buffer zone location" (Context, Environmental)
+- **Suggested V2:** "share of regional mining-related deforestation" / Spatial concentration of mining (Outcome, Environmental)
+- **Suggested direction:** Descriptive — not a clear causal relationship
+- **Note:** Borderline. Probably omittable — describes spatial distribution rather than a causal effect. Flag for reviewer.
+
+### Missing 4.10 — Methods: 25% bare substrate threshold for detection (Methods)
+- **Section:** Methods
+- **Verbatim text:** "Our decision tree for gold mining was based on the presence of at least 25% bare substrate... and standing water within each Landsat pixel"
+- **Note:** Methodological — out of scope per prompt instructions (extract only relational findings, not methodological descriptions).
+
+### Missing 4.11 — Asner et al 2013 omission/commission rates (Methods)
+- **Section:** Methods
+- **Verbatim text:** "gold mine detection omission and commission rates were found to be 15% and 18%, respectively"
+- **Note:** Methodological validation — out of scope.
+
+### Missing 4.12 — Interoceanic Highway → migration → mining causal chain (Introduction)
+- **Section:** Introduction
+- **Note:** The extractor's chat narrative explicitly noted this was omitted because "intermediate steps weren't explicit". Under comprehensive sensitivity, the implicit causal chain — paving → access → migration/mining colocation → mining expansion — could be extracted as multiple rows. The single relationship "paving → roadway access" is captured in Row 10. Whether the further links should be inferred is a coding-policy question. Flag for reviewer.
+
+---
+
+## 5. SCHEMA COMPLIANCE
+
+All 14 controlled-vocabulary fields verified programmatically against the permitted value lists in `Schema_for_ontology.csv`. **No non-permitted values found in any cell.** No required fields are blank (verified across all 30 rows × 34 columns = 1020 cells).
+
+Specific notes:
+- All `paper_section` values are valid.
+- All `v1_entity_type` and `v2_entity_type` values use `Population` (not the schema's stray `Populations` variant — the schema itself has both spellings; see ontology recommendations).
+- `rel_direction` uses the Unicode arrow `V1→V2` consistently (matching the schema example).
+- `geographic_scope_code` uses `Region` consistently for sub-national but supra-local extents — defensible.
+- `population_code` distributions: Terrestrial ecosystem (16), Human (5), Freshwater ecosystem (3), Mixed (3), other = 3 non-standard contexts.
+
+The **only schema-compliance issue** is interpretive rather than literal:
+
+### Issue 5.1 — Schema permits `Populations` (plural) in `v1_entity_type` but `Population` (singular) in `v2_entity_type`
+- **Field:** schema itself (not the extraction)
+- **Issue:** In `Schema_for_ontology.csv`, row B3 (v1_entity_type) lists "Populations" while row C3 (v2_entity_type) lists "Population". This is almost certainly a typo in the schema. The extraction has correctly used `Population` throughout, so no rows are non-compliant — but the schema should be corrected for clarity.
+
+---
+
+## 6. ONTOLOGY REVISION RECOMMENDATIONS
+
+Based on patterns in the issues found:
+
+1. **Add a "Not reported" or "Not applicable" value to `method_type`.** Multiple rows (3.16) code `Review` as a default for cited claims where the original method is unknown. This conflates synthesis with primary methodology. Permitted values for `method_type` should include an explicit "Not reported / Unknown" option.
+
+2. **Resolve the schema typo: `v1_entity_type` permits `Populations`, `v2_entity_type` permits `Population`.** Standardise to `Population` (singular) in both places. (Issue 5.1.)
+
+3. **Reconsider how `rel_valence` interacts with `rel_exists=No`.** When the paper claims a relationship does *not* hold, `rel_valence` is undefined but the current schema forces a value (typically `Indeterminate`). This creates noise: e.g. Row 23's `effect_magnitude=40` reads like a positive intervention effect when it actually quantifies the *failure* of the intervention. Recommend adding a permitted value `Not applicable` for `rel_valence` when `rel_exists=No`, or explicit handling rules for negated/failed relationships. (Issues 3.1, 3.10, 3.14.)
+
+4. **Tighten the `Synthesised from multiple sources` value in `source_locus`.** It is being applied to uncited authorial assertions (Issue 3.7). Either (a) define it more strictly (e.g. "claim attributed to ≥2 distinct prior studies"), or (b) add a `Reported without citation / Authorial assertion` value to handle the gap.
+
+5. **Define explicit handling for compound V2 raw values.** The decomposition rule in the prompt is clear, but the extraction shows several compound rows (Rows 22, 27) where the V2 spans multiple domains and PECO categories. The schema currently forces a single domain code per row, which loses information. Either enforce decomposition more strictly in the prompt, or allow multi-domain coding (e.g. domain values like `Environmental + Social`). (Issues 2.5, 3.9, 4.6.)
+
+6. **Separate geographic scope from `v2_code`/`v1_code` controlled vocabulary.** The current extraction embeds geographic scope into the `v2_code` (e.g. "Forest loss in Tambopata National Reserve" vs. "Forest loss"). The schema's `geographic_scope_*` fields are designed exactly for this purpose. Recommend a coding rule: `v1_code`/`v2_code` should be geographically-neutral; spatial qualification belongs in the scope fields. This will improve cross-paper aggregability. (Issue 2.4.)
+
+7. **Tighten `rel_uncertainty_code` definitions to distinguish epistemic confidence from causal multiplicity.** Issue 3.4 shows the extractor downgraded `Asserted` to `Probable` because the source listed "multiple factors" rather than because the authors hedged the specific claim. The schema definition should explicitly note that `rel_uncertainty_code` reflects authorial *hedging language*, not the structural complexity of the causal pathway.
+
+8. **Clarify whether `rel_conditionality_code` requires support from `rel_conditionality_raw`.** The current extraction has multiple rows where `rel_conditionality_raw="Not reported"` but `rel_conditionality_code` takes a substantive value (Issues 3.5, 3.6). The default when no condition is reported should be `Unconditional`, with a clear handling rule.
+
+9. **Consider adding a flag for self-citation in `source_citation_raw`.** Issue 3.8 noted that Row 14 cites the same lead author's earlier work. For evidence synthesis, distinguishing internal/self-citation from independent corroboration may be analytically important. A simple Boolean `is_self_citation` field would suffice.
+
+10. **The prompt vs. schema column count discrepancy (35 vs. 34) should be resolved.** The extraction prompt states "populate all 35 fields" but the schema enumerates 34. The extractor noted this in chat. Either correct the prompt or add the missing field (most plausibly a `temporal_scope_code` field paralleling `geographic_scope_code`, which is currently absent — `temporal_scope_raw` exists without a paired controlled-vocab field).
+
+11. **Add an explicit code or note convention for "intervention failed to produce intended effect" claims.** Rows 6, 23, and 28 all describe failed or absent relationships. The current `rel_exists=No` + free-text `rel_exists_note` works but makes downstream filtering harder. A controlled-vocab field like `rel_exists_type` with values `Asserted absence / Asserted failure / Asserted negative finding` would help.

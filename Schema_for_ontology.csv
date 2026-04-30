@@ -1,0 +1,35 @@
+Group,#,Column name,Type,Description,Example value
+A,A1,paper_id,string,Unique ID for the source paper (DOI or internal ref),10.1016/j.envpol.2021.117890
+A,A2,paper_section,controlled vocab,Section of paper where relationship was found,Results / Discussion / Abstract
+B,B1,v1_raw,verbatim text,Exact phrase from paper describing Variable 1,"""artisanal gold mining activities"""
+B,B2,v1_code,controlled vocab,Standardised term from ontology vocabulary,Artisanal and small-scale gold mining
+B,B3,v1_entity_type,controlled vocab,PECO-style classification of this variable's role,Exposure / Intervention / Outcome / Context / Population
+B,B4,v1_domain,controlled vocab,Thematic domain,Environmental / Social / Economic / Governance
+C,C1,v2_raw,verbatim text,Exact phrase from paper describing Variable 2,"""mercury concentrations in riparian soils"""
+C,C2,v2_code,controlled vocab,Standardised term from ontology vocabulary,Soil mercury contamination
+C,C3,v2_entity_type,controlled vocab,PECO-style classification of this variable's role,Exposure / Intervention / Outcome / Context / Population
+C,C4,v2_domain,controlled vocab,Thematic domain,Environmental / Social / Economic / Governance
+D,D1,rel_raw,verbatim text,Exact phrase describing the relationship between V1 and V2,"""significantly elevated levels of mercury were found downstream of"""
+D,D2,rel_exists,boolean,Does the paper claim a relationship exists?,Yes / No / Uncertain
+D,D3,rel_direction,controlled vocab,Direction of claimed relationship,V1→V2 / V2→V1 / Bidirectional / Non-directional / Indeterminate
+D,D4,rel_valence,controlled vocab,Sign of the effect (does V1 increase or decrease V2?),Positive / Negative / Non-linear / Indeterminate
+D,D5,rel_conditionality_raw,verbatim text,Any stated conditions under which the relationship holds,"""only during wet season"""
+D,D6,rel_conditionality_code,controlled vocab,Coded moderating condition type,Temporal / Spatial / Population-specific / Technology-specific / Unconditional
+D,D7,rel_uncertainty_raw,verbatim text,Hedging language used by authors,"""may contribute to"", ""likely associated with"""
+D,D8,rel_uncertainty_code,controlled vocab,Coded certainty level expressed by authors,Asserted / Probable / Possible / Speculative
+D,D9,rel_exists_note,free text,Flags unusual negation or existence edge cases,"""paper explicitly states X does not cause Y"""
+E,E1,effect_raw,verbatim text,Exact phrase reporting effect size or magnitude,"""3.4x higher than background levels (p<0.01)"""
+E,E2,effect_metric,string,Statistical metric used (if any),odds ratio / beta coefficient / % change / narrative only
+E,E3,effect_magnitude,numeric / string,Numeric value if reported; otherwise qualitative descriptor,"3.4 / ""substantial"" / not reported"
+E,E4,effect_error_metric,string,Statistical metric used (if any),standard error / confidence interval 
+E,E5,effect_error_magnitude,numeric / string,Numeric value if reported; otherwise qualitative descriptor,"3.4 / ""substantial"" / not reported"
+F,F1,source_locus,controlled vocab,Is this relationship original to this paper or cited from elsewhere?,Original to this study / Cited from prior work / Synthesised from multiple sources
+F,F2,source_citation_raw,verbatim text,Citation used if claim attributed elsewhere (if F1 ≠ Original),"""(Bose-O'Reilly et al., 2010)"""
+G,G1,method_raw,verbatim text,Methodological language used by authors,"""field sampling and ICP-MS analysis"""
+G,G2,method_type,controlled vocab,Coded method category,Observation / Experiment / Statistical modelling / Simulation / Review / Expert elicitation
+G,G3,causal_inference_level,controlled vocab,Maximum level of causal inference the method supports,Association / Controlled comparison / Intervention / Counterfactual
+H,H1,geographic_scope_raw,verbatim text,Location or geographic context as stated in paper,"""Madre de Dios region, Peru"""
+H,H2,geographic_scope_code,controlled vocab,Standardised geographic classification,Country / Region / Biome / Global
+H,H3,temporal_scope_raw,verbatim text,Time period or temporal context as stated,"""2015-2018 dry seasons"""
+H,H4,population_raw,verbatim text,Population or system unit of study,"""indigenous communities adjacent to mining areas"""
+H,H5,population_code,controlled vocab,Coded population/system type,Human / Freshwater ecosystem / Terrestrial ecosystem / Mixed

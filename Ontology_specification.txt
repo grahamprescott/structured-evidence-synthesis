@@ -1,0 +1,128 @@
+Structured AI-Assisted Evidence Synthesis — Ontology Specification v0.1
+
+** Aims **
+
+The specific aim of an evidence synthesis will differ among users. A user might want to know what the evidence is to support a specific intervention, how different components of a system interact with each other, or what the strength and direction of the relationship between two variables is. To make that more concrete, a user might want to know what the effects of different logging practices are on biodiversity, what the direct and indirect social and environmental impacts of gold mining are, or how actions to achieving different Sustainable Development Goals interact with each other.
+
+As it is impractical to anticipate every possible angle that a user might approach an evidence synthesis from, my approach is to identify common principles that will support a broad range of possible questions.
+
+Most synthesis questions can be reduced to questions about the relationships between variables. If A goes up, what happens to B? If there is a relationship, is it because A causes B, or because a different variable impacts A and B separately? If there is a quantitative relationship between the two variables, what is the magnitude? Underlying all questions about the relationship between variables is the question of how we know about that relationship: have the authors estimated it statistically, observed it experimentally, or reported it from prior research?
+
+This document describes the ontology and schema that support structured extraction of variables, relationships, and the evidence behind them.
+
+** Ontology **
+
+The ontology separates what to capture from how to categorise it. The former defines the information targets. The latter is an operational question about whether the controlled vocabulary is specified in advance by the user, improvised by the LLM and flagged for review, or resolved interactively.
+
+The core questions for every relationship extracted are:
+
+1. Does the relationship exist?
+2. Does the relationship have a direction?
+3. Does the relationship have a magnitude?
+
+For each of those, the schema captures:
+a. Under what conditions does it hold?
+b. What certainty does the author express?
+c. What effect size is reported?
+d. Is this claim original to this paper or reported from elsewhere?
+e. What method was used to establish it?
+f. What level of causal inference does that method support?
+
+Every coded entry is paired with the verbatim text from the paper that the coding was based on. This dual-layer architecture---raw text alongside controlled vocabulary---is the primary mechanism for transparency and auditability.
+
+Variables are classified using a PECO-style framework (Exposure / Intervention / Outcome / Context / Population) and assigned to a thematic domain (Environmental / Social / Economic / Governance). This classification is applied independently to each variable in a relationship; a variable's role may differ across relationships within the same paper.
+
+Epistemic source and epistemic method are treated as orthogonal axes. Source captures whether the claim is original to this paper or attributed to prior work. Method captures how the claim was generated---observation, experiment, statistical modelling, simulation, review, or expert elicitation. These are recorded separately and should not be conflated.
+
+** Schema **
+
+The extraction schema is structured as a flat table where each row represents one directional relationship between two variables extracted from a paper. Multi-way interactions are decomposed into pairwise relationships. Column groups are as follows:
+
+Definitions:
+
+Variable 1 = The subject of the relationship. If there is a directed arrow in the relationship, it originates from Variable 1.
+Variable 2 = The object of the relationship. If there is a directed arrow, it goes to Variable 2.
+Relationship = The arrow between Variable 1 and Variable 2. If the relationship is bidirectional, non-directional, or indeterminate, whichever variable is named first in the source text is assigned as Variable 1.
+
+--- Group A: Paper metadata ---
+
+A1  paper_id              [string]           Unique identifier for the source paper (DOI or internal reference)
+A2  paper_section         [controlled vocab] Section of the paper where the relationship was found
+                                             Values: Abstract / Introduction / Methods / Results / Discussion
+
+--- Group B: Variable 1 ---
+
+B1  v1_raw                [verbatim text]    Exact phrase from the paper describing Variable 1
+B2  v1_code               [controlled vocab] Standardised term from the ontology vocabulary
+B3  v1_entity_type        [controlled vocab] PECO-style classification of this variable's role
+                                             Values: Exposure / Intervention / Outcome / Context / Populations
+B4  v1_domain             [controlled vocab] Thematic domain
+                                             Values: Environmental / Social / Economic / Governance
+
+--- Group C: Variable 2 ---
+
+C1  v2_raw                [verbatim text]    Exact phrase from the paper describing Variable 2
+C2  v2_code               [controlled vocab] Standardised term from the ontology vocabulary
+C3  v2_entity_type        [controlled vocab] PECO-style classification of this variable's role
+                                             Values: Exposure / Intervention / Outcome / Context / Population
+C4  v2_domain             [controlled vocab] Thematic domain
+                                             Values: Environmental / Social / Economic / Governance
+
+--- Group D: Relationship ---
+
+D1  rel_raw               [verbatim text]    Exact phrase describing the relationship between V1 and V2
+D2  rel_exists            [boolean]          Does the paper claim a relationship exists?
+                                             Values: Yes / No / Uncertain
+D3  rel_direction         [controlled vocab] Direction of the claimed relationship
+                                             Values: V1→V2 / V2→V1 / Bidirectional / Non-directional / Indeterminate
+D4  rel_valence           [controlled vocab] Sign of the effect (does V1 increase or decrease V2?)
+                                             Values: Positive / Negative / Non-linear / Indeterminate
+D5  rel_conditionality_raw   [verbatim text] Any stated conditions under which the relationship holds
+D6  rel_conditionality_code  [controlled vocab] Coded moderating condition type
+                                             Values: Temporal / Spatial / Population-specific / Technology-specific / Unconditional
+D7  rel_uncertainty_raw   [verbatim text]    Hedging language used by the authors
+D8  rel_uncertainty_code  [controlled vocab] Coded certainty level expressed by the authors
+                                             Values: Asserted / Probable / Possible / Speculative
+D9  rel_exists_note       [free text]        Flags unusual negation or existence edge cases
+
+--- Group E: Effect size ---
+
+E1  effect_raw            [verbatim text]    Exact phrase reporting effect size or magnitude
+E2  effect_metric         [string]           Statistical metric used, if any (e.g. odds ratio, beta coefficient, % change, narrative only)
+E3  effect_magnitude      [numeric/string]   Numeric value if reported; otherwise a qualitative descriptor or "not reported"
+E4  effect_error_metric   [string]           Error metric used, if any (e.g. standard error, confidence interval)
+E5  effect_error_magnitude [numeric/string]  Numeric value if reported; otherwise a qualitative descriptor or "not reported"
+
+--- Group F: Epistemic source ---
+
+F1  source_locus          [controlled vocab] Is this relationship original to this paper or cited from elsewhere?
+                                             Values: Original to this study / Cited from prior work / Synthesised from multiple sources
+F2  source_citation_raw   [verbatim text]    Citation used if the claim is attributed elsewhere (if F1 ≠ Original to this study)
+
+--- Group G: Method ---
+
+G1  method_raw            [verbatim text]    Methodological language used by the authors
+G2  method_type           [controlled vocab] Coded method category
+                                             Values: Observation / Experiment / Statistical modelling / Simulation / Review / Expert elicitation
+G3  causal_inference_level [controlled vocab] Maximum level of causal inference the method supports
+                                             Values: Association / Controlled comparison / Intervention / Counterfactual
+
+--- Group H: Scope ---
+
+H1  geographic_scope_raw  [verbatim text]    Location or geographic context as stated in the paper
+H2  geographic_scope_code [controlled vocab] Standardised geographic classification
+                                             Values: Country / Region / Biome / Global
+H3  temporal_scope_raw    [verbatim text]    Time period or temporal context as stated in the paper
+H4  population_raw        [verbatim text]    Population or system unit of study as stated in the paper
+H5  population_code       [controlled vocab] Coded population or system type
+                                             Values: Human / Freshwater ecosystem / Terrestrial ecosystem / Mixed
+
+** How to implement **
+
+The user has three options for how the controlled vocabulary is populated during extraction:
+
+a) The user specifies target verbs or phrases in advance (e.g. cause*, link*, correl*, increas*, decreas*) to constrain what counts as a relationship.
+b) The user provides examples and instructs the LLM to prefer false negatives over false positives---i.e. to err on the side of omission rather than over-extraction.
+c) The user does not wish to constrain the scope, so all relational language is in scope. The user and/or LLM filters the output afterwards.
+
+In cases (a) and (b), the LLM should flag entries where it is uncertain about the correct controlled vocabulary term. These can be resolved by the user during audit, with revisions fed back into the ontology.
