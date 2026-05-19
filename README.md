@@ -1,6 +1,6 @@
 # Structured AI-Assisted Evidence Synthesis (SAES)
 
-**Version 0.1.0-alpha — proof of concept.** A protocol, ontology, and extraction schema for AI-assisted evidence synthesis from scientific literature, with a paired audit step.
+**Version 0.1.1 — proof of concept.** A protocol, ontology, and extraction schema for AI-assisted evidence synthesis from scientific literature, with a paired audit step.
 
 ## The problem
 
