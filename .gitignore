@@ -1,0 +1,20 @@
+# Article PDFs are not redistributed via this repo (mostly paywalled).
+# Each example's articles/ folder carries a README.md describing how to fetch them.
+**/articles/*.pdf
+**/articles/**/*.pdf
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python caches (in case scripts under setup/ or examples/ are run locally)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local scratch
+scratch/
+*.tmp

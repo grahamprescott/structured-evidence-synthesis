@@ -1,0 +1,2555 @@
+[
+  {
+    "edge_id": "aquatic_mercury_pollution__mercury_bio_accumulation",
+    "subject_code": "aquatic_mercury_pollution",
+    "object_code": "mercury_bio_accumulation",
+    "n_rows": 11,
+    "valence_distribution": {
+      "positive": 11,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 11,
+          "valence": {
+            "positive": 11
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 8,
+          "valence": {
+            "positive": 8
+          }
+        },
+        "Review": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 11,
+          "valence": {
+            "positive": 11
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 8,
+          "valence": {
+            "positive": 8
+          }
+        },
+        "Region": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r3",
+      "castilhos2006:r12",
+      "castilhos2006:r13",
+      "castilhos2006:r14",
+      "lacher1997:r4",
+      "lacher1997:r6",
+      "lacher1997:r10",
+      "regine2006:r1",
+      "tarras-wahlberg2001:r5",
+      "tarras-wahlberg2001:r14",
+      "tarras-wahlberg2001:r16"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2006-2001"
+  },
+  {
+    "edge_id": "gold_mining__mercury_use",
+    "subject_code": "gold_mining",
+    "object_code": "mercury_use",
+    "n_rows": 8,
+    "valence_distribution": {
+      "positive": 8,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 8,
+          "valence": {
+            "positive": 8
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        },
+        "Observation": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        },
+        "Review": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 8,
+          "valence": {
+            "positive": 8
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 6,
+          "valence": {
+            "positive": 6
+          }
+        },
+        "Region": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r3",
+      "castilhos2006:r1",
+      "castilhos2006:r6",
+      "fearnside2001:r5",
+      "lacher1997:r1",
+      "lacher1997:r9",
+      "regine2006:r2",
+      "tarras-wahlberg2001:r1"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2016-2001"
+  },
+  {
+    "edge_id": "mercury_use__aquatic_mercury_pollution",
+    "subject_code": "mercury_use",
+    "object_code": "aquatic_mercury_pollution",
+    "n_rows": 8,
+    "valence_distribution": {
+      "positive": 8,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 8,
+          "valence": {
+            "positive": 8
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        },
+        "Observation": {
+          "n": 6,
+          "valence": {
+            "positive": 6
+          }
+        },
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 8,
+          "valence": {
+            "positive": 8
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 7,
+          "valence": {
+            "positive": 7
+          }
+        },
+        "Region": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r19",
+      "castilhos2006:r2",
+      "castilhos2006:r11",
+      "castilhos2006:r22",
+      "lacher1997:r3",
+      "tarras-wahlberg2001:r15",
+      "tarras-wahlberg2001:r19",
+      "tarras-wahlberg2001:r20"
+    ],
+    "top_contributing_paper": "tarras-wahlberg2001",
+    "date_range_of_papers": "2016-2001"
+  },
+  {
+    "edge_id": "gold_mining__deforestation_and_forest_degradation",
+    "subject_code": "gold_mining",
+    "object_code": "deforestation_and_forest_degradation",
+    "n_rows": 7,
+    "valence_distribution": {
+      "positive": 7,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 7,
+          "valence": {
+            "positive": 7
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        },
+        "Observation": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": {
+          "n": 7,
+          "valence": {
+            "positive": 7
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 7,
+          "valence": {
+            "positive": 7
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r1",
+      "asner2016:r5",
+      "asner2016:r14",
+      "asner2016:r17",
+      "soderquist2000:r1",
+      "soderquist2000:r2",
+      "soderquist2000:r3"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2000"
+  },
+  {
+    "edge_id": "cyanide_use__cyanide_pollution",
+    "subject_code": "cyanide_use",
+    "object_code": "cyanide_pollution",
+    "n_rows": 6,
+    "valence_distribution": {
+      "positive": 6,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 6,
+          "valence": {
+            "positive": 6
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 6,
+          "valence": {
+            "positive": 6
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 6,
+          "valence": {
+            "positive": 6
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 6,
+          "valence": {
+            "positive": 6
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r10",
+      "tarras-wahlberg2001:r4",
+      "tarras-wahlberg2001:r10",
+      "tarras-wahlberg2001:r12",
+      "tarras-wahlberg2001:r13",
+      "tarras-wahlberg2001:r18"
+    ],
+    "top_contributing_paper": "tarras-wahlberg2001",
+    "date_range_of_papers": "2006-2001"
+  },
+  {
+    "edge_id": "mercury_bio_accumulation__human_health",
+    "subject_code": "mercury_bio_accumulation",
+    "object_code": "human_health",
+    "n_rows": 5,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 5,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 5,
+          "valence": {
+            "negative": 5
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 4,
+          "valence": {
+            "negative": 4
+          }
+        },
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 5,
+          "valence": {
+            "negative": 5
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 4,
+          "valence": {
+            "negative": 4
+          }
+        },
+        "Region": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r4",
+      "castilhos2006:r15",
+      "castilhos2006:r16",
+      "castilhos2006:r17",
+      "lacher1997:r5"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2006-1997"
+  },
+  {
+    "edge_id": "mercury_contaminated_tailings__aquatic_mercury_pollution",
+    "subject_code": "mercury_contaminated_tailings",
+    "object_code": "aquatic_mercury_pollution",
+    "n_rows": 4,
+    "valence_distribution": {
+      "positive": 4,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r21",
+      "regine2006:r4",
+      "tarras-wahlberg2001:r9",
+      "tarras-wahlberg2001:r11"
+    ],
+    "top_contributing_paper": "tarras-wahlberg2001",
+    "date_range_of_papers": "2006-2001"
+  },
+  {
+    "edge_id": "mercury_use__mercury_contaminated_tailings",
+    "subject_code": "mercury_use",
+    "object_code": "mercury_contaminated_tailings",
+    "n_rows": 4,
+    "valence_distribution": {
+      "positive": 4,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r9",
+      "castilhos2006:r20",
+      "regine2006:r3",
+      "tarras-wahlberg2001:r3"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2006-2001"
+  },
+  {
+    "edge_id": "miner_influx__gold_mining",
+    "subject_code": "miner_influx",
+    "object_code": "gold_mining",
+    "n_rows": 4,
+    "valence_distribution": {
+      "positive": 4,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 4,
+          "valence": {
+            "positive": 4
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        },
+        "Review": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        },
+        "Observation": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        },
+        "Aquatic ecosystem": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        },
+        "Region": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r9",
+      "fearnside2001:r4",
+      "lacher1997:r8",
+      "tarras-wahlberg2001:r7"
+    ],
+    "top_contributing_paper": "lacher1997",
+    "date_range_of_papers": "2016-2001"
+  },
+  {
+    "edge_id": "gold_mining__cyanide_use",
+    "subject_code": "gold_mining",
+    "object_code": "cyanide_use",
+    "n_rows": 3,
+    "valence_distribution": {
+      "positive": 3,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r24",
+      "tarras-wahlberg2001:r2",
+      "tarras-wahlberg2001:r17"
+    ],
+    "top_contributing_paper": "tarras-wahlberg2001",
+    "date_range_of_papers": "2006-2001"
+  },
+  {
+    "edge_id": "gold_mining__protected_areas",
+    "subject_code": "gold_mining",
+    "object_code": "protected_areas",
+    "n_rows": 3,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 3,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 3,
+          "valence": {
+            "negative": 3
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        },
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": {
+          "n": 3,
+          "valence": {
+            "negative": 3
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 3,
+          "valence": {
+            "negative": 3
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r4",
+      "asner2016:r15",
+      "fearnside2001:r8"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2001"
+  },
+  {
+    "edge_id": "gold_prices__gold_mining",
+    "subject_code": "gold_prices",
+    "object_code": "gold_mining",
+    "n_rows": 3,
+    "valence_distribution": {
+      "positive": 3,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        },
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 3,
+          "valence": {
+            "positive": 3
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r7",
+      "asner2016:r22",
+      "schwartzmann2005:r7"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2005"
+  },
+  {
+    "edge_id": "indigenous_land_rights__miner_influx",
+    "subject_code": "indigenous_land_rights",
+    "object_code": "miner_influx",
+    "n_rows": 3,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 3,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 3,
+          "valence": {
+            "negative": 3
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 3,
+          "valence": {
+            "negative": 3
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 3,
+          "valence": {
+            "negative": 3
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 3,
+          "valence": {
+            "negative": 3
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "schwartzmann2005:r1",
+      "schwartzmann2005:r4",
+      "schwartzmann2005:r10"
+    ],
+    "top_contributing_paper": "schwartzmann2005",
+    "date_range_of_papers": "2005-2005"
+  },
+  {
+    "edge_id": "atmospheric_mercury_pollution__human_health",
+    "subject_code": "atmospheric_mercury_pollution",
+    "object_code": "human_health",
+    "n_rows": 2,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 2,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r18",
+      "castilhos2006:r19"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2006-2006"
+  },
+  {
+    "edge_id": "enforcement_and_other_barriers_to_entry__gold_mining",
+    "subject_code": "enforcement_and_other_barriers_to_entry",
+    "object_code": "gold_mining",
+    "n_rows": 2,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 2,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r12",
+      "asner2016:r21"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "gold_mining__soil_excavation_and_erosion",
+    "subject_code": "gold_mining",
+    "object_code": "soil_excavation_and_erosion",
+    "n_rows": 2,
+    "valence_distribution": {
+      "positive": 2,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r2",
+      "asner2016:r18"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "informality__enforcement_and_other_barriers_to_entry",
+    "subject_code": "informality",
+    "object_code": "enforcement_and_other_barriers_to_entry",
+    "n_rows": 2,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 2,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        },
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 2,
+          "valence": {
+            "negative": 2
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        },
+        "Region": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r24",
+      "lacher1997:r7"
+    ],
+    "top_contributing_paper": "lacher1997",
+    "date_range_of_papers": "2016-1997"
+  },
+  {
+    "edge_id": "mercury_use__atmospheric_mercury_pollution",
+    "subject_code": "mercury_use",
+    "object_code": "atmospheric_mercury_pollution",
+    "n_rows": 2,
+    "valence_distribution": {
+      "positive": 2,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r7",
+      "castilhos2006:r8"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2006-2006"
+  },
+  {
+    "edge_id": "road_creation__miner_influx",
+    "subject_code": "road_creation",
+    "object_code": "miner_influx",
+    "n_rows": 2,
+    "valence_distribution": {
+      "positive": 2,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        },
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        },
+        "Human": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 2,
+          "valence": {
+            "positive": 2
+          }
+        }
+      }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r8",
+      "schwartzmann2005:r2"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2005"
+  },
+  {
+    "edge_id": "aquatic_mercury_pollution__human_health",
+    "subject_code": "aquatic_mercury_pollution",
+    "object_code": "human_health",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r25"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2006-2006"
+  },
+  {
+    "edge_id": "commerical_mine_closure__miner_influx",
+    "subject_code": "commerical_mine_closure",
+    "object_code": "miner_influx",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "tarras-wahlberg2001:r6"
+    ],
+    "top_contributing_paper": "tarras-wahlberg2001",
+    "date_range_of_papers": "2001-2001"
+  },
+  {
+    "edge_id": "cyanide_use__aquatic_mercury_pollution",
+    "subject_code": "cyanide_use",
+    "object_code": "aquatic_mercury_pollution",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r23"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2006-2006"
+  },
+  {
+    "edge_id": "dry_season__miner_influx",
+    "subject_code": "dry_season",
+    "object_code": "miner_influx",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "castilhos2006:r5"
+    ],
+    "top_contributing_paper": "castilhos2006",
+    "date_range_of_papers": "2006-2006"
+  },
+  {
+    "edge_id": "economic_alternatives__gold_mining",
+    "subject_code": "economic_alternatives",
+    "object_code": "gold_mining",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "schwartzmann2005:r11"
+    ],
+    "top_contributing_paper": "schwartzmann2005",
+    "date_range_of_papers": "2005-2005"
+  },
+  {
+    "edge_id": "economic_instability__gold_prices",
+    "subject_code": "economic_instability",
+    "object_code": "gold_prices",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r6"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "economic_instability__mining_lobbies",
+    "subject_code": "economic_instability",
+    "object_code": "mining_lobbies",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r10"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "gold_mining__indigenous_land_rights",
+    "subject_code": "gold_mining",
+    "object_code": "indigenous_land_rights",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "fearnside2001:r7"
+    ],
+    "top_contributing_paper": "fearnside2001",
+    "date_range_of_papers": "2001-2001"
+  },
+  {
+    "edge_id": "gold_mining__need_for_economic_alternatives",
+    "subject_code": "gold_mining",
+    "object_code": "need_for_economic_alternatives",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "schwartzmann2005:r9"
+    ],
+    "top_contributing_paper": "schwartzmann2005",
+    "date_range_of_papers": "2005-2005"
+  },
+  {
+    "edge_id": "gold_mining__sediment_load_in_rivers",
+    "subject_code": "gold_mining",
+    "object_code": "sediment_load_in_rivers",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Aquatic ecosystem": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "fearnside2001:r6"
+    ],
+    "top_contributing_paper": "fearnside2001",
+    "date_range_of_papers": "2001-2001"
+  },
+  {
+    "edge_id": "indigenous_land_rights__deforestation_and_forest_degradation",
+    "subject_code": "indigenous_land_rights",
+    "object_code": "deforestation_and_forest_degradation",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "schwartzmann2005:r6"
+    ],
+    "top_contributing_paper": "schwartzmann2005",
+    "date_range_of_papers": "2005-2005"
+  },
+  {
+    "edge_id": "indigenous_land_rights__gold_mining",
+    "subject_code": "indigenous_land_rights",
+    "object_code": "gold_mining",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "schwartzmann2005:r8"
+    ],
+    "top_contributing_paper": "schwartzmann2005",
+    "date_range_of_papers": "2005-2005"
+  },
+  {
+    "edge_id": "large_scale_commercial_agriculture__road_construction",
+    "subject_code": "large_scale_commercial_agriculture",
+    "object_code": "road_construction",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "fearnside2001:r1"
+    ],
+    "top_contributing_paper": "fearnside2001",
+    "date_range_of_papers": "2001-2001"
+  },
+  {
+    "edge_id": "large_scale_commercial_agriculture__social_inequality",
+    "subject_code": "large_scale_commercial_agriculture",
+    "object_code": "social_inequality",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "fearnside2001:r2"
+    ],
+    "top_contributing_paper": "fearnside2001",
+    "date_range_of_papers": "2001-2001"
+  },
+  {
+    "edge_id": "legal_regulation__enforcement_and_other_barriers_to_entry",
+    "subject_code": "legal_regulation",
+    "object_code": "enforcement_and_other_barriers_to_entry",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r13"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "miner_influx__indigenous_land_rights",
+    "subject_code": "miner_influx",
+    "object_code": "indigenous_land_rights",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "schwartzmann2005:r3"
+    ],
+    "top_contributing_paper": "schwartzmann2005",
+    "date_range_of_papers": "2005-2005"
+  },
+  {
+    "edge_id": "miner_organization__enforcement_and_other_barriers_to_entry",
+    "subject_code": "miner_organization",
+    "object_code": "enforcement_and_other_barriers_to_entry",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r20"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "mining_lobbies__enforcement_and_other_barriers_to_entry",
+    "subject_code": "mining_lobbies",
+    "object_code": "enforcement_and_other_barriers_to_entry",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r11"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "protected_areas__deforestation_and_forest_degradation",
+    "subject_code": "protected_areas",
+    "object_code": "deforestation_and_forest_degradation",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r16"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "road_construction__deforestation_and_forest_degradation",
+    "subject_code": "road_construction",
+    "object_code": "deforestation_and_forest_degradation",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "schwartzmann2005:r5"
+    ],
+    "top_contributing_paper": "schwartzmann2005",
+    "date_range_of_papers": "2005-2005"
+  },
+  {
+    "edge_id": "social_inequality__miner_influx",
+    "subject_code": "social_inequality",
+    "object_code": "miner_influx",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "fearnside2001:r3"
+    ],
+    "top_contributing_paper": "fearnside2001",
+    "date_range_of_papers": "2001-2001"
+  },
+  {
+    "edge_id": "soil_excavation_and_erosion__barren_land",
+    "subject_code": "soil_excavation_and_erosion",
+    "object_code": "barren_land",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 1,
+      "negative": 0,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "positive",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Statistical modelling": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "positive": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "asner2016:r23"
+    ],
+    "top_contributing_paper": "asner2016",
+    "date_range_of_papers": "2016-2016"
+  },
+  {
+    "edge_id": "weak_governance__enforcement_and_other_barriers_to_entry",
+    "subject_code": "weak_governance",
+    "object_code": "enforcement_and_other_barriers_to_entry",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Review": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Region": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "lacher1997:r2"
+    ],
+    "top_contributing_paper": "lacher1997",
+    "date_range_of_papers": "1997-1997"
+  },
+  {
+    "edge_id": "weak_governance_and_bad_policies__enforcement_and_other_barriers_to_entry",
+    "subject_code": "weak_governance_and_bad_policies",
+    "object_code": "enforcement_and_other_barriers_to_entry",
+    "n_rows": 1,
+    "valence_distribution": {
+      "positive": 0,
+      "negative": 1,
+      "non_linear": 0,
+      "indeterminate": 0
+    },
+    "modal_valence": "negative",
+    "max_causal_inference_level": "Association",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_method_type": {
+        "Observation": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_population_code": {
+        "Human": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      },
+      "by_geographic_scope_code": {
+        "Country": {
+          "n": 1,
+          "valence": {
+            "negative": 1
+          }
+        }
+      }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": [
+      "tarras-wahlberg2001:r8"
+    ],
+    "top_contributing_paper": "tarras-wahlberg2001",
+    "date_range_of_papers": "2001-2001"
+  }
+]

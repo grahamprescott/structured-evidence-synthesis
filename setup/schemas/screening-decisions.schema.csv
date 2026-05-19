@@ -1,0 +1,20 @@
+paper_id,decision,reason,criterion_tag,reviewer,notes
+# SAES screening-decisions schema v0.2.0-alpha
+# One row per candidate paper from the search.
+# Save populated file as `screening_decisions.csv` in your project root, alongside `search_log.json` and `question_framing.md`.
+#
+# COLUMN DEFINITIONS
+# paper_id        | required | OpenAlex work ID (e.g. W2345678901) or DOI. Must match the IDs in the search results (openalex_works.jsonl).
+# decision        | required | One of: include / exclude / include_uncertain
+# reason          | required | Short prose justification (one sentence). For `exclude`, must reference the specific criterion that failed. For `include_uncertain`, describes the uncertainty.
+# criterion_tag  | required if decision=exclude | Tag from the exclusion-criteria list in question_framing.md (e.g. wrong_outcome, wrong_population, out_of_scope_geo, unclear_from_abstract). Leave blank for `include` and `include_uncertain`.
+# reviewer       | required | Who made the decision. Conventions: `LLM-pass-1`, `human-pass-1`, `human-pass-2`, `consensus`. Track human overrides explicitly — do not silently overwrite the LLM row.
+# notes           | optional but recommended | Verbatim quote from title/abstract that triggered the decision, plus any free-text context. Quote in escaped double quotes.
+#
+# LIFECYCLE
+# 1. LLM (or human) populates one row per candidate via 03_screening.md.
+# 2. Human reviewer reviews all `exclude` and all `include_uncertain` rows.
+# 3. When a human overrides an LLM decision, add a new row with the same paper_id and reviewer=`human-pass-1` (etc.). The latest reviewer entry wins for downstream processing.
+# 4. Final `include` set is the input to the extraction stage. `paper_id`s in the include set must be the same `paper_id`s used as A1 in extraction rows.
+#
+# Delete these comment lines (#-prefixed) from your populated file. CSV parsers vary in their tolerance of in-band comments.

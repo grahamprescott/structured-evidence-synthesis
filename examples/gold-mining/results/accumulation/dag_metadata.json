@@ -1,0 +1,606 @@
+{
+  "n_nodes": 33,
+  "n_edges": 43,
+  "nodes": [
+    {
+      "code": "gold_mining",
+      "degree": 13,
+      "appears_as_subject_in": 8,
+      "appears_as_object_in": 5
+    },
+    {
+      "code": "miner_influx",
+      "degree": 7,
+      "appears_as_subject_in": 2,
+      "appears_as_object_in": 5
+    },
+    {
+      "code": "enforcement_and_other_barriers_to_entry",
+      "degree": 7,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 6
+    },
+    {
+      "code": "aquatic_mercury_pollution",
+      "degree": 5,
+      "appears_as_subject_in": 2,
+      "appears_as_object_in": 3
+    },
+    {
+      "code": "indigenous_land_rights",
+      "degree": 5,
+      "appears_as_subject_in": 3,
+      "appears_as_object_in": 2
+    },
+    {
+      "code": "mercury_use",
+      "degree": 4,
+      "appears_as_subject_in": 3,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "deforestation_and_forest_degradation",
+      "degree": 4,
+      "appears_as_subject_in": 0,
+      "appears_as_object_in": 4
+    },
+    {
+      "code": "human_health",
+      "degree": 3,
+      "appears_as_subject_in": 0,
+      "appears_as_object_in": 3
+    },
+    {
+      "code": "cyanide_use",
+      "degree": 3,
+      "appears_as_subject_in": 2,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "road_construction",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "soil_excavation_and_erosion",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "mercury_contaminated_tailings",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "mining_lobbies",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "large_scale_commercial_agriculture",
+      "degree": 2,
+      "appears_as_subject_in": 2,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "social_inequality",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "mercury_bio_accumulation",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "atmospheric_mercury_pollution",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "economic_instability",
+      "degree": 2,
+      "appears_as_subject_in": 2,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "protected_areas",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "gold_prices",
+      "degree": 2,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "need_for_economic_alternatives",
+      "degree": 1,
+      "appears_as_subject_in": 0,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "road_creation",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "weak_governance_and_bad_policies",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "economic_alternatives",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "barren_land",
+      "degree": 1,
+      "appears_as_subject_in": 0,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "legal_regulation",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "informality",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "commerical_mine_closure",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "sediment_load_in_rivers",
+      "degree": 1,
+      "appears_as_subject_in": 0,
+      "appears_as_object_in": 1
+    },
+    {
+      "code": "dry_season",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "weak_governance",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "miner_organization",
+      "degree": 1,
+      "appears_as_subject_in": 1,
+      "appears_as_object_in": 0
+    },
+    {
+      "code": "cyanide_pollution",
+      "degree": 1,
+      "appears_as_subject_in": 0,
+      "appears_as_object_in": 1
+    }
+  ],
+  "edges": [
+    {
+      "subject_code": "aquatic_mercury_pollution",
+      "object_code": "mercury_bio_accumulation",
+      "n_rows": 11,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 11
+    },
+    {
+      "subject_code": "gold_mining",
+      "object_code": "mercury_use",
+      "n_rows": 8,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 8
+    },
+    {
+      "subject_code": "mercury_use",
+      "object_code": "aquatic_mercury_pollution",
+      "n_rows": 8,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 8
+    },
+    {
+      "subject_code": "gold_mining",
+      "object_code": "deforestation_and_forest_degradation",
+      "n_rows": 7,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 7
+    },
+    {
+      "subject_code": "cyanide_use",
+      "object_code": "cyanide_pollution",
+      "n_rows": 6,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 6
+    },
+    {
+      "subject_code": "mercury_bio_accumulation",
+      "object_code": "human_health",
+      "n_rows": 5,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 5
+    },
+    {
+      "subject_code": "mercury_contaminated_tailings",
+      "object_code": "aquatic_mercury_pollution",
+      "n_rows": 4,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 4
+    },
+    {
+      "subject_code": "mercury_use",
+      "object_code": "mercury_contaminated_tailings",
+      "n_rows": 4,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 4
+    },
+    {
+      "subject_code": "miner_influx",
+      "object_code": "gold_mining",
+      "n_rows": 4,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 4
+    },
+    {
+      "subject_code": "gold_mining",
+      "object_code": "cyanide_use",
+      "n_rows": 3,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 3
+    },
+    {
+      "subject_code": "gold_mining",
+      "object_code": "protected_areas",
+      "n_rows": 3,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 3
+    },
+    {
+      "subject_code": "gold_prices",
+      "object_code": "gold_mining",
+      "n_rows": 3,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 3
+    },
+    {
+      "subject_code": "indigenous_land_rights",
+      "object_code": "miner_influx",
+      "n_rows": 3,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 3
+    },
+    {
+      "subject_code": "atmospheric_mercury_pollution",
+      "object_code": "human_health",
+      "n_rows": 2,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 2
+    },
+    {
+      "subject_code": "enforcement_and_other_barriers_to_entry",
+      "object_code": "gold_mining",
+      "n_rows": 2,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 2
+    },
+    {
+      "subject_code": "gold_mining",
+      "object_code": "soil_excavation_and_erosion",
+      "n_rows": 2,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 2
+    },
+    {
+      "subject_code": "informality",
+      "object_code": "enforcement_and_other_barriers_to_entry",
+      "n_rows": 2,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 2
+    },
+    {
+      "subject_code": "mercury_use",
+      "object_code": "atmospheric_mercury_pollution",
+      "n_rows": 2,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 2
+    },
+    {
+      "subject_code": "road_creation",
+      "object_code": "miner_influx",
+      "n_rows": 2,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": true,
+      "provenance_row_ids_count": 2
+    },
+    {
+      "subject_code": "aquatic_mercury_pollution",
+      "object_code": "human_health",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "commerical_mine_closure",
+      "object_code": "miner_influx",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "cyanide_use",
+      "object_code": "aquatic_mercury_pollution",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "dry_season",
+      "object_code": "miner_influx",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "economic_alternatives",
+      "object_code": "gold_mining",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "economic_instability",
+      "object_code": "gold_prices",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "economic_instability",
+      "object_code": "mining_lobbies",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "gold_mining",
+      "object_code": "indigenous_land_rights",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "gold_mining",
+      "object_code": "need_for_economic_alternatives",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "gold_mining",
+      "object_code": "sediment_load_in_rivers",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "indigenous_land_rights",
+      "object_code": "deforestation_and_forest_degradation",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "indigenous_land_rights",
+      "object_code": "gold_mining",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "large_scale_commercial_agriculture",
+      "object_code": "road_construction",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "large_scale_commercial_agriculture",
+      "object_code": "social_inequality",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "legal_regulation",
+      "object_code": "enforcement_and_other_barriers_to_entry",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "miner_influx",
+      "object_code": "indigenous_land_rights",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "miner_organization",
+      "object_code": "enforcement_and_other_barriers_to_entry",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "mining_lobbies",
+      "object_code": "enforcement_and_other_barriers_to_entry",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "protected_areas",
+      "object_code": "deforestation_and_forest_degradation",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "road_construction",
+      "object_code": "deforestation_and_forest_degradation",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": true,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "social_inequality",
+      "object_code": "miner_influx",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "soil_excavation_and_erosion",
+      "object_code": "barren_land",
+      "n_rows": 1,
+      "modal_valence": "positive",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": false,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "weak_governance",
+      "object_code": "enforcement_and_other_barriers_to_entry",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": true,
+      "provenance_row_ids_count": 1
+    },
+    {
+      "subject_code": "weak_governance_and_bad_policies",
+      "object_code": "enforcement_and_other_barriers_to_entry",
+      "n_rows": 1,
+      "modal_valence": "negative",
+      "max_causal_inference_level": "Association",
+      "disagreement_flag": true,
+      "provenance_row_ids_count": 1
+    }
+  ],
+  "rendering_notes": {
+    "layout": "multi-tier causal flow: socio-economic drivers \u2192 gold mining \u2192 biophysical mediators \u2192 environmental outcomes",
+    "filters_applied": [
+      "All nodes appearing as subject or object in any edge"
+    ],
+    "warnings": [
+      "All 105 rows are at causal_inference_level=Association; no Intervention or Counterfactual evidence.",
+      "4 edges are disagreement-flagged purely on vocabulary fragmentation, not substantive conflict.",
+      "The corpus stops at proximate environmental endpoints (deforestation, mercury bioaccumulation, human health) \u2014 no direct biodiversity-outcome rows. The DAG nodes labelled at right are proxy outcomes.",
+      "Edge thickness \u221d n_rows. The strongest edge is aquatic_mercury_pollution \u2192 mercury_bio_accumulation (n=11).",
+      "43 edges and 28 nodes; close to the soft threshold for visual density. Some 1-row peripheral edges shown faintly."
+    ]
+  }
+}

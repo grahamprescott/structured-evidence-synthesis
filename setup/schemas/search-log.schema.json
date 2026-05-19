@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/grahamprescott/structured-evidence-synthesis/blob/main/setup/schemas/search-log.schema.json",
+  "title": "SAES search log",
+  "description": "Records a single literature search run during the SETUP stage. One file per search. Committed to version control alongside the question framing document and screening decisions.",
+  "type": "object",
+  "required": [
+    "search_id",
+    "research_question_ref",
+    "database",
+    "search_url",
+    "search_string_human_readable",
+    "run_date",
+    "result_count"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "search_id": {
+      "type": "string",
+      "description": "Short slug identifying this search, e.g. 'asgm-biodiversity-2026-05'. Used to cross-reference from screening_decisions.csv and downstream provenance.",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "research_question_ref": {
+      "type": "string",
+      "description": "Path to the framing document that this search is operationalising. Usually 'question_framing.md'."
+    },
+    "database": {
+      "type": "string",
+      "description": "Source database. OpenAlex is the default; other supported values are 'Scopus', 'Web of Science', 'PubMed', 'Google Scholar', 'snowball-from-seed'.",
+      "enum": [
+        "OpenAlex",
+        "Scopus",
+        "Web of Science",
+        "PubMed",
+        "Google Scholar",
+        "snowball-from-seed",
+        "other"
+      ]
+    },
+    "search_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The full URL as submitted to the database, including all filter parameters. For snowball searches, the URL of the seed paper."
+    },
+    "search_string_human_readable": {
+      "type": "string",
+      "description": "The boolean search string in a form a human reader can interpret without parsing the URL. Should match the meaning of search_url."
+    },
+    "filters_applied": {
+      "type": "array",
+      "description": "One entry per filter beyond the core search string. Each filter must carry a rationale linking it to the framing document.",
+      "items": {
+        "type": "object",
+        "required": ["filter", "rationale"],
+        "additionalProperties": false,
+        "properties": {
+          "filter": {
+            "type": "string",
+            "description": "The filter as expressed in the API, e.g. 'from_publication_date:2000-01-01'."
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Why this filter was applied. Usually a reference to a scope boundary in the framing document."
+          }
+        }
+      }
+    },
+    "run_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO-8601 date when the search was executed. OpenAlex content changes over time, so this matters for reproducibility."
+    },
+    "result_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total result count returned by the database (e.g. OpenAlex meta.count). Note discrepancies between this and the screened count in screening_decisions.csv in 'notes' if any."
+    },
+    "snapshot_id": {
+      "type": "string",
+      "description": "Optional. The OpenAlex snapshot release identifier, if the user is pinning to a specific snapshot rather than the live API. Recommended for high-stakes syntheses."
+    },
+    "protocol_version": {
+      "type": "string",
+      "description": "SAES protocol version under which this search was conducted, e.g. 'v0.2.0-alpha'."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free text. Anything a future reader needs to know — e.g. 'first run returned 2; re-ran without is_oa filter; new count 87' or 'large language model used to suggest synonym expansion, see chat log on date X'."
+    }
+  }
+}

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1380" height="1200" viewBox="0 0 1380 1200" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow-pos" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1b7a3a"/>
+    </marker>
+    <marker id="arrow-neg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a8262e"/>
+    </marker>
+    <marker id="arrow-mix" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="690" y="30" text-anchor="middle" font-size="20" font-weight="bold">Cocoa-biodiversity consolidated DAG (v0.2.0-alpha)</text>
+  <text x="690" y="50" text-anchor="middle" font-size="11" fill="#666">31 edges across 21 nodes — green = positive, red = negative, grey-dashed = mixed/indeterminate</text>
+  <text x="690" y="65" text-anchor="middle" font-size="11" fill="#666">Edge thickness ∝ n_rows  ·  yellow halo + ! = disagreement_flag  ·  ★ = at least one Intervention-level row</text>
+
+  <!-- Column headers -->
+  <text x="150" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#444">PREDICTORS</text>
+  <text x="560" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#444">MEDIATORS</text>
+  <text x="1000" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#444">OUTCOMES</text>
+
+  <!-- ============ EDGES (drawn first, behind nodes) ============ -->
+
+  <!-- ===== agroforestry_vs_monoculture (y=145) edges ===== -->
+  <!-- → cocoa_yield (n=8, mixed, disagreement, ★) -->
+  <path d="M 260 145 Q 600 280 870 340" stroke="#888" stroke-width="5" stroke-dasharray="6,3" fill="none" marker-end="url(#arrow-mix)"/>
+  <text x="500" y="220" font-size="11" fill="#888" font-weight="bold">~ (n=8) ! ★</text>
+
+  <!-- → natural_enemy_abundance (n=6, positive) -->
+  <path d="M 260 150 Q 580 360 870 470" stroke="#1b7a3a" stroke-width="4" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="600" y="370" font-size="10" fill="#1b7a3a">+ (n=6)</text>
+
+  <!-- → pod_count (n=1, negative) -->
+  <path d="M 260 155 Q 560 210 870 200" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="510" y="175" font-size="9" fill="#a8262e">− (n=1)</text>
+
+  <!-- → pollination_success [mediator] (n=1, positive) -->
+  <path d="M 260 158 Q 380 360 460 575" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="280" y="430" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- → carbon_sequestration (n=1, positive) -->
+  <path d="M 260 160 Q 700 600 870 635" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="680" y="580" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- ===== shade_index (y=185) edges ===== -->
+  <!-- → cocoa_yield (n=1, negative) -->
+  <line x1="260" y1="185" x2="870" y2="345" stroke="#a8262e" stroke-width="1.5" marker-end="url(#arrow-neg)"/>
+  <text x="540" y="270" font-size="9" fill="#a8262e">− (n=1)</text>
+
+  <!-- → pod_loss_to_pests (n=2, negative) -->
+  <path d="M 260 183 Q 500 130 870 145" stroke="#a8262e" stroke-width="2" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="500" y="120" font-size="10" fill="#a8262e">− (n=2)</text>
+
+  <!-- → natural_enemy_abundance (n=2, positive) -->
+  <path d="M 260 188 Q 550 320 870 472" stroke="#1b7a3a" stroke-width="2" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="450" y="320" font-size="10" fill="#1b7a3a">+ (n=2)</text>
+
+  <!-- → farmer_net_returns (n=1, negative) -->
+  <path d="M 260 190 Q 600 500 870 558" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="640" y="510" font-size="9" fill="#a8262e">− (n=1)</text>
+
+  <!-- → input_cost [mediator] (n=1, negative) -->
+  <path d="M 260 195 Q 360 320 460 395" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="290" y="335" font-size="9" fill="#a8262e">− (n=1)</text>
+
+  <!-- ===== shade_tree_density (y=225) edges ===== -->
+  <!-- → natural_enemy_abundance (n=2, mixed, disagreement) -->
+  <path d="M 260 220 Q 530 360 870 478" stroke="#888" stroke-width="2" stroke-dasharray="5,3" fill="none" marker-end="url(#arrow-mix)"/>
+  <text x="450" y="355" font-size="10" fill="#888">~ (n=2) !</text>
+
+  <!-- → cocoa_yield (n=2, mixed, disagreement) -->
+  <line x1="260" y1="225" x2="870" y2="350" stroke="#888" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-mix)"/>
+  <text x="490" y="297" font-size="10" fill="#888">~ (n=2) !</text>
+
+  <!-- → unproductive_cocoa_rate [mediator] (n=2, positive) -->
+  <line x1="260" y1="230" x2="460" y2="230" stroke="#1b7a3a" stroke-width="2" marker-end="url(#arrow-pos)"/>
+  <text x="320" y="225" font-size="10" fill="#1b7a3a">+ (n=2)</text>
+
+  <!-- → cocoa_tree_basal_area [mediator] (n=1, positive) -->
+  <path d="M 260 217 Q 320 170 460 168" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="300" y="158" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- ===== shade_tree_species_richness (y=265) edges ===== -->
+  <!-- → pod_loss_to_pests (n=1, negative) -->
+  <path d="M 260 260 Q 500 195 870 148" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="500" y="190" font-size="9" fill="#a8262e">− (n=1)</text>
+
+  <!-- → natural_enemy_abundance (n=1, positive) -->
+  <path d="M 260 265 Q 540 380 870 484" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="440" y="395" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- → unproductive_cocoa_rate [mediator] (n=1, negative) -->
+  <path d="M 260 270 Q 340 250 460 232" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="320" y="265" font-size="9" fill="#a8262e">− (n=1)</text>
+
+  <!-- ===== shade_cover_percentage (y=305) edges ===== -->
+  <!-- → cocoa_yield (n=2, negative) -->
+  <line x1="260" y1="300" x2="870" y2="355" stroke="#a8262e" stroke-width="2" marker-end="url(#arrow-neg)"/>
+  <text x="540" y="325" font-size="10" fill="#a8262e">− (n=2)</text>
+
+  <!-- → natural_enemy_abundance (n=1, positive) -->
+  <path d="M 260 308 Q 540 410 870 488" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="450" y="430" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- ===== functional_diversity_of_shade_trees (y=345) edges ===== -->
+  <!-- → cocoa_yield (n=4, positive) -->
+  <line x1="260" y1="345" x2="870" y2="360" stroke="#1b7a3a" stroke-width="3" marker-end="url(#arrow-pos)"/>
+  <text x="540" y="345" font-size="10" fill="#1b7a3a" font-weight="bold">+ (n=4)</text>
+
+  <!-- ===== cocoa_variety (y=385) edges ===== -->
+  <!-- → cocoa_yield (n=1, positive) -->
+  <line x1="260" y1="385" x2="870" y2="365" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <text x="540" y="385" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- ===== rainfall_extreme (y=425) edges ===== -->
+  <!-- → cocoa_yield (n=2, negative) -->
+  <line x1="260" y1="425" x2="870" y2="370" stroke="#a8262e" stroke-width="2" marker-end="url(#arrow-neg)"/>
+  <text x="540" y="410" font-size="10" fill="#a8262e">− (n=2)</text>
+
+  <!-- ===== natural_habitat (y=465) edges ===== -->
+  <!-- → pollination_success [mediator] (n=1, positive) -->
+  <line x1="260" y1="465" x2="460" y2="575" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <text x="290" y="525" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- ===== pesticide_input (y=505) edges ===== -->
+  <!-- → pollinator_diversity [mediator] (n=1, negative) -->
+  <line x1="260" y1="505" x2="460" y2="475" stroke="#a8262e" stroke-width="1.5" marker-end="url(#arrow-neg)"/>
+  <text x="300" y="500" font-size="9" fill="#a8262e">− (n=1)</text>
+
+  <!-- ===== MEDIATOR → OUTCOME edges ===== -->
+
+  <!-- cocoa_tree_basal_area (y=168) → pod_count (n=1, positive) -->
+  <line x1="660" y1="168" x2="870" y2="205" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <text x="700" y="180" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- unproductive_cocoa_rate (y=230) → cocoa_yield (n=1, negative) -->
+  <line x1="660" y1="230" x2="870" y2="335" stroke="#a8262e" stroke-width="1.5" marker-end="url(#arrow-neg)"/>
+  <text x="700" y="280" font-size="9" fill="#a8262e">− (n=1)</text>
+
+  <!-- input_cost (y=395) → farmer_net_returns (n=1, indeterminate) -->
+  <line x1="660" y1="395" x2="870" y2="565" stroke="#888" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-mix)"/>
+  <text x="700" y="490" font-size="9" fill="#888">~ (n=1)</text>
+
+  <!-- pollinator_diversity (y=475) → pollination_success (n=2, positive) -->
+  <line x1="660" y1="478" x2="460" y2="575" stroke="#1b7a3a" stroke-width="2" marker-end="url(#arrow-pos)"/>
+  <text x="490" y="525" font-size="10" fill="#1b7a3a">+ (n=2)</text>
+
+  <!-- pollinator_diversity (y=478) → cocoa_yield (n=1, positive) -->
+  <path d="M 660 472 Q 760 380 870 372" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="730" y="425" font-size="9" fill="#1b7a3a">+ (n=1)</text>
+
+  <!-- pollination_success (y=575) → cocoa_yield (n=1, positive, ★) -->
+  <path d="M 660 575 Q 800 480 870 378" stroke="#1b7a3a" stroke-width="2" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="700" y="475" font-size="10" fill="#1b7a3a" font-weight="bold">+ (n=1) ★</text>
+
+  <!-- pollination_success (y=580) → pod_count (n=1, positive, ★) -->
+  <path d="M 660 570 Q 820 400 870 215" stroke="#1b7a3a" stroke-width="2" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="690" y="385" font-size="10" fill="#1b7a3a" font-weight="bold">+ (n=1) ★</text>
+
+  <!-- ============ NODES (drawn on top) ============ -->
+
+  <!-- Left column: predictors -->
+  <g id="predictors">
+    <rect x="40" y="125" width="220" height="36" rx="4" fill="#d8d8d8" stroke="#666"/>
+    <text x="150" y="148" text-anchor="middle" font-size="11">agroforestry_vs_monoculture</text>
+
+    <rect x="40" y="167" width="220" height="36" rx="4" fill="#e0e0e0" stroke="#666"/>
+    <text x="150" y="190" text-anchor="middle" font-size="11">shade_index</text>
+
+    <rect x="40" y="208" width="220" height="36" rx="4" fill="#e0e0e0" stroke="#666"/>
+    <text x="150" y="231" text-anchor="middle" font-size="11">shade_tree_density</text>
+
+    <rect x="40" y="248" width="220" height="36" rx="4" fill="#e8e8e8" stroke="#666"/>
+    <text x="150" y="271" text-anchor="middle" font-size="11">shade_tree_species_richness</text>
+
+    <rect x="40" y="288" width="220" height="36" rx="4" fill="#e8e8e8" stroke="#666"/>
+    <text x="150" y="311" text-anchor="middle" font-size="11">shade_cover_percentage</text>
+
+    <rect x="40" y="328" width="220" height="36" rx="4" fill="#e8e8e8" stroke="#666"/>
+    <text x="150" y="350" text-anchor="middle" font-size="10.5">functional_diversity_of_shade_trees</text>
+
+    <rect x="40" y="368" width="220" height="36" rx="4" fill="#f0f0f0" stroke="#999"/>
+    <text x="150" y="391" text-anchor="middle" font-size="11">cocoa_variety</text>
+
+    <rect x="40" y="408" width="220" height="36" rx="4" fill="#f0f0f0" stroke="#999"/>
+    <text x="150" y="431" text-anchor="middle" font-size="11">rainfall_extreme</text>
+
+    <rect x="40" y="448" width="220" height="36" rx="4" fill="#f0f0f0" stroke="#999"/>
+    <text x="150" y="471" text-anchor="middle" font-size="11">natural_habitat</text>
+
+    <rect x="40" y="488" width="220" height="36" rx="4" fill="#f0f0f0" stroke="#999"/>
+    <text x="150" y="511" text-anchor="middle" font-size="11">pesticide_input</text>
+  </g>
+
+  <!-- Middle column: mediators -->
+  <g id="mediators">
+    <rect x="460" y="150" width="200" height="36" rx="4" fill="#fff3d6" stroke="#a07000"/>
+    <text x="560" y="172" text-anchor="middle" font-size="11">cocoa_tree_basal_area</text>
+
+    <rect x="460" y="212" width="200" height="36" rx="4" fill="#fff3d6" stroke="#a07000"/>
+    <text x="560" y="234" text-anchor="middle" font-size="11">unproductive_cocoa_rate</text>
+
+    <rect x="460" y="377" width="200" height="36" rx="4" fill="#fff3d6" stroke="#a07000"/>
+    <text x="560" y="400" text-anchor="middle" font-size="11">input_cost</text>
+
+    <rect x="460" y="457" width="200" height="36" rx="4" fill="#fff3d6" stroke="#a07000"/>
+    <text x="560" y="480" text-anchor="middle" font-size="11">pollinator_diversity</text>
+
+    <rect x="460" y="557" width="200" height="36" rx="4" fill="#fff3d6" stroke="#a07000"/>
+    <text x="560" y="580" text-anchor="middle" font-size="11">pollination_success</text>
+  </g>
+
+  <!-- Right column: outcomes -->
+  <g id="outcomes">
+    <rect x="870" y="130" width="240" height="36" rx="4" fill="#c9b59e" stroke="#432"/>
+    <text x="990" y="153" text-anchor="middle" font-size="12" font-weight="bold">pod_loss_to_pests</text>
+
+    <rect x="870" y="190" width="240" height="36" rx="4" fill="#c9b59e" stroke="#432"/>
+    <text x="990" y="213" text-anchor="middle" font-size="12" font-weight="bold">pod_count</text>
+
+    <rect x="870" y="320" width="240" height="80" rx="8" fill="#9eb5c9" stroke="#234"/>
+    <text x="990" y="350" text-anchor="middle" font-size="16" font-weight="bold">cocoa_yield</text>
+    <text x="990" y="370" text-anchor="middle" font-size="10" fill="#234">degree: 9 (incoming)</text>
+    <text x="990" y="386" text-anchor="middle" font-size="9" fill="#a07000">★ pollination Intervention evidence</text>
+
+    <rect x="870" y="460" width="240" height="36" rx="4" fill="#c9b59e" stroke="#432"/>
+    <text x="990" y="482" text-anchor="middle" font-size="12" font-weight="bold">natural_enemy_abundance</text>
+
+    <rect x="870" y="545" width="240" height="36" rx="4" fill="#c9b59e" stroke="#432"/>
+    <text x="990" y="567" text-anchor="middle" font-size="12" font-weight="bold">farmer_net_returns</text>
+
+    <rect x="870" y="615" width="240" height="36" rx="4" fill="#c9b59e" stroke="#432"/>
+    <text x="990" y="638" text-anchor="middle" font-size="12" font-weight="bold">carbon_sequestration</text>
+  </g>
+
+  <!-- Disagreement halos -->
+  <!-- agroforestry → cocoa_yield (mid-curve) -->
+  <circle cx="600" cy="290" r="35" fill="none" stroke="#e4c01a" stroke-width="2" stroke-dasharray="3,3" opacity="0.6"/>
+  <text x="600" y="252" text-anchor="middle" font-size="10" fill="#a07000" font-weight="bold">!</text>
+
+  <!-- shade_tree_density → natural_enemy_abundance + cocoa_yield region -->
+  <circle cx="510" cy="345" r="30" fill="none" stroke="#e4c01a" stroke-width="2" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="510" y="307" text-anchor="middle" font-size="10" fill="#a07000" font-weight="bold">!</text>
+
+  <!-- Interpretation note -->
+  <g id="interpretation-note" transform="translate(50, 690)">
+    <rect x="0" y="0" width="1280" height="160" rx="6" fill="#fff8e1" stroke="#a07000"/>
+    <text x="20" y="22" font-size="13" font-weight="bold" fill="#532">Reading the cocoa biodiversity–yield DAG</text>
+    <text x="20" y="46" font-size="11" fill="#333">• The headline trade-off lives on the <tspan font-weight="bold">agroforestry_vs_monoculture → cocoa_yield</tspan> edge (mixed valence, 8 rows). It splits cleanly into yield-magnitude (5 rows, all Negative) vs yield-stability/resilience (3 rows, all Positive).</text>
+    <text x="20" y="66" font-size="11" fill="#333">• Same predictor → <tspan font-weight="bold">natural_enemy_abundance</tspan> is unanimously Positive (n=6). Cocoa agroforestry costs yield magnitude but supports the broader biodiversity / ecosystem-services bundle.</text>
+    <text x="20" y="86" font-size="11" fill="#333">• <tspan font-weight="bold">functional_diversity_of_shade_trees → cocoa_yield</tspan> is Positive (n=4) — a key nuance: total shade is penalising, but selecting the right shade-tree species can recover yield.</text>
+    <text x="20" y="106" font-size="11" fill="#333">• ★ marks the two Intervention-level rows: Toledo-Hernández hand-pollination (pollination_success → cocoa_yield, +51%-+161%) and Besse 1972 shade removal (lumped into agroforestry_vs_monoculture → cocoa_yield).</text>
+    <text x="20" y="126" font-size="11" fill="#333">• <tspan font-weight="bold">Disagreement flags</tspan> on shade_tree_density edges reflect the native-vs-exotic stratification in Bisseleua 2013 — a vocabulary artefact, not a substantive conflict.</text>
+    <text x="20" y="146" font-size="11" fill="#333">• Mediator chains visible: shade_tree_density → unproductive_cocoa_rate → cocoa_yield (Jagoret 2017); shade_index → input_cost → farmer_net_returns; pollinator_diversity → pollination_success → cocoa_yield (Abah 2025 + Kongor 2024 citing Toledo-Hernández).</text>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 880)">
+    <rect x="0" y="0" width="350" height="160" fill="#fafafa" stroke="#ccc"/>
+    <text x="175" y="22" text-anchor="middle" font-size="13" font-weight="bold">Legend</text>
+    <line x1="20" y1="44" x2="60" y2="44" stroke="#1b7a3a" stroke-width="3" marker-end="url(#arrow-pos)"/>
+    <text x="70" y="48" font-size="11">Positive valence</text>
+    <line x1="20" y1="66" x2="60" y2="66" stroke="#a8262e" stroke-width="3" marker-end="url(#arrow-neg)"/>
+    <text x="70" y="70" font-size="11">Negative valence</text>
+    <line x1="20" y1="88" x2="60" y2="88" stroke="#888" stroke-width="3" stroke-dasharray="5,3" marker-end="url(#arrow-mix)"/>
+    <text x="70" y="92" font-size="11">Mixed / indeterminate</text>
+    <text x="20" y="115" font-size="11">! = disagreement_flag</text>
+    <text x="20" y="132" font-size="11">★ = ≥1 Intervention-level row in edge</text>
+    <text x="20" y="149" font-size="11">Thickness ∝ n_rows (1.5 = n=1, 5 = n=8)</text>
+  </g>
+
+  <!-- Corpus summary -->
+  <g id="corpus-summary" transform="translate(440, 880)">
+    <rect x="0" y="0" width="430" height="160" fill="#fafafa" stroke="#ccc"/>
+    <text x="215" y="22" text-anchor="middle" font-size="13" font-weight="bold">Corpus composition</text>
+    <text x="20" y="46" font-size="11">8 papers · 57 extracted rows · 31 edges · 21 nodes</text>
+    <text x="20" y="66" font-size="11">Primary data: bisseleua2013 (Cameroon), jagoret2017 (Cameroon),</text>
+    <text x="20" y="82" font-size="11">avadi2023 (Ecuador), saj2015 (Cameroon, abstract only)</text>
+    <text x="20" y="102" font-size="11">Reviews: abah2025 (Nigeria pollination), kongor2024 (challenges)</text>
+    <text x="20" y="122" font-size="11">Design/qualitative: schneider2010 (Bolivia, baseline only),</text>
+    <text x="20" y="138" font-size="11">setyowati2025 (Indonesia, n=5 qualitative)</text>
+    <text x="20" y="155" font-size="10" fill="#666" font-style="italic">19/31 edges include ≥1 cited-from-prior-work row.</text>
+  </g>
+
+  <!-- Inference-level summary -->
+  <g id="inference-summary" transform="translate(910, 880)">
+    <rect x="0" y="0" width="420" height="160" fill="#fafafa" stroke="#ccc"/>
+    <text x="210" y="22" text-anchor="middle" font-size="13" font-weight="bold">Causal-inference level</text>
+    <text x="20" y="46" font-size="11">★ Intervention (2 rows): pollination → yield (Toledo-Hernández,</text>
+    <text x="20" y="62" font-size="11">+51%-+161%); shade removal → yield (Besse 1972, +253%)</text>
+    <text x="20" y="84" font-size="11">Controlled comparison (3 rows): Lachenaud 1985 monocrop vs</text>
+    <text x="20" y="100" font-size="11">agroforest; Kongor 2024 cited; agroforestry → pod_count</text>
+    <text x="20" y="122" font-size="11">Association (49 rows): all remaining; observational/regression</text>
+    <text x="20" y="144" font-size="11" fill="#a07000" font-weight="bold">No primary cocoa-agroforestry vs monoculture RCT in this corpus.</text>
+  </g>
+</svg>

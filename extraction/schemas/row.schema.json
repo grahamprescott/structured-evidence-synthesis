@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/grahamprescott/structured-evidence-synthesis/blob/main/extraction/schemas/row.schema.json",
+  "title": "SAES extraction row",
+  "description": "One directional relationship between two variables, extracted from one paper. Implements ontology specification v0.1.2. Every coded field is paired with the verbatim text it was derived from.",
+  "type": "object",
+  "required": [
+    "paper_id",
+    "paper_section",
+    "version",
+    "subject_raw",
+    "subject_code",
+    "subject_trend_only",
+    "rel_exists",
+    "rel_direction",
+    "rel_valence",
+    "source_locus",
+    "method_type",
+    "causal_inference_level"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "paper_id": {
+      "type": "string",
+      "description": "A1. Unique identifier for the source paper (DOI or OpenAlex ID). Must match the include set from screening_decisions.csv."
+    },
+    "paper_section": {
+      "type": "string",
+      "description": "A2. Section of the paper where the relationship was found.",
+      "enum": ["Abstract", "Introduction", "Methods", "Results", "Discussion"]
+    },
+    "version": {
+      "type": "string",
+      "description": "A3. Version of the extraction protocol used.",
+      "examples": ["v0.2.0-alpha"]
+    },
+
+    "subject_raw": {
+      "type": "string",
+      "description": "B1. Exact phrase from the paper describing the subject. Verbatim, in double quotes."
+    },
+    "subject_code": {
+      "type": "string",
+      "description": "B2. Standardised term from the controlled vocabulary. If no vocabulary is provided, the most precise consistent term derivable from the text. Suspect codes flagged with [UNVERIFIED]."
+    },
+    "subject_trend_only": {
+      "type": "string",
+      "description": "B3. Yes if the subject's trajectory is described but no relationship to an object is asserted. When Yes, object_raw and object_code are left empty.",
+      "enum": ["Yes", "No"]
+    },
+
+    "object_raw": {
+      "type": ["string", "null"],
+      "description": "C1. Exact phrase from the paper describing the object. Empty if subject_trend_only=Yes."
+    },
+    "object_code": {
+      "type": ["string", "null"],
+      "description": "C2. Standardised term from the controlled vocabulary. Empty if subject_trend_only=Yes."
+    },
+
+    "rel_raw": {
+      "type": ["string", "null"],
+      "description": "D1. Exact phrase describing the relationship between subject and object."
+    },
+    "rel_exists": {
+      "type": "string",
+      "description": "D2. Does the paper claim a relationship exists?",
+      "enum": ["Yes", "No", "Uncertain"]
+    },
+    "rel_direction": {
+      "type": "string",
+      "description": "D3. Direction of the claimed relationship.",
+      "enum": [
+        "Subject→Object",
+        "Object→Subject",
+        "Bidirectional",
+        "Non-directional",
+        "Indeterminate"
+      ]
+    },
+    "rel_valence": {
+      "type": "string",
+      "description": "D4. Sign of the effect (does the subject increase or decrease the object?).",
+      "enum": ["Positive", "Negative", "Non-linear", "Indeterminate"]
+    },
+    "rel_conditionality_raw": {
+      "type": ["string", "null"],
+      "description": "D5. Any stated conditions under which the relationship holds."
+    },
+    "rel_conditionality_code": {
+      "type": ["string", "null"],
+      "description": "D6. Coded moderating condition type.",
+      "enum": [
+        "Temporal",
+        "Spatial",
+        "Population-specific",
+        "Technology-specific",
+        "Unconditional",
+        null
+      ]
+    },
+    "rel_uncertainty_raw": {
+      "type": ["string", "null"],
+      "description": "D7. Hedging language used by the authors."
+    },
+    "rel_uncertainty_code": {
+      "type": ["string", "null"],
+      "description": "D8. Coded certainty level expressed by the authors.",
+      "enum": ["Asserted", "Probable", "Possible", "Speculative", null]
+    },
+    "rel_exists_note": {
+      "type": ["string", "null"],
+      "description": "D9. Flags unusual negation or existence edge cases. Prefix audit flags with [FLAG]."
+    },
+
+    "effect_raw": {
+      "type": ["string", "null"],
+      "description": "E1. Exact phrase reporting effect size or magnitude."
+    },
+    "effect_metric": {
+      "type": ["string", "null"],
+      "description": "E2. Statistical metric used, if any (e.g. odds ratio, beta coefficient, % change, narrative only)."
+    },
+    "effect_magnitude": {
+      "type": ["string", "number", "null"],
+      "description": "E3. Numeric value if reported; otherwise a qualitative descriptor or \"not reported\"."
+    },
+    "effect_error_metric": {
+      "type": ["string", "null"],
+      "description": "E4. Error metric used, if any (e.g. standard error, confidence interval)."
+    },
+    "effect_error_magnitude": {
+      "type": ["string", "number", "null"],
+      "description": "E5. Numeric value if reported; otherwise a qualitative descriptor or \"not reported\"."
+    },
+
+    "source_locus": {
+      "type": "string",
+      "description": "F1. Is this relationship original to this paper or cited from elsewhere?",
+      "enum": [
+        "Original to this study",
+        "Cited from prior work",
+        "Synthesised from multiple sources"
+      ]
+    },
+    "source_citation_raw": {
+      "type": ["string", "null"],
+      "description": "F2. Citation used if the claim is attributed elsewhere (required if source_locus != \"Original to this study\")."
+    },
+
+    "method_raw": {
+      "type": ["string", "null"],
+      "description": "G1. Methodological language used by the authors."
+    },
+    "method_type": {
+      "type": "string",
+      "description": "G2. Coded method category.",
+      "enum": [
+        "Observation",
+        "Experiment",
+        "Statistical modelling",
+        "Simulation",
+        "Review",
+        "Expert elicitation"
+      ]
+    },
+    "causal_inference_level": {
+      "type": "string",
+      "description": "G3. Maximum level of causal inference the method supports.",
+      "enum": [
+        "Association",
+        "Controlled comparison",
+        "Intervention",
+        "Counterfactual"
+      ]
+    },
+
+    "geographic_scope_raw": {
+      "type": ["string", "null"],
+      "description": "H1. Location or geographic context as stated in the paper."
+    },
+    "geographic_scope_code": {
+      "type": ["string", "null"],
+      "description": "H2. Standardised geographic classification.",
+      "enum": ["Country", "Region", "Biome", "Global", null]
+    },
+    "temporal_scope_raw": {
+      "type": ["string", "null"],
+      "description": "H3. Time period or temporal context as stated in the paper."
+    },
+    "temporal_scope_code": {
+      "type": ["string", "null"],
+      "description": "H4. Standardised temporal classification (e.g. snapshot, multi-year, decadal, multi-decadal)."
+    },
+    "population_raw": {
+      "type": ["string", "null"],
+      "description": "H5. Population or system unit of study as stated in the paper."
+    },
+    "population_code": {
+      "type": ["string", "null"],
+      "description": "H6. Coded population or system type.",
+      "enum": [
+        "Human",
+        "Freshwater ecosystem",
+        "Terrestrial ecosystem",
+        "Mixed",
+        null
+      ]
+    }
+  },
+
+  "allOf": [
+    {
+      "if": { "properties": { "subject_trend_only": { "const": "Yes" } } },
+      "then": {
+        "properties": {
+          "object_raw": { "type": "null" },
+          "object_code": { "type": "null" }
+        }
+      },
+      "else": {
+        "required": ["object_raw", "object_code"]
+      }
+    },
+    {
+      "if": {
+        "not": {
+          "properties": {
+            "source_locus": { "const": "Original to this study" }
+          }
+        }
+      },
+      "then": {
+        "required": ["source_citation_raw"]
+      }
+    }
+  ]
+}

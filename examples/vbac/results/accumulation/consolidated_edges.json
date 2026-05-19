@@ -1,0 +1,645 @@
+[
+  {
+    "edge_id": "prior_vaginal_birth__vbac_success",
+    "subject_code": "prior_vaginal_birth",
+    "object_code": "vbac_success",
+    "n_rows": 9,
+    "valence_distribution": { "positive": 8, "negative": 0, "non_linear": 0, "indeterminate": 1 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 9, "valence": { "positive": 8, "indeterminate": 1 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 8, "valence": { "positive": 7, "indeterminate": 1 } },
+        "Review": { "n": 1, "valence": { "positive": 1 } }
+      },
+      "by_population_code": {
+        "Human": { "n": 9, "valence": { "positive": 8, "indeterminate": 1 } }
+      },
+      "by_geographic_scope_code": {
+        "Country": { "n": 9, "valence": { "positive": 8, "indeterminate": 1 } }
+      }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
+        "n": 7,
+        "metric": "odds ratio",
+        "central_tendency_median": 3.9,
+        "spread_range": "2.0-5.1 (single-study point estimates range from non-significant 1.0 in bhide2016 to 5.1 in gonen2004 and 4.94 in lazarou2021)",
+        "note": "Within-stratum pooling; not an overall effect."
+      }
+    ],
+    "provenance_row_ids": [
+      "gonen2004:r6", "hollard2006:r16", "obeidat2013:r2-via-SVD", "olagbuji2010:r2",
+      "bhide2016:r4", "knight2013:r17-cited", "ashwal2015:r2", "girma2021:r3",
+      "chaillet2013:r3", "lazarou2021:r2"
+    ],
+    "top_contributing_paper": "lazarou2021",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "prior_successful_vbac__vbac_success",
+    "subject_code": "prior_successful_vbac",
+    "object_code": "vbac_success",
+    "n_rows": 6,
+    "valence_distribution": { "positive": 6, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 6, "valence": { "positive": 6 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 6, "valence": { "positive": 6 } }
+      },
+      "by_population_code": { "Human": { "n": 6, "valence": { "positive": 6 } } },
+      "by_geographic_scope_code": { "Country": { "n": 6, "valence": { "positive": 6 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
+        "n": 6,
+        "metric": "odds ratio",
+        "central_tendency_median": 3.8,
+        "spread_range": "2.0-10.45 (girma2021 OR 2.0; obeidat2013 OR 3.8; lazarou2021 OR 4.93; gonen2004 OR 10.45 univariate)",
+        "note": "Within-stratum pooling; not an overall effect."
+      }
+    ],
+    "provenance_row_ids": [
+      "obeidat2013:r2", "ashwal2015:r1", "knight2013:via-chaillet-coef", "girma2021:r2",
+      "lazarou2021:r3", "chaillet2013:r4", "gonen2004:univariate"
+    ],
+    "top_contributing_paper": "ashwal2015",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "prior_caesarean_indication_recurring__vbac_success",
+    "subject_code": "prior_caesarean_indication_recurring",
+    "object_code": "vbac_success",
+    "n_rows": 11,
+    "valence_distribution": { "positive": 0, "negative": 9, "non_linear": 0, "indeterminate": 2 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 11, "valence": { "negative": 9, "indeterminate": 2 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 10, "valence": { "negative": 8, "indeterminate": 2 } },
+        "Review": { "n": 1, "valence": { "negative": 1 } }
+      },
+      "by_population_code": { "Human": { "n": 11, "valence": { "negative": 9, "indeterminate": 2 } } },
+      "by_geographic_scope_code": { "Country": { "n": 11, "valence": { "negative": 9, "indeterminate": 2 } } }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
+        "n": 6,
+        "metric": "odds ratio",
+        "central_tendency_median": 0.52,
+        "spread_range": "0.32-6.39 (different reference frames: olagbuji2010 OR 0.32 for non-recurrent vs recurrent; ashwal2015 OR 0.52; bhide2016 OR 6.39 for failure given prior FTP)",
+        "note": "Within-stratum pooling; not an overall effect. Direction reconciled: recurring → lower success."
+      }
+    ],
+    "provenance_row_ids": [
+      "obeidat2013:r7-NS", "olagbuji2010:r1", "bhide2016:r3", "ashwal2015:r5",
+      "knight2013:r5-and-r6", "seffah2014:r10-r11", "girma2021:r1",
+      "lazarou2021:r5", "konheim-kalkstein2017:r4", "chaillet2013:r5"
+    ],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "prior_caesarean_indication_non_recurring__vbac_success",
+    "subject_code": "prior_caesarean_indication_non_recurring",
+    "object_code": "vbac_success",
+    "n_rows": 4,
+    "valence_distribution": { "positive": 4, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 4, "valence": { "positive": 4 } } },
+      "by_method_type": { "Statistical modelling": { "n": 4, "valence": { "positive": 4 } } },
+      "by_population_code": { "Human": { "n": 4, "valence": { "positive": 4 } } },
+      "by_geographic_scope_code": { "Country": { "n": 4, "valence": { "positive": 4 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
+        "n": 4,
+        "metric": "odds ratio",
+        "central_tendency_median": 5.2,
+        "spread_range": "2.5-7.4 (gonen2004 abnormal presentation OR 7.4; gonen2004 NRFHR OR 2.5; lazarou2021 breech: 67% VBAC vs 51.6% reference)",
+        "note": "Within-stratum pooling; not an overall effect."
+      }
+    ],
+    "provenance_row_ids": ["gonen2004:r1", "gonen2004:r7", "olagbuji2010:r1-inverse", "lazarou2021:r6"],
+    "top_contributing_paper": "gonen2004",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "maternal_age__vbac_success",
+    "subject_code": "maternal_age",
+    "object_code": "vbac_success",
+    "n_rows": 9,
+    "valence_distribution": { "positive": 0, "negative": 6, "non_linear": 0, "indeterminate": 3 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 9, "valence": { "negative": 6, "indeterminate": 3 } } },
+      "by_method_type": { "Statistical modelling": { "n": 9, "valence": { "negative": 6, "indeterminate": 3 } } },
+      "by_population_code": { "Human": { "n": 9, "valence": { "negative": 6, "indeterminate": 3 } } },
+      "by_geographic_scope_code": { "Country": { "n": 9, "valence": { "negative": 6, "indeterminate": 3 } } }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
+        "n": 4,
+        "metric": "odds ratio per year",
+        "central_tendency_median": 0.93,
+        "spread_range": "0.79-0.98 (knight2013 OR 0.79 for >34; ashwal2015 OR 0.98; lazarou2021 OR 0.925)",
+        "note": "Within-stratum pooling; not an overall effect."
+      }
+    ],
+    "provenance_row_ids": [
+      "gonen2004:r18-NS", "hollard2006:r8-NS", "knight2013:r1-and-r2", "obeidat2013:r5-NS-inverse",
+      "olagbuji2010:r3-NS", "bhide2016:univariate-NS", "ashwal2015:r6-NS", "lazarou2021:r1",
+      "seffah2014:r4", "chaillet2013:r1"
+    ],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "ethnicity__vbac_success",
+    "subject_code": "ethnicity",
+    "object_code": "vbac_success",
+    "n_rows": 6,
+    "valence_distribution": { "positive": 0, "negative": 6, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 6, "valence": { "negative": 6 } } },
+      "by_method_type": { "Statistical modelling": { "n": 6, "valence": { "negative": 6 } } },
+      "by_population_code": { "Human": { "n": 6, "valence": { "negative": 6 } } },
+      "by_geographic_scope_code": { "Country": { "n": 6, "valence": { "negative": 6 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
+        "n": 6,
+        "metric": "adjusted odds ratio vs white reference",
+        "central_tendency_median": 0.62,
+        "spread_range": "0.37-0.76 (knight2013 Black 0.54; hollard2006 AA 0.37, Hispanic 0.63; knight2013 Asian 0.76; bhide2016 OR-for-failure inverted: Asian success~0.63, African success~0.56)",
+        "note": "Within-stratum pooling; not an overall effect. All Black/African/Hispanic/Asian compared to White; consistent direction."
+      }
+    ],
+    "provenance_row_ids": [
+      "hollard2006:r1", "hollard2006:r2", "knight2013:r3", "knight2013:r4",
+      "bhide2016:r1", "bhide2016:r2"
+    ],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2006-2016"
+  },
+  {
+    "edge_id": "induction_of_labour__vbac_success",
+    "subject_code": "induction_of_labour",
+    "object_code": "vbac_success",
+    "n_rows": 7,
+    "valence_distribution": { "positive": 0, "negative": 5, "non_linear": 0, "indeterminate": 2 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 7, "valence": { "negative": 5, "indeterminate": 2 } } },
+      "by_method_type": { "Statistical modelling": { "n": 7, "valence": { "negative": 5, "indeterminate": 2 } } },
+      "by_population_code": { "Human": { "n": 7, "valence": { "negative": 5, "indeterminate": 2 } } },
+      "by_geographic_scope_code": { "Country": { "n": 7, "valence": { "negative": 5, "indeterminate": 2 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
+        "n": 4,
+        "metric": "odds ratio",
+        "central_tendency_median": 0.62,
+        "spread_range": "0.59-0.70 (knight2013 failed-IOL OR 0.59; ashwal2015 OR 0.62; hollard2006 OR 0.70; bhide2016 univariate similar)",
+        "note": "Within-stratum pooling; not an overall effect."
+      }
+    ],
+    "provenance_row_ids": [
+      "hollard2006:r4", "knight2013:r6", "obeidat2013:r8-NS", "bhide2016:r6",
+      "ashwal2015:r3", "gonen2004:r17-NS", "chaillet2013:r6"
+    ],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "macrosomia__vbac_success",
+    "subject_code": "macrosomia",
+    "object_code": "vbac_success",
+    "n_rows": 9,
+    "valence_distribution": { "positive": 0, "negative": 7, "non_linear": 0, "indeterminate": 2 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 9, "valence": { "negative": 7, "indeterminate": 2 } } },
+      "by_method_type": {
+        "Statistical modelling": { "n": 8, "valence": { "negative": 6, "indeterminate": 2 } },
+        "Review": { "n": 1, "valence": { "negative": 1 } }
+      },
+      "by_population_code": { "Human": { "n": 9, "valence": { "negative": 7, "indeterminate": 2 } } },
+      "by_geographic_scope_code": { "Country": { "n": 9, "valence": { "negative": 7, "indeterminate": 2 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association (current birth weight >4000g)",
+        "n": 5,
+        "metric": "odds ratio for VBAC success",
+        "central_tendency_median": 0.56,
+        "spread_range": "0.50-0.64 (knight2013 0.50; hollard2006 0.64; girma2021/Wu2019 meta 0.56; bhide2016 univariate similar; seffah2014 ~0.25 inverse mapping)",
+        "note": "Within-stratum pooling; not an overall effect."
+      }
+    ],
+    "provenance_row_ids": [
+      "hollard2006:r6", "knight2013:r12", "bhide2016:r7", "ashwal2015:r7", "ashwal2015:r8",
+      "seffah2014:r1", "seffah2014:r2", "seffah2014:r3", "girma2021:r8-cited", "obeidat2013:r6-NS",
+      "gonen2004:r9-via-EFW"
+    ],
+    "top_contributing_paper": "seffah2014",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "maternal_bmi__vbac_success",
+    "subject_code": "maternal_bmi",
+    "object_code": "vbac_success",
+    "n_rows": 4,
+    "valence_distribution": { "positive": 0, "negative": 4, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 4, "valence": { "negative": 4 } } },
+      "by_method_type": {
+        "Statistical modelling": { "n": 3, "valence": { "negative": 3 } },
+        "Review": { "n": 1, "valence": { "negative": 1 } }
+      },
+      "by_population_code": { "Human": { "n": 4, "valence": { "negative": 4 } } },
+      "by_geographic_scope_code": { "Country": { "n": 4, "valence": { "negative": 4 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": [
+      "bhide2016:r5", "lazarou2021:r4", "chaillet2013:r2", "seffah2014:r11-cited",
+      "konheim-kalkstein2017:r7-high-risk-cited"
+    ],
+    "top_contributing_paper": "lazarou2021",
+    "date_range_of_papers": "2013-2021"
+  },
+  {
+    "edge_id": "inter_delivery_interval__vbac_success",
+    "subject_code": "inter_delivery_interval",
+    "object_code": "vbac_success",
+    "n_rows": 4,
+    "valence_distribution": { "positive": 1, "negative": 2, "non_linear": 0, "indeterminate": 1 },
+    "modal_valence": "mixed",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 4, "valence": { "positive": 1, "negative": 2, "indeterminate": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 4, "valence": { "positive": 1, "negative": 2, "indeterminate": 1 } } },
+      "by_population_code": { "Human": { "n": 4, "valence": { "positive": 1, "negative": 2, "indeterminate": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 4, "valence": { "positive": 1, "negative": 2, "indeterminate": 1 } } }
+    },
+    "disagreement_flag": true,
+    "provenance_row_ids": [
+      "knight2013:r13", "obeidat2013:r4", "ashwal2015:r4", "lazarou2021:r8-NS"
+    ],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2013-2021"
+  },
+  {
+    "edge_id": "parity__vbac_success",
+    "subject_code": "parity",
+    "object_code": "vbac_success",
+    "n_rows": 4,
+    "valence_distribution": { "positive": 3, "negative": 0, "non_linear": 0, "indeterminate": 1 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 4, "valence": { "positive": 3, "indeterminate": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 4, "valence": { "positive": 3, "indeterminate": 1 } } },
+      "by_population_code": { "Human": { "n": 4, "valence": { "positive": 3, "indeterminate": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 4, "valence": { "positive": 3, "indeterminate": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": [
+      "hollard2006:r3", "obeidat2013:r1", "seffah2014:r5", "girma2021:r6-NS"
+    ],
+    "top_contributing_paper": "hollard2006",
+    "date_range_of_papers": "2006-2021"
+  },
+  {
+    "edge_id": "epidural_analgesia__vbac_success",
+    "subject_code": "epidural_analgesia",
+    "object_code": "vbac_success",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 0, "negative": 2, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 2, "valence": { "negative": 2 } } },
+      "by_method_type": { "Statistical modelling": { "n": 2, "valence": { "negative": 2 } } },
+      "by_population_code": { "Human": { "n": 2, "valence": { "negative": 2 } } },
+      "by_geographic_scope_code": { "Country": { "n": 2, "valence": { "negative": 2 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["gonen2004:r14", "hollard2006:r5"],
+    "top_contributing_paper": "gonen2004",
+    "date_range_of_papers": "2004-2006"
+  },
+  {
+    "edge_id": "cervical_dilation_at_admission__vbac_success",
+    "subject_code": "cervical_dilation_at_admission",
+    "object_code": "vbac_success",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 2, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 2, "valence": { "positive": 2 } } },
+      "by_method_type": { "Statistical modelling": { "n": 2, "valence": { "positive": 2 } } },
+      "by_population_code": { "Human": { "n": 2, "valence": { "positive": 2 } } },
+      "by_geographic_scope_code": { "Country": { "n": 2, "valence": { "positive": 2 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["gonen2004:r4", "girma2021:r4"],
+    "top_contributing_paper": "gonen2004",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "gestational_age__vbac_success",
+    "subject_code": "gestational_age",
+    "object_code": "vbac_success",
+    "n_rows": 3,
+    "valence_distribution": { "positive": 0, "negative": 3, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 3, "valence": { "negative": 3 } } },
+      "by_method_type": { "Statistical modelling": { "n": 3, "valence": { "negative": 3 } } },
+      "by_population_code": { "Human": { "n": 3, "valence": { "negative": 3 } } },
+      "by_geographic_scope_code": { "Country": { "n": 3, "valence": { "negative": 3 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["gonen2004:r3", "seffah2014:r7", "chaillet2013:r8-cited"],
+    "top_contributing_paper": "seffah2014",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "preeclampsia__vbac_success",
+    "subject_code": "preeclampsia",
+    "object_code": "vbac_success",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 1 },
+    "modal_valence": "mixed",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 2, "valence": { "negative": 1, "indeterminate": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 2, "valence": { "negative": 1, "indeterminate": 1 } } },
+      "by_population_code": { "Human": { "n": 2, "valence": { "negative": 1, "indeterminate": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 2, "valence": { "negative": 1, "indeterminate": 1 } } }
+    },
+    "disagreement_flag": true,
+    "provenance_row_ids": ["hollard2006:r10-NS", "knight2013:r10"],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2006-2013"
+  },
+  {
+    "edge_id": "gestational_diabetes__vbac_success",
+    "subject_code": "gestational_diabetes",
+    "object_code": "vbac_success",
+    "n_rows": 3,
+    "valence_distribution": { "positive": 0, "negative": 2, "non_linear": 0, "indeterminate": 1 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 3, "valence": { "negative": 2, "indeterminate": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 3, "valence": { "negative": 2, "indeterminate": 1 } } },
+      "by_population_code": { "Human": { "n": 3, "valence": { "negative": 2, "indeterminate": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 3, "valence": { "negative": 2, "indeterminate": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["hollard2006:r9-NS", "knight2013:r7-and-r9", "bhide2016:r9"],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2006-2016"
+  },
+  {
+    "edge_id": "socioeconomic_status__vbac_success",
+    "subject_code": "socioeconomic_status",
+    "object_code": "vbac_success",
+    "n_rows": 3,
+    "valence_distribution": { "positive": 2, "negative": 0, "non_linear": 0, "indeterminate": 1 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 3, "valence": { "positive": 2, "indeterminate": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 3, "valence": { "positive": 2, "indeterminate": 1 } } },
+      "by_population_code": { "Human": { "n": 3, "valence": { "positive": 2, "indeterminate": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 3, "valence": { "positive": 2, "indeterminate": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["hollard2006:r7", "hollard2006:r17-cited", "knight2013:r13-NS-success"],
+    "top_contributing_paper": "hollard2006",
+    "date_range_of_papers": "2006-2013"
+  },
+  {
+    "edge_id": "tolac_failure__maternal_morbidity",
+    "subject_code": "tolac_failure",
+    "object_code": "maternal_morbidity",
+    "n_rows": 5,
+    "valence_distribution": { "positive": 5, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 1, "valence": { "positive": 1 } },
+        "Controlled comparison": { "n": 4, "valence": { "positive": 4 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 3, "valence": { "positive": 3 } },
+        "Observation": { "n": 1, "valence": { "positive": 1 } },
+        "Review": { "n": 1, "valence": { "positive": 1 } }
+      },
+      "by_population_code": { "Human": { "n": 5, "valence": { "positive": 5 } } },
+      "by_geographic_scope_code": { "Country": { "n": 5, "valence": { "positive": 5 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": [
+      "gonen2004:r21-cited", "hollard2006:r13-cited", "knight2013:r16-cited",
+      "ashwal2015:r11-cited", "bhide2016:r11-cited"
+    ],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2004-2016"
+  },
+  {
+    "edge_id": "tolac_failure__uterine_rupture",
+    "subject_code": "tolac_failure",
+    "object_code": "uterine_rupture",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 2, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "positive": 2 } }
+      },
+      "by_method_type": {
+        "Observation": { "n": 1, "valence": { "positive": 1 } },
+        "Statistical modelling": { "n": 1, "valence": { "positive": 1 } }
+      },
+      "by_population_code": { "Human": { "n": 2, "valence": { "positive": 2 } } },
+      "by_geographic_scope_code": { "Country": { "n": 2, "valence": { "positive": 2 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["ashwal2015:r9", "obeidat2013:r13-cited"],
+    "top_contributing_paper": "ashwal2015",
+    "date_range_of_papers": "2013-2015"
+  },
+  {
+    "edge_id": "oxytocin_use__uterine_rupture",
+    "subject_code": "oxytocin_use",
+    "object_code": "uterine_rupture",
+    "n_rows": 3,
+    "valence_distribution": { "positive": 3, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "positive": 2 } },
+        "Controlled comparison": { "n": 1, "valence": { "positive": 1 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 2, "valence": { "positive": 2 } },
+        "Review": { "n": 1, "valence": { "positive": 1 } }
+      },
+      "by_population_code": { "Human": { "n": 3, "valence": { "positive": 3 } } },
+      "by_geographic_scope_code": { "Country": { "n": 3, "valence": { "positive": 3 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["gonen2004:r20-cited", "knight2013:r15-cited", "lazarou2021:r11-cited-prostaglandin"],
+    "top_contributing_paper": "lazarou2021",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "labour_augmentation__vbac_success",
+    "subject_code": "labour_augmentation",
+    "object_code": "vbac_success",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } },
+      "by_population_code": { "Human": { "n": 1, "valence": { "negative": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["gonen2004:r15"],
+    "top_contributing_paper": "gonen2004",
+    "date_range_of_papers": "2004-2004"
+  },
+  {
+    "edge_id": "station_at_admission__vbac_success",
+    "subject_code": "station_at_admission",
+    "object_code": "vbac_success",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } },
+      "by_population_code": { "Human": { "n": 1, "valence": { "positive": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["gonen2004:r12"],
+    "top_contributing_paper": "gonen2004",
+    "date_range_of_papers": "2004-2004"
+  },
+  {
+    "edge_id": "cervical_dilation_at_prior_cs__vbac_success",
+    "subject_code": "cervical_dilation_at_prior_cs",
+    "object_code": "vbac_success",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } },
+      "by_population_code": { "Human": { "n": 1, "valence": { "positive": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["obeidat2013:r3"],
+    "top_contributing_paper": "obeidat2013",
+    "date_range_of_papers": "2013-2013"
+  },
+  {
+    "edge_id": "premature_rupture_of_membranes__vbac_success",
+    "subject_code": "premature_rupture_of_membranes",
+    "object_code": "vbac_success",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } },
+      "by_population_code": { "Human": { "n": 1, "valence": { "negative": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["knight2013:r11"],
+    "top_contributing_paper": "knight2013",
+    "date_range_of_papers": "2013-2013"
+  },
+  {
+    "edge_id": "duration_first_stage__vbac_success",
+    "subject_code": "duration_first_stage",
+    "object_code": "vbac_success",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 0, "negative": 2, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 2, "valence": { "negative": 2 } } },
+      "by_method_type": { "Statistical modelling": { "n": 2, "valence": { "negative": 2 } } },
+      "by_population_code": { "Human": { "n": 2, "valence": { "negative": 2 } } },
+      "by_geographic_scope_code": { "Country": { "n": 2, "valence": { "negative": 2 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["gonen2004:r16", "girma2021:r5"],
+    "top_contributing_paper": "gonen2004",
+    "date_range_of_papers": "2004-2021"
+  },
+  {
+    "edge_id": "ethnicity__duration_first_stage",
+    "subject_code": "ethnicity",
+    "object_code": "duration_first_stage",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } },
+      "by_population_code": { "Human": { "n": 1, "valence": { "positive": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["hollard2006:r12-cited-hopkins"],
+    "top_contributing_paper": "hollard2006",
+    "date_range_of_papers": "2006-2006"
+  },
+  {
+    "edge_id": "uterine_scar_thickness__uterine_rupture",
+    "subject_code": "uterine_scar_thickness",
+    "object_code": "uterine_rupture",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } },
+      "by_population_code": { "Human": { "n": 1, "valence": { "negative": 1 } } },
+      "by_geographic_scope_code": { "Country": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "provenance_row_ids": ["lazarou2021:intro-cited-Kok"],
+    "top_contributing_paper": "lazarou2021",
+    "date_range_of_papers": "2021-2021"
+  }
+]

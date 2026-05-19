@@ -1,0 +1,872 @@
+[
+  {
+    "edge_id": "agroforestry_vs_monoculture__cocoa_yield",
+    "subject_code": "agroforestry_vs_monoculture",
+    "object_code": "cocoa_yield",
+    "n_rows": 8,
+    "valence_distribution": { "positive": 3, "negative": 5, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "mixed",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Intervention": { "n": 1, "valence": { "negative": 1 } },
+        "Controlled comparison": { "n": 2, "valence": { "negative": 2 } },
+        "Association": { "n": 5, "valence": { "negative": 2, "positive": 3 } }
+      },
+      "by_method_type": {
+        "Experiment": { "n": 2, "valence": { "negative": 2 } },
+        "Statistical modelling": { "n": 4, "valence": { "negative": 3, "positive": 1 } },
+        "Observation": { "n": 1, "valence": { "negative": 1 } },
+        "Review": { "n": 1, "valence": { "positive": 1 } }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": { "n": 8, "valence": { "negative": 5, "positive": 3 } }
+      },
+      "by_geographic_scope_code": {
+        "Country": { "n": 7, "valence": { "negative": 5, "positive": 2 } },
+        "Region": { "n": 1, "valence": { "positive": 1 } }
+      },
+      "by_outcome_facet": {
+        "yield_magnitude": { "n": 5, "valence": { "negative": 5 } },
+        "yield_stability_or_resilience": { "n": 2, "valence": { "positive": 2 } },
+        "yield_under_diverse_tree_selection": { "n": 1, "valence": { "positive": 1 } }
+      }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Experiment; causal_inference_level=Intervention or Controlled comparison; cited classical trials",
+        "n": 2,
+        "metric": "percent yield increase after shade removal or in monocrop",
+        "central_tendency_median": 250.0,
+        "spread_range": "247% (Lachenaud & Mossu 1985 monocrop vs agroforest) to 253% (Besse 1972 shade-removal 5-year trial)",
+        "note": "Cited from prior work; magnitudes reflect per-tree yield, not per-hectare. Direction unambiguous (monoculture > agroforestry on yield-magnitude)."
+      }
+    ],
+    "provenance_row_ids": [
+      "jagoret2017:r6",
+      "jagoret2017:r7",
+      "saj2015:r2",
+      "kongor2024:r1",
+      "kongor2024:r10",
+      "avadi2023:r1",
+      "setyowati2025:r1",
+      "setyowati2025:r4"
+    ],
+    "top_contributing_paper": "kongor2024",
+    "date_range_of_papers": "2015-2025 (citing experiments back to 1972)",
+    "interpretive_note": "Headline trade-off of the corpus. The 5 negative rows are about yield magnitude (kg/ha or pods/tree). The 3 positive rows split into 2 stability/resilience claims (Setyowati 2025) — different outcome facet — and 1 cocoa-coconut counterexample (Kongor citing Utomo 2016). When stratified by outcome facet, the magnitude-side is unanimously negative; the stability/diversification side is positive."
+  },
+  {
+    "edge_id": "agroforestry_vs_monoculture__natural_enemy_abundance",
+    "subject_code": "agroforestry_vs_monoculture",
+    "object_code": "natural_enemy_abundance",
+    "n_rows": 6,
+    "valence_distribution": { "positive": 6, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 6, "valence": { "positive": 6 } }
+      },
+      "by_method_type": {
+        "Review": { "n": 5, "valence": { "positive": 5 } },
+        "Observation": { "n": 1, "valence": { "positive": 1 } }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": { "n": 6, "valence": { "positive": 6 } }
+      },
+      "by_geographic_scope_code": {
+        "Global": { "n": 4, "valence": { "positive": 4 } },
+        "Country": { "n": 1, "valence": { "positive": 1 } },
+        "Region": { "n": 1, "valence": { "positive": 1 } }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Review",
+        "n": 5,
+        "metric": "narrative direction",
+        "central_tendency_median": null,
+        "spread_range": "all 5 review-style rows assert that cocoa agroforestry promotes biodiversity / ecosystem services; no numeric magnitudes reported",
+        "note": "Within-stratum direction summary; no quantitative pooling possible."
+      }
+    ],
+    "provenance_row_ids": [
+      "bisseleua2013:r16",
+      "jagoret2017:r12",
+      "saj2015:r1",
+      "kongor2024:r2",
+      "kongor2024:r9",
+      "avadi2023:r3"
+    ],
+    "top_contributing_paper": "kongor2024",
+    "date_range_of_papers": "2013-2025",
+    "interpretive_note": "5 of 6 rows are review/synthesis statements bundling biodiversity, soil fertility, pest control, and carbon under 'ecosystem services'. The single original-data row (Saj 2015) is a poster abstract. Direction is well-replicated but the evidence is mostly secondary; no primary-data abundance counts in this corpus."
+  },
+  {
+    "edge_id": "functional_diversity_of_shade_trees__cocoa_yield",
+    "subject_code": "functional_diversity_of_shade_trees",
+    "object_code": "cocoa_yield",
+    "n_rows": 4,
+    "valence_distribution": { "positive": 4, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 4, "valence": { "positive": 4 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 4, "valence": { "positive": 4 } }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": { "n": 4, "valence": { "positive": 4 } }
+      },
+      "by_geographic_scope_code": {
+        "Country": { "n": 3, "valence": { "positive": 3 } },
+        "Global": { "n": 1, "valence": { "positive": 1 } }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
+        "n": 4,
+        "metric": "narrative direction",
+        "central_tendency_median": null,
+        "spread_range": "Consistent positive direction: pioneer/light wood trees, cocoa-coconut combination, and pruning/thinning management all linked to higher yield",
+        "note": "No common metric across the 4 rows. The mechanism: not all shade is equal — selecting low-competition functional groups recovers yield."
+      }
+    ],
+    "provenance_row_ids": [
+      "jagoret2017:r10",
+      "saj2015:r3",
+      "kongor2024:r3",
+      "kongor2024:r8"
+    ],
+    "top_contributing_paper": "kongor2024",
+    "date_range_of_papers": "2015-2024",
+    "interpretive_note": "Important nuance to the headline trade-off. Where shade-cover and total shade-tree density penalise yield, *functional* diversity of selected tree species can rescue it. The cocoa-coconut combination beats both cocoa monoculture and mixed agroforestry on environmental impact categories (Utomo 2016)."
+  },
+  {
+    "edge_id": "shade_index__natural_enemy_abundance",
+    "subject_code": "shade_index",
+    "object_code": "natural_enemy_abundance",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 2, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "positive": 2 } }
+      },
+      "by_method_type": {
+        "Observation": { "n": 2, "valence": { "positive": 2 } }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": { "n": 2, "valence": { "positive": 2 } }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Observation; bisseleua2013 plot-level regressions",
+        "n": 2,
+        "metric": "linear regression slope or F-statistic on count data",
+        "central_tendency_median": null,
+        "spread_range": "Ant richness slope +11.3 (r²=0.68, F=37.9); spider webs/wasp nests F=157.2",
+        "note": "Same paper, two separate regressions on ants and on spider/wasp nests. Both significant at p<0.0001."
+      }
+    ],
+    "provenance_row_ids": ["bisseleua2013:r4", "bisseleua2013:r5"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013"
+  },
+  {
+    "edge_id": "shade_index__pod_loss_to_pests",
+    "subject_code": "shade_index",
+    "object_code": "pod_loss_to_pests",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 0, "negative": 2, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "negative": 2 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 2, "valence": { "negative": 2 } }
+      },
+      "by_population_code": {
+        "Terrestrial ecosystem": { "n": 2, "valence": { "negative": 2 } }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling; bisseleua2013 plot-level regressions",
+        "n": 2,
+        "metric": "linear regression slope",
+        "central_tendency_median": -67.2,
+        "spread_range": "Herbivore count slope −36.9 (r²=0.76); herbivory rate slope −97.5 (r²=0.64)",
+        "note": "Both significant at p<0.0001. Higher shade → fewer herbivores and lower herbivory."
+      }
+    ],
+    "provenance_row_ids": ["bisseleua2013:r2", "bisseleua2013:r3"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013"
+  },
+  {
+    "edge_id": "shade_tree_density__natural_enemy_abundance",
+    "subject_code": "shade_tree_density",
+    "object_code": "natural_enemy_abundance",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 1, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "mixed",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "positive": 1, "negative": 1 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 2, "valence": { "positive": 1, "negative": 1 } }
+      },
+      "by_tree_provenance": {
+        "Native": { "n": 1, "valence": { "positive": 1 } },
+        "Exotic": { "n": 1, "valence": { "negative": 1 } }
+      }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "tree_provenance=Native",
+        "n": 1,
+        "metric": "F-statistic with r²",
+        "central_tendency_median": null,
+        "spread_range": "F=11.5, r²=0.39, p<0.005 (positive, significant)",
+        "note": "Native shade trees increase spider/wasp predator density."
+      },
+      {
+        "stratum": "tree_provenance=Exotic",
+        "n": 1,
+        "metric": "F-statistic with r²",
+        "central_tendency_median": null,
+        "spread_range": "r²=0.01, p=0.64 (NS; trend negative)",
+        "note": "Exotic trees do not support predators."
+      }
+    ],
+    "provenance_row_ids": ["bisseleua2013:r6", "bisseleua2013:r7"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013",
+    "interpretive_note": "The 'disagreement' here is by design — same study stratified by tree provenance shows opposing signs. Should be split into shade_tree_density_native and shade_tree_density_exotic in a v2 vocabulary."
+  },
+  {
+    "edge_id": "shade_tree_density__cocoa_yield",
+    "subject_code": "shade_tree_density",
+    "object_code": "cocoa_yield",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 1 },
+    "modal_valence": "mixed",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "negative": 1, "indeterminate": 1 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 2, "valence": { "negative": 1, "indeterminate": 1 } }
+      },
+      "by_tree_provenance": {
+        "Native": { "n": 1, "valence": { "negative": 1 } },
+        "Exotic": { "n": 1, "valence": { "indeterminate": 1 } }
+      }
+    },
+    "disagreement_flag": true,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "tree_provenance=Native",
+        "n": 1,
+        "metric": "linear regression slope",
+        "central_tendency_median": null,
+        "spread_range": "slope −2.8, r²=0.25, p<0.05",
+        "note": "Native shade-tree density reduces cocoa yield. Same trees that support predators."
+      },
+      {
+        "stratum": "tree_provenance=Exotic",
+        "n": 1,
+        "metric": "linear regression slope",
+        "central_tendency_median": null,
+        "spread_range": "r²=0.05, p=0.34 (NS)",
+        "note": "Exotic shade-tree density does not detectably affect yield."
+      }
+    ],
+    "provenance_row_ids": ["bisseleua2013:r8", "bisseleua2013:r9"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013",
+    "interpretive_note": "Stratified disagreement: native trees penalise yield AND support predators; exotic trees do neither. Land-sharing trade-off operates only for native trees."
+  },
+  {
+    "edge_id": "shade_tree_density__unproductive_cocoa_rate",
+    "subject_code": "shade_tree_density",
+    "object_code": "unproductive_cocoa_rate",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 2, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "positive": 2 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 2, "valence": { "positive": 2 } }
+      },
+      "by_tree_provenance": {
+        "Associated trees (all)": { "n": 1, "valence": { "positive": 1 } },
+        "Fruit trees": { "n": 1, "valence": { "positive": 1 } }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Jagoret 2017 multiple regression",
+        "n": 2,
+        "metric": "regression coefficient",
+        "central_tendency_median": 0.497,
+        "spread_range": "+0.787 (all associated trees, p<0.0001) to +0.207 (fruit trees, p=0.01); cumulative r²=0.494 for the model",
+        "note": "Mediator: shade-tree density → unproductive cocoa rate → reduced yield. Mechanism for the shade→yield negative effect."
+      }
+    ],
+    "provenance_row_ids": ["jagoret2017:r2", "jagoret2017:r11"],
+    "top_contributing_paper": "jagoret2017",
+    "date_range_of_papers": "2017"
+  },
+  {
+    "edge_id": "shade_cover_percentage__cocoa_yield",
+    "subject_code": "shade_cover_percentage",
+    "object_code": "cocoa_yield",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 0, "negative": 2, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "negative": 2 } }
+      },
+      "by_method_type": {
+        "Statistical modelling": { "n": 1, "valence": { "negative": 1 } },
+        "Review": { "n": 1, "valence": { "negative": 1 } }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "narrative direction only",
+        "n": 2,
+        "metric": "narrative",
+        "central_tendency_median": null,
+        "spread_range": "Excessive shade cover described as a 'limiting factor' (Grant 2022 cited by Kongor 2024) and as significantly reducing yield (Blaser 2017 cited by Jagoret 2017)",
+        "note": "Both rows are cited from prior work; no extracted magnitudes."
+      }
+    ],
+    "provenance_row_ids": ["jagoret2017:r9", "kongor2024:r4"],
+    "top_contributing_paper": "kongor2024",
+    "date_range_of_papers": "2017-2024",
+    "interpretive_note": "Mechanism is likely non-linear (threshold above which shade limits photosynthesis); both rows code Negative but recognise the relationship may be threshold-shaped."
+  },
+  {
+    "edge_id": "pollinator_diversity__pollination_success",
+    "subject_code": "pollinator_diversity",
+    "object_code": "pollination_success",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 2, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "positive": 2 } }
+      },
+      "by_method_type": {
+        "Review": { "n": 2, "valence": { "positive": 2 } }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Review",
+        "n": 2,
+        "metric": "narrative direction",
+        "central_tendency_median": null,
+        "spread_range": "All review rows assert wild pollinators enhance fruit set",
+        "note": "Cited from Garibaldi 2013 cornerstone synthesis (41 crops worldwide)."
+      }
+    ],
+    "provenance_row_ids": ["abah2025:r2", "abah2025:r7"],
+    "top_contributing_paper": "abah2025",
+    "date_range_of_papers": "2025"
+  },
+  {
+    "edge_id": "rainfall_extreme__cocoa_yield",
+    "subject_code": "rainfall_extreme",
+    "object_code": "cocoa_yield",
+    "n_rows": 2,
+    "valence_distribution": { "positive": 0, "negative": 2, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": {
+        "Association": { "n": 2, "valence": { "negative": 2 } }
+      },
+      "by_method_type": {
+        "Review": { "n": 1, "valence": { "negative": 1 } },
+        "Observation": { "n": 1, "valence": { "negative": 1 } }
+      }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["abah2025:r3", "setyowati2025:r3"],
+    "top_contributing_paper": "abah2025",
+    "date_range_of_papers": "2025",
+    "interpretive_note": "Climate-side predictor. Mechanism mediated by pollinator inactivity during rainfall (Forcipomyia midges) and disease/pest amplification."
+  },
+  {
+    "edge_id": "shade_index__cocoa_yield",
+    "subject_code": "shade_index",
+    "object_code": "cocoa_yield",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling",
+        "n": 1,
+        "metric": "ANOVA F",
+        "central_tendency_median": 14.83,
+        "spread_range": "F1,19=14.83, p<0.001; yield 1500-2300 kg/ha at low shade vs 900-1500 at high shade",
+        "note": "Single primary study (Bisseleua 2013); composite predictor."
+      }
+    ],
+    "provenance_row_ids": ["bisseleua2013:r1"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013"
+  },
+  {
+    "edge_id": "shade_index__farmer_net_returns",
+    "subject_code": "shade_index",
+    "object_code": "farmer_net_returns",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling",
+        "n": 1,
+        "metric": "net return (USD/ha)",
+        "central_tendency_median": 2349,
+        "spread_range": "US$ 1194/ha (shade index 0.69) → US$ 2349/ha (0.59) → US$ 3801/ha (0.41); F=45.6, r²=0.72, p<0.0001",
+        "note": "Lower shade index = higher net return. Bisseleua 2013."
+      }
+    ],
+    "provenance_row_ids": ["bisseleua2013:r10"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013"
+  },
+  {
+    "edge_id": "shade_index__input_cost",
+    "subject_code": "shade_index",
+    "object_code": "input_cost",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["bisseleua2013:r11"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013",
+    "interpretive_note": "Counter-intuitive coding direction: more shade → LOWER input cost (less spraying needed). The shade→yield Negative and shade→input_cost Negative findings together imply land-sharing reduces both inputs and outputs."
+  },
+  {
+    "edge_id": "input_cost__farmer_net_returns",
+    "subject_code": "input_cost",
+    "object_code": "farmer_net_returns",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 0, "non_linear": 0, "indeterminate": 1 },
+    "modal_valence": "indeterminate",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "indeterminate": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "indeterminate": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["bisseleua2013:r12"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013"
+  },
+  {
+    "edge_id": "shade_cover_percentage__natural_enemy_abundance",
+    "subject_code": "shade_cover_percentage",
+    "object_code": "natural_enemy_abundance",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling",
+        "n": 1,
+        "metric": "F-statistic with r²",
+        "central_tendency_median": null,
+        "spread_range": "F=12.2, r²=0.40, p<0.01",
+        "note": "Bisseleua 2013; ant richness ↑ with shade cover."
+      }
+    ],
+    "provenance_row_ids": ["bisseleua2013:r13"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013"
+  },
+  {
+    "edge_id": "shade_tree_species_richness__pod_loss_to_pests",
+    "subject_code": "shade_tree_species_richness",
+    "object_code": "pod_loss_to_pests",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["bisseleua2013:r14"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013"
+  },
+  {
+    "edge_id": "shade_tree_species_richness__natural_enemy_abundance",
+    "subject_code": "shade_tree_species_richness",
+    "object_code": "natural_enemy_abundance",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Observation": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["bisseleua2013:r15"],
+    "top_contributing_paper": "bisseleua2013",
+    "date_range_of_papers": "2013"
+  },
+  {
+    "edge_id": "cocoa_tree_basal_area__pod_count",
+    "subject_code": "cocoa_tree_basal_area",
+    "object_code": "pod_count",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "method_type=Statistical modelling",
+        "n": 1,
+        "metric": "linear regression slope with r²",
+        "central_tendency_median": 0.232,
+        "spread_range": "slope 0.232, r²=0.465, p<0.0001",
+        "note": "Cocoa vigour proxy → pod productivity. Mediator on biodiversity-yield path."
+      }
+    ],
+    "provenance_row_ids": ["jagoret2017:r1"],
+    "top_contributing_paper": "jagoret2017",
+    "date_range_of_papers": "2017"
+  },
+  {
+    "edge_id": "shade_tree_species_richness__unproductive_cocoa_rate",
+    "subject_code": "shade_tree_species_richness",
+    "object_code": "unproductive_cocoa_rate",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Jagoret 2017 multiple regression",
+        "n": 1,
+        "metric": "regression coefficient",
+        "central_tendency_median": -7.269,
+        "spread_range": "−7.269, p<0.0001",
+        "note": "More shade-tree species = fewer unproductive cocoa trees. Direction reverses simple shade-yield story."
+      }
+    ],
+    "provenance_row_ids": ["jagoret2017:r3"],
+    "top_contributing_paper": "jagoret2017",
+    "date_range_of_papers": "2017",
+    "interpretive_note": "Key mechanistic finding: density of shade trees increases unproductive cocoa rate (competition) but *diversity* of shade trees decreases it. Composition matters more than abundance."
+  },
+  {
+    "edge_id": "unproductive_cocoa_rate__cocoa_yield",
+    "subject_code": "unproductive_cocoa_rate",
+    "object_code": "cocoa_yield",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Jagoret 2017 multiple regression",
+        "n": 1,
+        "metric": "regression coefficient",
+        "central_tendency_median": -7.438,
+        "spread_range": "−7.438, p=0.001, cumulative model r²=0.834",
+        "note": "The downstream half of the mediation chain shade-tree density → unproductive rate → yield."
+      }
+    ],
+    "provenance_row_ids": ["jagoret2017:r4"],
+    "top_contributing_paper": "jagoret2017",
+    "date_range_of_papers": "2017"
+  },
+  {
+    "edge_id": "shade_tree_density__cocoa_tree_basal_area",
+    "subject_code": "shade_tree_density",
+    "object_code": "cocoa_tree_basal_area",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Jagoret 2017, forest-tree basal area",
+        "n": 1,
+        "metric": "regression coefficient",
+        "central_tendency_median": 0.245,
+        "spread_range": "+0.245, p=0.021, cumulative r²=0.781",
+        "note": "Forest-tree basal area positively predicts cocoa-tree vigour. Counterpoint to the simple competition story."
+      }
+    ],
+    "provenance_row_ids": ["jagoret2017:r5"],
+    "top_contributing_paper": "jagoret2017",
+    "date_range_of_papers": "2017"
+  },
+  {
+    "edge_id": "agroforestry_vs_monoculture__pod_count",
+    "subject_code": "agroforestry_vs_monoculture",
+    "object_code": "pod_count",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Controlled comparison": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Experiment": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Cited experimental on-farm comparison",
+        "n": 1,
+        "metric": "pod count per tree per year",
+        "central_tendency_median": 30.3,
+        "spread_range": "30.3 (with orange) and 28.3 (with avocado) pods/tree/yr vs 64 in monocrop — ~50% reduction",
+        "note": "Cited from Koko et al. 2013."
+      }
+    ],
+    "provenance_row_ids": ["jagoret2017:r8"],
+    "top_contributing_paper": "jagoret2017",
+    "date_range_of_papers": "2017 (citing 2013)"
+  },
+  {
+    "edge_id": "pollinator_diversity__cocoa_yield",
+    "subject_code": "pollinator_diversity",
+    "object_code": "cocoa_yield",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Review": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Tabular review summary",
+        "n": 1,
+        "metric": "mean yield difference (kg/ha)",
+        "central_tendency_median": 300,
+        "spread_range": "High-diversity farms 650-800 kg/ha vs low-diversity 350-500 kg/ha (~300 kg/ha differential)",
+        "note": "Abah 2025 review; primary sources not directly extracted. Treat magnitude with caution."
+      }
+    ],
+    "provenance_row_ids": ["abah2025:r1"],
+    "top_contributing_paper": "abah2025",
+    "date_range_of_papers": "2025",
+    "interpretive_note": "The only direct numeric estimate of a biodiversity → yield magnitude in the corpus. Drawn from a tabular review summary; provenance trust is reduced."
+  },
+  {
+    "edge_id": "agroforestry_vs_monoculture__pollination_success",
+    "subject_code": "agroforestry_vs_monoculture",
+    "object_code": "pollination_success",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Review": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["abah2025:r4"],
+    "top_contributing_paper": "abah2025",
+    "date_range_of_papers": "2025"
+  },
+  {
+    "edge_id": "pesticide_input__pollinator_diversity",
+    "subject_code": "pesticide_input",
+    "object_code": "pollinator_diversity",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 0, "negative": 1, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "negative",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "negative": 1 } } },
+      "by_method_type": { "Review": { "n": 1, "valence": { "negative": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["abah2025:r5"],
+    "top_contributing_paper": "abah2025",
+    "date_range_of_papers": "2025"
+  },
+  {
+    "edge_id": "natural_habitat__pollination_success",
+    "subject_code": "natural_habitat",
+    "object_code": "pollination_success",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Review": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["abah2025:r6"],
+    "top_contributing_paper": "abah2025",
+    "date_range_of_papers": "2025"
+  },
+  {
+    "edge_id": "pollination_success__cocoa_yield",
+    "subject_code": "pollination_success",
+    "object_code": "cocoa_yield",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Intervention": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Experiment": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Cited experimental hand-pollination trial",
+        "n": 1,
+        "metric": "percent yield increase",
+        "central_tendency_median": 161,
+        "spread_range": "+51% (13% hand pollination) and +161% (100% hand pollination)",
+        "note": "Toledo-Hernández et al. 2020 (cited by Kongor 2024). Strongest causal-inference evidence in corpus: cocoa yield is pollination-limited."
+      }
+    ],
+    "provenance_row_ids": ["kongor2024:r5"],
+    "top_contributing_paper": "kongor2024",
+    "date_range_of_papers": "2024 (citing 2020)",
+    "interpretive_note": "Together with pollinator_diversity→cocoa_yield (n=1, Abah 2025) this is the strongest evidence in the corpus that the biodiversity→yield link is causal: if pollination supplementation more than doubles yield, then ambient pollinator services are the binding constraint."
+  },
+  {
+    "edge_id": "pollination_success__pod_count",
+    "subject_code": "pollination_success",
+    "object_code": "pod_count",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Intervention": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Experiment": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Cited experimental",
+        "n": 1,
+        "metric": "fold change",
+        "central_tendency_median": 3,
+        "spread_range": "3× fruit set with 10% hand pollination",
+        "note": "Toledo-Hernández et al. 2023 (Brazil agroforests)."
+      }
+    ],
+    "provenance_row_ids": ["kongor2024:r6"],
+    "top_contributing_paper": "kongor2024",
+    "date_range_of_papers": "2024 (citing 2023)"
+  },
+  {
+    "edge_id": "cocoa_variety__cocoa_yield",
+    "subject_code": "cocoa_variety",
+    "object_code": "cocoa_yield",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Review": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [],
+    "provenance_row_ids": ["kongor2024:r7"],
+    "top_contributing_paper": "kongor2024",
+    "date_range_of_papers": "2024 (citing Niether 2020)"
+  },
+  {
+    "edge_id": "agroforestry_vs_monoculture__carbon_sequestration",
+    "subject_code": "agroforestry_vs_monoculture",
+    "object_code": "carbon_sequestration",
+    "n_rows": 1,
+    "valence_distribution": { "positive": 1, "negative": 0, "non_linear": 0, "indeterminate": 0 },
+    "modal_valence": "positive",
+    "stratification": {
+      "by_causal_inference_level": { "Association": { "n": 1, "valence": { "positive": 1 } } },
+      "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } }
+    },
+    "disagreement_flag": false,
+    "effect_size_pooled_within_stratum": [
+      {
+        "stratum": "Avadi 2023 LCA",
+        "n": 1,
+        "metric": "t C ha-1 yr-1",
+        "central_tendency_median": 2.89,
+        "spread_range": "2.89 t C/ha/yr (cocoa trees in agroforestry); 4.20 t C/ha/yr (other associated species)",
+        "note": "Co-benefit of agroforestry; orthogonal to yield axis."
+      }
+    ],
+    "provenance_row_ids": ["avadi2023:r2"],
+    "top_contributing_paper": "avadi2023",
+    "date_range_of_papers": "2023"
+  }
+]

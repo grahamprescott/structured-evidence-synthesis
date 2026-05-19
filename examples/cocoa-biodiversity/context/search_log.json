@@ -1,0 +1,33 @@
+{
+  "search_id": "cocoa-biodiversity-yield-2026-05",
+  "research_question_ref": "context/research_question.md",
+  "database": "OpenAlex",
+  "search_url": "https://api.openalex.org/works?filter=title_and_abstract.search:cocoa%20yield%20biodiversity,type:article,is_oa:true,language:en,from_publication_date:2010-01-01",
+  "search_string_human_readable": "title or abstract contains 'cocoa' AND 'yield' AND 'biodiversity'",
+  "filters_applied": [
+    {
+      "filter": "title_and_abstract.search:cocoa yield biodiversity",
+      "rationale": "Tightest scoping that returns a tractable corpus. Broader search ('cocoa OR cacao' AND 'biodiversity OR shade OR agroforestry' AND 'yield') returned 18,761; this filter narrows to papers that explicitly cover all three concepts in title or abstract."
+    },
+    {
+      "filter": "type:article",
+      "rationale": "Exclude books, datasets, theses."
+    },
+    {
+      "filter": "is_oa:true",
+      "rationale": "Restrict to open access so PDF download is feasible without paywall access."
+    },
+    {
+      "filter": "language:en",
+      "rationale": "English-only declared in framing doc. Acknowledged limitation."
+    },
+    {
+      "filter": "from_publication_date:2010-01-01",
+      "rationale": "Last 15 years captures the modern agroforestry-resurgence literature; older work would dilute with pre-yield-modelling-era studies."
+    }
+  ],
+  "run_date": "2026-05-19",
+  "result_count": 48,
+  "snapshot_id": null,
+  "notes": "Title hits include Cocoa agroforestry vs monocultures meta-analysis (Niether 2020), Shade Tree Diversity / Cocoa Pest Damage / Yield (Gras 2013), Structural characteristics determine productivity (2017), Conservation through Chocolate (Waldron 2012). Mix of empirical and meta-analytic — good corpus for a synthesis demo. Not all 48 will have downloadable PDFs."
+}

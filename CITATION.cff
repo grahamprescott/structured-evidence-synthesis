@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this protocol, please cite it as below."
+title: "Structured AI-Assisted Evidence Synthesis (SAES)"
+abstract: >-
+  A three-stage protocol, ontology, and prompt set for AI-assisted
+  evidence synthesis from scientific literature. The pipeline runs
+  from research question through corpus assembly (SETUP), per-paper
+  variable–relationship extraction with audit (EXTRACTION), and
+  cross-paper consolidation with provenance (ACCUMULATION).
+type: software
+authors:
+  - family-names: Prescott
+    given-names: Graham
+    email: graham.prescott@gmail.com
+version: 0.2.0-alpha
+date-released: 2026-05-19
+license: MIT
+repository-code: "https://github.com/grahamprescott/structured-evidence-synthesis"
+keywords:
+  - evidence synthesis
+  - literature review
+  - large language models
+  - ontology
+  - reproducibility

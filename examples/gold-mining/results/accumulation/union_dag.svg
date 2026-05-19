@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow-pos" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1b7a3a"/>
+    </marker>
+    <marker id="arrow-neg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a8262e"/>
+    </marker>
+    <marker id="arrow-mix" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="800" y="30" text-anchor="middle" font-size="20" font-weight="bold">Gold-mining → biodiversity consolidated DAG (v0.2.0-alpha)</text>
+  <text x="800" y="50" text-anchor="middle" font-size="11" fill="#666">43 edges across 33 nodes — green = positive, red = negative — Edge thickness ∝ n_rows · yellow halo + ! = disagreement_flag (vocabulary)</text>
+  <text x="800" y="65" text-anchor="middle" font-size="11" fill="#a8262e" font-weight="bold">Note: corpus stops at proximate environmental endpoints. No direct "species_richness" or "wildlife_abundance" rows — see audit report §2.</text>
+
+  <!-- Column headers -->
+  <text x="150" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">DISTAL DRIVERS</text>
+  <text x="475" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">ACCESS / INFLUX / GOVERNANCE</text>
+  <text x="795" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">MINING ACTIVITY</text>
+  <text x="1105" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">POLLUTION MEDIATORS</text>
+  <text x="1415" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">OUTCOMES (proxy)</text>
+
+  <!-- ============ EDGES (drawn behind nodes) ============ -->
+
+  <!-- Tier 1 → Tier 2 -->
+  <!-- economic_instability → gold_prices (n=1, +) -->
+  <line x1="260" y1="135" x2="370" y2="170" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <!-- economic_instability → mining_lobbies (n=1, +) [back-arrow within Tier 1] -->
+  <path d="M 150 145 Q 110 200 150 245" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <!-- gold_prices → gold_mining (n=3, +) [Tier 1→3] -->
+  <line x1="260" y1="175" x2="690" y2="275" stroke="#1b7a3a" stroke-width="2.5" marker-end="url(#arrow-pos)"/>
+  <text x="450" y="225" font-size="10" fill="#1b7a3a">+ (n=3)</text>
+  <!-- mining_lobbies → enforcement (n=1, -) -->
+  <line x1="260" y1="255" x2="370" y2="375" stroke="#a8262e" stroke-width="1.5" marker-end="url(#arrow-neg)"/>
+  <!-- social_inequality → miner_influx (n=1, +) -->
+  <line x1="260" y1="295" x2="370" y2="305" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <!-- weak_governance_and_bad_policies → enforcement (n=1, -) -->
+  <line x1="260" y1="335" x2="370" y2="375" stroke="#a8262e" stroke-width="1.5" marker-end="url(#arrow-neg)"/>
+  <text x="265" y="358" font-size="9" fill="#a8262e">−</text>
+  <!-- weak_governance → enforcement (n=1, -) [alias] -->
+  <path d="M 260 372 Q 320 378 370 380" stroke="#a8262e" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arrow-neg)"/>
+  <!-- weak_governance_and_bad_policies → informality (n=1, +) -->
+  <path d="M 260 340 Q 340 360 370 410" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <!-- weak_governance_and_bad_policies → effective_comprehensive_bottom_up_formalization (n=3, -) -->
+  <path d="M 230 345 Q 320 480 370 540" stroke="#a8262e" stroke-width="2.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="270" y="448" font-size="10" fill="#a8262e">− (n=3)</text>
+  <!-- weak_governance_and_bad_policies → technical_alternatives_and_training (n=1, -) -->
+  <path d="M 230 350 Q 280 470 370 530" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <!-- legal_regulation → enforcement (n=1, +) -->
+  <line x1="260" y1="415" x2="370" y2="380" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <!-- miner_organization → enforcement (n=1, -) -->
+  <line x1="260" y1="455" x2="370" y2="385" stroke="#a8262e" stroke-width="1.5" marker-end="url(#arrow-neg)"/>
+  <!-- external_funding → effective_comprehensive_bottom_up_formalization (n=2, indeterminate) -->
+  <!-- (we don't have external_funding in node list per latest enumeration — it appears in subjects 4 times in workbook but not in unique-edges output above. Skip.) -->
+
+  <!-- indigenous_land_rights → miner_influx (n=3, -) -->
+  <path d="M 260 515 Q 320 410 370 305" stroke="#a8262e" stroke-width="2.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="290" y="430" font-size="10" fill="#a8262e">− (n=3)</text>
+  <!-- indigenous_land_rights → gold_mining (n=1, -) -->
+  <path d="M 260 518 Q 530 460 690 305" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <!-- indigenous_land_rights → deforestation (n=1, -) [tier 1 → tier 5 directly] -->
+  <path d="M 260 520 Q 760 700 1310 215" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="800" y="630" font-size="9" fill="#a8262e">− (n=1) indigenous_land_rights → deforestation</text>
+
+  <!-- protected_areas → deforestation (n=1, -) -->
+  <path d="M 260 565 Q 770 730 1310 230" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="800" y="650" font-size="9" fill="#a8262e">− (n=1) protected_areas → deforestation</text>
+
+  <!-- large_scale_commercial_agriculture → road_construction (n=1, +) -->
+  <line x1="260" y1="215" x2="370" y2="135" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <!-- large_scale_commercial_agriculture → social_inequality (n=1, +) [intra-tier] -->
+  <path d="M 150 225 Q 60 250 150 285" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+
+  <!-- ===== Tier 2 → Tier 3 ===== -->
+  <!-- road_construction → deforestation (n=1, +) flagged -->
+  <path d="M 580 135 Q 950 130 1310 200" stroke="#1b7a3a" stroke-width="1.5" stroke-dasharray="2,2" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="780" y="120" font-size="9" fill="#1b7a3a">+ (n=1) !</text>
+  <!-- road_creation → miner_influx (n=2, +) flagged -->
+  <line x1="580" y1="175" x2="475" y2="290" stroke="#1b7a3a" stroke-width="2" stroke-dasharray="2,2" marker-end="url(#arrow-pos)"/>
+  <text x="500" y="220" font-size="10" fill="#1b7a3a">+ (n=2) !</text>
+  <!-- road_construction → deforestation also gets the road_construction handle -->
+
+  <!-- dry_season → miner_influx (n=1, +) -->
+  <line x1="580" y1="215" x2="475" y2="295" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <!-- commerical_mine_closure → miner_influx (n=1, +) -->
+  <line x1="580" y1="255" x2="475" y2="297" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+
+  <!-- miner_influx → gold_mining (n=4, +) -->
+  <line x1="580" y1="300" x2="690" y2="285" stroke="#1b7a3a" stroke-width="3" marker-end="url(#arrow-pos)"/>
+  <text x="590" y="285" font-size="10" fill="#1b7a3a" font-weight="bold">+ (n=4)</text>
+  <!-- miner_influx → indigenous_land_rights (n=1, -) [Tier 2 → Tier 1 — reverse arrow] -->
+  <path d="M 370 310 Q 330 480 260 525" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+
+  <!-- enforcement → gold_mining (n=2, -) -->
+  <path d="M 580 380 Q 640 340 690 305" stroke="#a8262e" stroke-width="2" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="600" y="358" font-size="10" fill="#a8262e">− (n=2)</text>
+  <!-- informality → enforcement (n=2, -) -->
+  <path d="M 580 410 Q 540 395 475 385" stroke="#a8262e" stroke-width="2" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="500" y="390" font-size="10" fill="#a8262e">− (n=2)</text>
+  <!-- effective_comprehensive_bottom_up_formalization → informality (n=1, -) -->
+  <path d="M 580 530 Q 590 480 580 415" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <!-- technical_alternatives_and_training → mercury_use (n=1, -) -->
+  <path d="M 580 530 Q 640 460 690 405" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <!-- economic_alternatives → gold_mining (n=1, -) -->
+  <path d="M 580 460 Q 640 380 690 295" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <!-- external_funding → effective formalization & training rows had None arrow; skipped in consolidation -->
+
+  <!-- ===== Tier 3 outflows (gold_mining → mining activities) ===== -->
+  <!-- gold_mining → mercury_use (n=8, +) -->
+  <line x1="900" y1="295" x2="690" y2="405" stroke="#1b7a3a" stroke-width="4" marker-end="url(#arrow-pos)"/>
+  <text x="780" y="345" font-size="11" fill="#1b7a3a" font-weight="bold">+ (n=8)</text>
+  <!-- gold_mining → cyanide_use (n=3, +) -->
+  <line x1="900" y1="300" x2="690" y2="455" stroke="#1b7a3a" stroke-width="2.5" marker-end="url(#arrow-pos)"/>
+  <text x="785" y="380" font-size="10" fill="#1b7a3a">+ (n=3)</text>
+  <!-- gold_mining → soil_excavation_and_erosion (n=2, +) -->
+  <line x1="900" y1="305" x2="690" y2="500" stroke="#1b7a3a" stroke-width="2" marker-end="url(#arrow-pos)"/>
+  <text x="785" y="430" font-size="10" fill="#1b7a3a">+ (n=2)</text>
+  <!-- gold_mining → sediment_load_in_rivers (n=1, +) -->
+  <line x1="900" y1="310" x2="690" y2="545" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <!-- gold_mining → deforestation_and_forest_degradation (n=7, +) [Tier 3 → Tier 5] -->
+  <path d="M 900 270 Q 1110 230 1310 200" stroke="#1b7a3a" stroke-width="3.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="1000" y="235" font-size="11" fill="#1b7a3a" font-weight="bold">+ (n=7)</text>
+  <!-- gold_mining → protected_areas (n=3, -) [Tier 3 → Tier 1 back-arrow] -->
+  <path d="M 900 275 Q 800 470 260 555" stroke="#a8262e" stroke-width="2.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <text x="660" y="555" font-size="10" fill="#a8262e">− (n=3) gold_mining → protected_areas</text>
+  <!-- gold_mining → indigenous_land_rights (n=1, +) [SUSPECT — flagged in disagreement report] -->
+  <path d="M 900 282 Q 700 535 260 522" stroke="#1b7a3a" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="600" y="515" font-size="9" fill="#1b7a3a" font-style="italic">+ (n=1, suspect — see disagreement report)</text>
+  <!-- gold_mining → need_for_economic_alternatives (n=1, -) -->
+  <path d="M 690 318 Q 530 420 475 470" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+
+  <!-- soil_excavation_and_erosion → barren_land (n=1, +) [Tier 3 → Tier 5] -->
+  <line x1="900" y1="500" x2="1310" y2="250" stroke="#1b7a3a" stroke-width="1.5" marker-end="url(#arrow-pos)"/>
+  <text x="1100" y="375" font-size="9" fill="#1b7a3a">+ soil → barren</text>
+
+  <!-- ===== Tier 3 → Tier 4 mercury chain ===== -->
+  <!-- mercury_use → aquatic_mercury_pollution (n=8, +) -->
+  <line x1="900" y1="405" x2="1010" y2="420" stroke="#1b7a3a" stroke-width="4" marker-end="url(#arrow-pos)"/>
+  <text x="910" y="408" font-size="11" fill="#1b7a3a" font-weight="bold">+ (n=8)</text>
+  <!-- mercury_use → atmospheric_mercury_pollution (n=2, +) -->
+  <line x1="900" y1="410" x2="1010" y2="470" stroke="#1b7a3a" stroke-width="2" marker-end="url(#arrow-pos)"/>
+  <text x="915" y="438" font-size="10" fill="#1b7a3a">+ (n=2)</text>
+  <!-- mercury_use → mercury_contaminated_tailings (n=4, +) -->
+  <line x1="900" y1="415" x2="690" y2="595" stroke="#1b7a3a" stroke-width="2.5" marker-end="url(#arrow-pos)"/>
+  <text x="700" y="540" font-size="10" fill="#1b7a3a">+ (n=4) mercury_use → tailings</text>
+  <!-- mercury_contaminated_tailings → aquatic_mercury_pollution (n=4, +) -->
+  <path d="M 900 595 Q 980 510 1010 425" stroke="#1b7a3a" stroke-width="2.5" fill="none" marker-end="url(#arrow-pos)"/>
+  <text x="910" y="510" font-size="10" fill="#1b7a3a">+ (n=4)</text>
+  <!-- cyanide_use → cyanide_pollution (n=6, +) -->
+  <line x1="900" y1="455" x2="1010" y2="520" stroke="#1b7a3a" stroke-width="3" marker-end="url(#arrow-pos)"/>
+  <text x="915" y="492" font-size="10" fill="#1b7a3a" font-weight="bold">+ (n=6)</text>
+  <!-- cyanide_use → aquatic_mercury_pollution (n=1, +) — unusual cross-link -->
+  <path d="M 900 460 Q 950 440 1010 425" stroke="#1b7a3a" stroke-width="1.5" fill="none" marker-end="url(#arrow-pos)"/>
+
+  <!-- ===== Tier 4 → Tier 5 ===== -->
+  <!-- aquatic_mercury_pollution → mercury_bio_accumulation (n=11, +) [STRONGEST EDGE] -->
+  <line x1="1200" y1="425" x2="1010" y2="580" stroke="#1b7a3a" stroke-width="5" marker-end="url(#arrow-pos)"/>
+  <text x="1080" y="510" font-size="12" fill="#1b7a3a" font-weight="bold">+ (n=11)</text>
+  <!-- aquatic_mercury_pollution → human_health (n=1, -) -->
+  <path d="M 1200 425 Q 1280 490 1310 560" stroke="#a8262e" stroke-width="1.5" fill="none" marker-end="url(#arrow-neg)"/>
+  <!-- atmospheric_mercury_pollution → human_health (n=2, -) -->
+  <line x1="1200" y1="475" x2="1310" y2="560" stroke="#a8262e" stroke-width="2" marker-end="url(#arrow-neg)"/>
+  <text x="1215" y="520" font-size="10" fill="#a8262e">− (n=2)</text>
+  <!-- mercury_bio_accumulation → human_health (n=5, -) -->
+  <line x1="1200" y1="580" x2="1310" y2="565" stroke="#a8262e" stroke-width="3" marker-end="url(#arrow-neg)"/>
+  <text x="1215" y="580" font-size="11" fill="#a8262e" font-weight="bold">− (n=5)</text>
+
+  <!-- ============ NODES ============ -->
+
+  <!-- Tier 1 column: distal drivers -->
+  <g id="tier1">
+    <rect x="40" y="125" width="220" height="22" rx="3" fill="#e8e8e8" stroke="#666"/>
+    <text x="150" y="140" text-anchor="middle" font-size="10">economic_instability</text>
+
+    <rect x="40" y="160" width="220" height="22" rx="3" fill="#e8e8e8" stroke="#666"/>
+    <text x="150" y="175" text-anchor="middle" font-size="10">gold_prices</text>
+
+    <rect x="40" y="200" width="220" height="22" rx="3" fill="#e8e8e8" stroke="#666"/>
+    <text x="150" y="215" text-anchor="middle" font-size="10">large_scale_commercial_agriculture</text>
+
+    <rect x="40" y="240" width="220" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="150" y="255" text-anchor="middle" font-size="10">mining_lobbies</text>
+
+    <rect x="40" y="280" width="220" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="150" y="295" text-anchor="middle" font-size="10">social_inequality</text>
+
+    <rect x="40" y="320" width="220" height="22" rx="3" fill="#dcdcdc" stroke="#666"/>
+    <text x="150" y="335" text-anchor="middle" font-size="10">weak_governance_and_bad_policies</text>
+
+    <rect x="40" y="358" width="220" height="20" rx="3" fill="#f4f4f4" stroke="#aaa" stroke-dasharray="2,1"/>
+    <text x="150" y="372" text-anchor="middle" font-size="9" fill="#666">weak_governance (alias)</text>
+
+    <rect x="40" y="400" width="220" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="150" y="415" text-anchor="middle" font-size="10">legal_regulation</text>
+
+    <rect x="40" y="440" width="220" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="150" y="455" text-anchor="middle" font-size="10">miner_organization</text>
+
+    <rect x="40" y="500" width="220" height="26" rx="3" fill="#d8c9e4" stroke="#523"/>
+    <text x="150" y="517" text-anchor="middle" font-size="11" font-weight="bold">indigenous_land_rights</text>
+
+    <rect x="40" y="546" width="220" height="26" rx="3" fill="#d8c9e4" stroke="#523"/>
+    <text x="150" y="563" text-anchor="middle" font-size="11" font-weight="bold">protected_areas</text>
+  </g>
+
+  <!-- Tier 2 column: access / influx / governance mediators -->
+  <g id="tier2">
+    <rect x="370" y="125" width="210" height="22" rx="3" fill="#e0e0e0" stroke="#666"/>
+    <text x="475" y="140" text-anchor="middle" font-size="10">road_construction</text>
+
+    <rect x="370" y="160" width="210" height="20" rx="3" fill="#f4f4f4" stroke="#aaa" stroke-dasharray="2,1"/>
+    <text x="475" y="174" text-anchor="middle" font-size="9" fill="#666">road_creation (alias)</text>
+
+    <rect x="370" y="200" width="210" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="475" y="215" text-anchor="middle" font-size="10">dry_season</text>
+
+    <rect x="370" y="240" width="210" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="475" y="255" text-anchor="middle" font-size="10">commerical_mine_closure</text>
+
+    <rect x="370" y="285" width="210" height="30" rx="4" fill="#c9c9d8" stroke="#234"/>
+    <text x="475" y="305" text-anchor="middle" font-size="12" font-weight="bold">miner_influx</text>
+
+    <rect x="370" y="365" width="210" height="30" rx="4" fill="#c9c9d8" stroke="#234"/>
+    <text x="475" y="385" text-anchor="middle" font-size="11" font-weight="bold">enforcement_and_other_</text>
+    <text x="475" y="396" text-anchor="middle" font-size="9" font-weight="bold">barriers_to_entry</text>
+
+    <rect x="370" y="405" width="210" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="475" y="420" text-anchor="middle" font-size="10">informality</text>
+
+    <rect x="370" y="445" width="210" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="475" y="460" text-anchor="middle" font-size="10">economic_alternatives</text>
+
+    <rect x="370" y="480" width="210" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="475" y="495" text-anchor="middle" font-size="10">need_for_economic_alternatives</text>
+
+    <rect x="370" y="520" width="210" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="475" y="535" text-anchor="middle" font-size="9.5">effective_..._formalization</text>
+
+    <rect x="370" y="555" width="210" height="22" rx="3" fill="#f0f0f0" stroke="#888"/>
+    <text x="475" y="570" text-anchor="middle" font-size="10">technical_alternatives_and_training</text>
+  </g>
+
+  <!-- Tier 3 column: mining activity hub -->
+  <g id="tier3">
+    <rect x="690" y="255" width="210" height="60" rx="6" fill="#c9b59e" stroke="#432"/>
+    <text x="795" y="280" text-anchor="middle" font-size="15" font-weight="bold">gold_mining</text>
+    <text x="795" y="296" text-anchor="middle" font-size="10" fill="#234">hub  ·  degree=13</text>
+    <text x="795" y="309" text-anchor="middle" font-size="9" fill="#a07000">5 incoming, 8 outgoing edges</text>
+
+    <rect x="690" y="395" width="210" height="22" rx="3" fill="#e8e0d0" stroke="#666"/>
+    <text x="795" y="410" text-anchor="middle" font-size="10">mercury_use</text>
+
+    <rect x="690" y="445" width="210" height="22" rx="3" fill="#e8e0d0" stroke="#666"/>
+    <text x="795" y="460" text-anchor="middle" font-size="10">cyanide_use</text>
+
+    <rect x="690" y="490" width="210" height="22" rx="3" fill="#e8e0d0" stroke="#666"/>
+    <text x="795" y="505" text-anchor="middle" font-size="10">soil_excavation_and_erosion</text>
+
+    <rect x="690" y="535" width="210" height="22" rx="3" fill="#e8e0d0" stroke="#666"/>
+    <text x="795" y="550" text-anchor="middle" font-size="10">sediment_load_in_rivers</text>
+
+    <rect x="690" y="585" width="210" height="22" rx="3" fill="#e8e0d0" stroke="#666"/>
+    <text x="795" y="600" text-anchor="middle" font-size="10">mercury_contaminated_tailings</text>
+  </g>
+
+  <!-- Tier 4 column: pollution mediators -->
+  <g id="tier4">
+    <rect x="1010" y="412" width="195" height="22" rx="3" fill="#9eb5c9" stroke="#234"/>
+    <text x="1107" y="427" text-anchor="middle" font-size="10">aquatic_mercury_pollution</text>
+
+    <rect x="1010" y="460" width="195" height="22" rx="3" fill="#9eb5c9" stroke="#234"/>
+    <text x="1107" y="475" text-anchor="middle" font-size="10">atmospheric_mercury_pollution</text>
+
+    <rect x="1010" y="510" width="195" height="22" rx="3" fill="#9eb5c9" stroke="#234"/>
+    <text x="1107" y="525" text-anchor="middle" font-size="10">cyanide_pollution</text>
+
+    <rect x="1010" y="572" width="195" height="22" rx="3" fill="#9eb5c9" stroke="#234"/>
+    <text x="1107" y="587" text-anchor="middle" font-size="10">mercury_bio_accumulation</text>
+  </g>
+
+  <!-- Tier 5: outcomes -->
+  <g id="tier5">
+    <rect x="1310" y="190" width="210" height="22" rx="3" fill="#d8a8a8" stroke="#532"/>
+    <text x="1415" y="205" text-anchor="middle" font-size="10" font-weight="bold">deforestation_and_forest_degradation</text>
+
+    <rect x="1310" y="240" width="210" height="22" rx="3" fill="#d8a8a8" stroke="#532"/>
+    <text x="1415" y="255" text-anchor="middle" font-size="10" font-weight="bold">barren_land</text>
+
+    <rect x="1310" y="552" width="210" height="22" rx="3" fill="#d8a8a8" stroke="#532"/>
+    <text x="1415" y="567" text-anchor="middle" font-size="10" font-weight="bold">human_health</text>
+  </g>
+
+  <!-- Disagreement halos (vocabulary fragmentation) -->
+  <circle cx="370" cy="155" r="32" fill="none" stroke="#e4c01a" stroke-width="2" stroke-dasharray="3,3" opacity="0.6"/>
+  <text x="370" y="115" text-anchor="middle" font-size="11" fill="#a07000" font-weight="bold">! vocab</text>
+  <circle cx="220" cy="365" r="32" fill="none" stroke="#e4c01a" stroke-width="2" stroke-dasharray="3,3" opacity="0.6"/>
+  <text x="220" y="395" text-anchor="middle" font-size="9" fill="#a07000">! vocab</text>
+
+  <!-- "Where biodiversity lives" callout -->
+  <g id="biodiversity-note" transform="translate(1290, 320)">
+    <rect x="0" y="0" width="300" height="190" rx="6" fill="#fff8e1" stroke="#a07000"/>
+    <text x="10" y="20" font-size="12" font-weight="bold" fill="#532">Where is "biodiversity" in this DAG?</text>
+    <text x="10" y="42" font-size="10" fill="#333">The 2022 coding stops at proximate</text>
+    <text x="10" y="56" font-size="10" fill="#333">endpoints. Direct biodiversity outcomes</text>
+    <text x="10" y="70" font-size="10" fill="#333">are <tspan font-style="italic">implied</tspan>, not coded:</text>
+    <text x="10" y="92" font-size="10" fill="#333">• deforestation → vertebrate community loss</text>
+    <text x="10" y="106" font-size="10" fill="#333">• mercury_bio_accumulation → piscivore</text>
+    <text x="10" y="120" font-size="10" fill="#333">  &amp; raptor exposure (Lacher 1997, Régine 2006)</text>
+    <text x="10" y="134" font-size="10" fill="#333">• sediment → benthic invertebrate diversity</text>
+    <text x="10" y="148" font-size="10" fill="#333">  loss (Tarras-Wahlberg 2001)</text>
+    <text x="10" y="168" font-size="10" font-weight="bold" fill="#a07000">v0.2 re-extraction recommended to</text>
+    <text x="10" y="182" font-size="10" font-weight="bold" fill="#a07000">add species-level outcome nodes.</text>
+  </g>
+
+  <!-- Pathway summary -->
+  <g id="pathway-summary" transform="translate(40, 690)">
+    <rect x="0" y="0" width="780" height="180" rx="6" fill="#f8f8f8" stroke="#ccc"/>
+    <text x="20" y="22" font-size="13" font-weight="bold" fill="#234">Three pathways from gold mining to (proxy) biodiversity impact</text>
+    <text x="20" y="46" font-size="11" fill="#234"><tspan font-weight="bold" fill="#1b7a3a">Direct biophysical (top):</tspan> gold_mining → deforestation_and_forest_degradation (n=7, +)</text>
+    <text x="20" y="62" font-size="11" fill="#234">  gold_mining → soil_excavation_and_erosion → barren_land</text>
+    <text x="20" y="86" font-size="11" fill="#234"><tspan font-weight="bold" fill="#1b7a3a">Toxic chain (middle):</tspan> gold_mining → mercury_use (n=8) → aquatic_mercury_pollution (n=8) →</text>
+    <text x="20" y="100" font-size="11" fill="#234">  mercury_bio_accumulation (n=11, strongest edge) → human_health (n=5, -)</text>
+    <text x="20" y="114" font-size="11" fill="#234">  Parallel path: gold_mining → cyanide_use (n=3) → cyanide_pollution (n=6)</text>
+    <text x="20" y="138" font-size="11" fill="#234"><tspan font-weight="bold" fill="#1b7a3a">Socio-economic loop:</tspan> gold_prices → gold_mining → indigenous_land_rights (negative);</text>
+    <text x="20" y="152" font-size="11" fill="#234">  indigenous_land_rights → miner_influx (n=3, -); enforcement → gold_mining (n=2, -)</text>
+    <text x="20" y="168" font-size="11" fill="#234">  Weak governance ↘ enforcement ↘ gold_mining: a 3-edge causal chain end-to-end.</text>
+  </g>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(840, 690)">
+    <rect x="0" y="0" width="320" height="180" fill="#fafafa" stroke="#ccc"/>
+    <text x="160" y="22" text-anchor="middle" font-size="13" font-weight="bold">Legend</text>
+    <line x1="20" y1="44" x2="60" y2="44" stroke="#1b7a3a" stroke-width="3" marker-end="url(#arrow-pos)"/>
+    <text x="70" y="48" font-size="11">Positive valence</text>
+    <line x1="20" y1="66" x2="60" y2="66" stroke="#a8262e" stroke-width="3" marker-end="url(#arrow-neg)"/>
+    <text x="70" y="70" font-size="11">Negative valence</text>
+    <line x1="20" y1="88" x2="60" y2="88" stroke="#888" stroke-width="2" stroke-dasharray="3,2"/>
+    <text x="70" y="92" font-size="11">Dashed = vocabulary alias / suspect</text>
+    <text x="20" y="115" font-size="11">! yellow halo = disagreement_flag (all 4 are</text>
+    <text x="20" y="130" font-size="11">vocabulary fragmentation, not substantive)</text>
+    <text x="20" y="152" font-size="11">Edge thickness: 1.5 (n=1) to 5 (n=11)</text>
+    <text x="20" y="170" font-size="11" fill="#a8262e" font-weight="bold">All edges are at Association level.</text>
+  </g>
+
+  <!-- Corpus composition -->
+  <g id="corpus-summary" transform="translate(1180, 690)">
+    <rect x="0" y="0" width="390" height="180" fill="#fafafa" stroke="#ccc"/>
+    <text x="195" y="22" text-anchor="middle" font-size="13" font-weight="bold">Corpus composition</text>
+    <text x="20" y="46" font-size="11">8 papers (1997–2016) · 105 rows · 43 edges · 33 nodes</text>
+    <text x="20" y="70" font-size="11">Primary data: Asner 2016 (Peru, remote sensing),</text>
+    <text x="20" y="84" font-size="11">Castilhos 2006 (Indonesia, fish-Hg), Régine 2006</text>
+    <text x="20" y="98" font-size="11">(French Guiana, fish-Hg), Tarras-Wahlberg 2001</text>
+    <text x="20" y="112" font-size="11">(Ecuador, river-Hg), Soderquist 2000 (Australia mammals)</text>
+    <text x="20" y="134" font-size="11">Reviews: Fearnside 2001, Lacher 1997, Schwartzmann 2005</text>
+    <text x="20" y="158" font-size="11" font-style="italic" fill="#666">All 105 rows derived from prior 2022 manual coding;</text>
+    <text x="20" y="172" font-size="11" font-style="italic" fill="#666">no numeric effect sizes captured. See audit report §1.</text>
+  </g>
+
+</svg>

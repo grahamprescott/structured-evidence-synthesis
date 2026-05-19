@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/grahamprescott/structured-evidence-synthesis/blob/main/accumulation/schemas/consolidated-edge.schema.json",
+  "title": "SAES consolidated edge",
+  "description": "One consolidated edge in the accumulated evidence base. Aggregates K extracted relationship rows that share the same (subject_code, object_code) edge, after vocabulary harmonisation. Mandatory provenance back to source row IDs.",
+  "type": "object",
+  "required": [
+    "edge_id",
+    "subject_code",
+    "object_code",
+    "n_rows",
+    "valence_distribution",
+    "modal_valence",
+    "stratification",
+    "disagreement_flag",
+    "provenance_row_ids"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "edge_id": {
+      "type": "string",
+      "description": "Stable identifier for this edge. Convention: subject_code + double underscore + object_code, e.g. 'gold_mining_artisanal__forest_cover_loss'.",
+      "pattern": "^[a-z0-9_]+__[a-z0-9_]+$"
+    },
+    "subject_code": {
+      "type": "string",
+      "description": "Canonical code for the subject of the edge. After vocabulary harmonisation if a mapping table was applied."
+    },
+    "object_code": {
+      "type": "string",
+      "description": "Canonical code for the object of the edge."
+    },
+    "n_rows": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of extracted rows aggregated into this edge."
+    },
+
+    "valence_distribution": {
+      "type": "object",
+      "description": "Tally of rel_valence values across contributing rows.",
+      "required": ["positive", "negative", "non_linear", "indeterminate"],
+      "additionalProperties": false,
+      "properties": {
+        "positive": { "type": "integer", "minimum": 0 },
+        "negative": { "type": "integer", "minimum": 0 },
+        "non_linear": { "type": "integer", "minimum": 0 },
+        "indeterminate": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "modal_valence": {
+      "type": "string",
+      "description": "The most common valence if it accounts for >50% of rows; otherwise 'mixed'.",
+      "enum": ["positive", "negative", "non_linear", "indeterminate", "mixed"]
+    },
+
+    "stratification": {
+      "type": "object",
+      "description": "Within-edge breakdowns. Each sub-object reports the row count and valence distribution per stratum.",
+      "required": [
+        "by_causal_inference_level",
+        "by_method_type",
+        "by_population_code",
+        "by_geographic_scope_code"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "by_causal_inference_level": {
+          "type": "object",
+          "description": "Keyed by causal_inference_level value (Association / Controlled comparison / Intervention / Counterfactual).",
+          "additionalProperties": { "$ref": "#/$defs/stratum" }
+        },
+        "by_method_type": {
+          "type": "object",
+          "description": "Keyed by method_type value.",
+          "additionalProperties": { "$ref": "#/$defs/stratum" }
+        },
+        "by_population_code": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/stratum" }
+        },
+        "by_geographic_scope_code": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/stratum" }
+        }
+      }
+    },
+
+    "disagreement_flag": {
+      "type": "boolean",
+      "description": "True if the edge contains a valence conflict, existence conflict, magnitude conflict, or direction conflict (as defined in 02_disagreement_surfacing.md). When true, the edge is referenced from disagreement_report.md."
+    },
+
+    "effect_size_pooled_within_stratum": {
+      "type": "array",
+      "description": "Optional. Within-stratum effect-size summaries. Only populated for strata that meet the pooling policy declared in 01_consolidation.md (same metric, numeric magnitudes, >=3 rows). Never pool across strata.",
+      "items": {
+        "type": "object",
+        "required": ["stratum", "n", "metric", "note"],
+        "additionalProperties": false,
+        "properties": {
+          "stratum": {
+            "type": "string",
+            "description": "Free-text description of the stratum, e.g. 'method_type=Statistical modelling; causal_inference_level=Association'."
+          },
+          "n": { "type": "integer", "minimum": 3 },
+          "metric": { "type": "string" },
+          "central_tendency_median": { "type": ["number", "null"] },
+          "central_tendency_mean": { "type": ["number", "null"] },
+          "spread_iqr": { "type": ["string", "null"] },
+          "spread_range": { "type": ["string", "null"] },
+          "note": {
+            "type": "string",
+            "description": "Must include the phrase 'Within-stratum pooling; not an overall effect.' so readers cannot accidentally misread as a meta-analytic estimate."
+          }
+        }
+      }
+    },
+
+    "provenance_row_ids": {
+      "type": "array",
+      "description": "Mandatory. List of row IDs (or paper_id + row_index_within_paper) that contribute to this edge. The chain of custody back to source verbatim text.",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+
+    "top_contributing_paper": {
+      "type": ["string", "null"],
+      "description": "Optional. paper_id of the paper contributing the largest number of rows on this edge."
+    },
+    "date_range_of_papers": {
+      "type": ["string", "null"],
+      "description": "Optional. Year range of contributing papers, e.g. '2001–2022'."
+    }
+  },
+
+  "$defs": {
+    "stratum": {
+      "type": "object",
+      "required": ["n"],
+      "additionalProperties": false,
+      "properties": {
+        "n": { "type": "integer", "minimum": 0 },
+        "valence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "positive": { "type": "integer", "minimum": 0 },
+            "negative": { "type": "integer", "minimum": 0 },
+            "non_linear": { "type": "integer", "minimum": 0 },
+            "indeterminate": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    }
+  }
+}

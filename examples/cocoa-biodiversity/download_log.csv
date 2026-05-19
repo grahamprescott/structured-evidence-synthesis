@@ -1,0 +1,49 @@
+id,status,url,reason
+W3203250146,failed,https://www.sciencedirect.com/science/article/am/pii/S1161030121001660?via%3Dihub,http_403
+W3070087734,failed,https://iopscience.iop.org/article/10.1088/1748-9326/abb053/pdf,not_pdf (content-type=text/html; charset=UTF-8)
+W2278866024,no_pdf_url,,no OA pdf advertised
+W2613320175,failed,https://www.sciencedirect.com/science/article/pii/S0921800915302512,http_403
+W1970296682,ok,https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0056115&type=printable,ok
+W2029958494,no_pdf_url,,no OA pdf advertised
+W2767331857,ok,https://link.springer.com/content/pdf/10.1007/s13593-017-0468-0.pdf,ok
+W4403943676,ok,https://cabiagbio.biomedcentral.com/counter/pdf/10.1186/s43170-024-00310-6,ok
+W3206424560,no_pdf_url,,no OA pdf advertised
+W2141151259,failed,https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1755-263X.2012.00230.x,http_403
+W3002582828,no_pdf_url,,no OA pdf advertised
+W4213055675,failed,https://ars.els-cdn.com/content/image/1-s2.0-S004896972201124X-ga1_lrg.jpg,not_pdf (content-type=image/jpeg)
+W4386324924,ok,https://www.nature.com/articles/s41598-023-41593-5.pdf,ok
+W4402091998,no_pdf_url,,no OA pdf advertised
+W4401528024,ok,https://edepot.wur.nl/671515,ok
+W2739434125,no_pdf_url,,no OA pdf advertised
+W4321186864,ok,https://link.springer.com/content/pdf/10.1007/s11367-023-02142-4.pdf,ok
+W4401250535,failed,https://pmc.ncbi.nlm.nih.gov/articles/PMC11607354/pdf/13280_2024_Article_2061.pdf,not_pdf (content-type=text/html; charset=utf-8)
+W4404997204,no_pdf_url,,no OA pdf advertised
+W4379933053,no_pdf_url,,no OA pdf advertised
+W2782882980,no_pdf_url,,no OA pdf advertised
+W4392984943,failed,https://www.tropenbos.org/file.php/2635/2-4ruegg.pdf,http_404
+W606051972,failed,https://hdl.handle.net/10568/21213,not_pdf (content-type=text/html; charset=utf-8)
+W4400689416,no_pdf_url,,no OA pdf advertised
+W4405159938,no_pdf_url,,no OA pdf advertised
+W4392155195,failed,https://online.ucpress.edu/elementa/article-pdf/12/1/00004/809793/elementa.2023.00004.pdf,http_403
+W4320916161,failed,https://journalajraf.com/index.php/AJRAF/article/download/196/389,http_403
+W78171484,ok,https://orgprints.org/18371/1/schneider-etal-2010-tropentag.pdf,ok
+W4404574485,no_pdf_url,,no OA pdf advertised
+W4406740254,failed,https://rgsa.openaccesspublications.org/rgsa/article/download/10739/5746,http_522
+W4320004096,no_pdf_url,,no OA pdf advertised
+W4312134978,no_pdf_url,,no OA pdf advertised
+W4413451658,no_pdf_url,,no OA pdf advertised
+W7126241809,no_pdf_url,,no OA pdf advertised
+W2972313027,failed,https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nph.16105,http_403
+W3152153011,no_pdf_url,,no OA pdf advertised
+W2953629390,ok,http://orgprints.org/35820/1/bernet-2019-Public_PalmOil_FiBL_SynthesisReport.pdf,ok
+W4392648680,failed,https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1751-7915.14432,http_403
+W3156008297,no_pdf_url,,no OA pdf advertised
+W4415230822,ok,https://proceeding.researchsynergypress.com/index.php/rsfconferenceseries1/article/download/955/1421,ok
+W2554663711,ok,http://agritrop.cirad.fr/576567/1/P50%20%20de%20L1%20Regional%20Dimensions%281%29.pdf,ok
+W4410406161,failed,https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/joom.1375,http_403
+W4414216696,ok,https://tbs.scione.com/cms/pdf.php?artid=42,ok
+W7128735577,failed,https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ece3.73094,http_403
+W7161145525,no_pdf_url,,no OA pdf advertised
+W3177474558,ok,https://strategicjournals.com/index.php/journal/article/download/2013/1924,ok
+W1663810233,no_pdf_url,,no OA pdf advertised
+W7150858838,failed,https://www.emerald.com/sasbe/article-pdf/15/3/941/11490169/sasbe-04-2026-760en.pdf,http_403
