@@ -55,7 +55,7 @@ See [`CHANGELOG.md`](CHANGELOG.md) for full version history.
 2. Splitting generation from evaluation at every stage — extraction is followed by audit; consolidation is followed by disagreement surfacing.
 3. Logging the inputs (search strings, screening decisions, source row IDs) so any consolidated claim can be traced back to the papers it draws on.
 
-The full argument is in [`docs/covering-essay.md`](docs/covering-essay.md).
+See examples: https://github.com/grahamprescott/structured-evidence-synthesis/tree/main/examples
 
 ---
 
