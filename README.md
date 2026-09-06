@@ -6,7 +6,7 @@ When we ask an LLM a question, the LLM searches and screens the available eviden
 
 SAES is an open protocol that makes each of those steps explicit and auditable, tracing every claim to its source text, logging every search and screening decision, surfacing disagreements between sources, and building a map of how the evidence connects across the whole corpus.
 
-This protocol has been tested on three questions spanning medicine, agriculture and environmental impact. It is applicable to any literature that makes causal claims. The intention is to develop and test it can be used wherever people ask an LLM "what does the evidence say about x?"
+This protocol has been tested on three questions spanning medicine, agriculture and environmental impact. It is applicable to any literature that makes causal claims. The intention is to develop and test it until it can be used wherever people ask an LLM "what does the evidence say about x?"
 
 > **Scope.** SAES runs from research question to consolidated evidence base. It is not intended for use in simulation, theory-building, or forward synthesis.
 
@@ -17,7 +17,7 @@ This protocol has been tested on three questions spanning medicine, agriculture 
 **AI-assisted evidence synthesis is easy to generate but challenging to evaluate.** SAES addresses this by:
 
 1. Forcing every coded field to be paired with the verbatim text it came from.
-2. Splitting generation from evaluation at every stage. Extraction is followed by audit and consolidation is followed by disagreement surfacing. (in he v0.2 trials the audit ran in the same LLM session as the extraction; they will separated in the next release). 
+2. Splitting generation from evaluation at every stage. Extraction is followed by audit and consolidation is followed by disagreement surfacing. (in the v0.2 trials the audit ran in the same LLM session as the extraction; they will separated in the next release). 
 3. Logging the inputs (search strings, screening decisions, source row IDs) so any consolidated claim can be traced back to the papers it draws on.
 
 See examples: https://github.com/grahamprescott/structured-evidence-synthesis/tree/main/examples
@@ -33,7 +33,7 @@ See examples: https://github.com/grahamprescott/structured-evidence-synthesis/tr
 
 ---
 ## Evaluation plan 
-- Find labelled datasets to test against (Conservation Evidence, CEE, Corchrane)
+- Find labelled datasets to test against (Conservation Evidence, CEE, Cochrane)
 - Human-human then human-LLM agreement
 - Test structured against unstructured extraction
   
