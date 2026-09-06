@@ -78,9 +78,13 @@ See [`CHANGELOG.md`](CHANGELOG.md) for full version history.
 This protocol is currently operated by hand, with users copying prompts, papers, and schemas into LLM sessions. Future development will tackle automation when the prompts and protocol have stabilised. 
 
 1. **SETUP**
+
 Work through [`setup/prompts/01_question_framing.md`](setup/prompts/01_question_framing.md), then [`02_openalex_search.md`](setup/prompts/02_openalex_search.md), then [`03_screening.md`](setup/prompts/03_screening.md). For bulk PDF downloads from OpenAlex, see [`setup/scripts/openalex_pdf_download.py`](setup/scripts/openalex_pdf_download.py).
+
 2. **EXTRACTION**
+   
 For each screened paper, run [`extraction/prompts/extraction.md`](extraction/prompts/extraction.md) followed by [`extraction/prompts/audit.md`](extraction/prompts/audit.md).
+
 3. **ACCUMULATION**
 Over the row-set, run [`accumulation/prompts/01_consolidation.md`](accumulation/prompts/01_consolidation.md), then [`02_disagreement_surfacing.md`](accumulation/prompts/02_disagreement_surfacing.md), optionally [`03_dag_construction.md`](accumulation/prompts/03_dag_construction.md).
 
