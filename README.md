@@ -2,11 +2,26 @@
 
 **Version 0.2.0-alpha**
 
-This is a research workflow for AI-assisted evidence synthesis from scientific literature.
+When we ask an LLM a question, the LLM searches and screens the available evidence, extracts claims, weighs conflicting evidence, and consolidates what it finds into a fluent narrative to answer the question. We currently receive the LLM's answer, but the process behind arriving at that answer is opaque. We don't know what the LLM searched or extracted, or what conflicts it had to resolve. 
 
-This release expands the v0.1 prototype—a single extraction-and-audit pass on one paper—into an end-to-end workflow that runs from a research question to a consolidated, auditable evidence base. The underlying principle is that **every stage produces outputs traceable to its inputs.**
+SAES is an open protocol that makes each of those steps explicit and auditable, tracing every claim to its source text, logging every search and screening decision, surfacing every disagreement, and building a map of how the evidence connects across the whole corpus.
 
-> **Scope.** SAES runs from research question to consolidated evidence base. Simulation, theory-building, and forward synthesis are out of scope.
+This protocol has been tested on three questions spanning medicine, agriculture and enviornmental impact. It is applicable to any literature that makes causal claims. The intention is develop and test it can be used wherever people ask an LLM "what does the evidence say about x?"
+
+> **Scope.** SAES runs from research question to consolidated evidence base. It is not indended for use in simulation, theory-building, and forward synthesis.
+
+---
+
+## Why this design
+
+**AI-assisted evidence synthesis is easy to generate but challenging to evaluate.** SAES addresses this by:
+
+1. Forcing every coded field to be paired with the verbatim text it came from.
+2. Splitting generation from evaluation at every stage. Extraction is followed by audit and consolidation is followed by disagreement surfacing.
+3. Logging the inputs (search strings, screening decisions, source row IDs) so any consolidated claim can be traced back to the papers it draws on.
+
+See examples: https://github.com/grahamprescott/structured-evidence-synthesis/tree/main/examples
+
 
 ---
 
@@ -22,7 +37,7 @@ Research question
    3. ACCUMULATION →  Consolidated evidence base with provenance
 ```
 
-See [`docs/flowchart.svg`](docs/flowchart.svg) for the full pipeline diagram, including the documents produced at each stage. The argument for why this matters is in [`docs/covering-essay.md`](docs/covering-essay.md). A cross-trial reflection on the three worked examples is in [`docs/v0.2_trials_summary.md`](docs/v0.2_trials_summary.md).
+See [`docs/flowchart.svg`](docs/flowchart.svg) for the full pipeline diagram, including the documents produced at each stage. A cross-trial reflection on the three worked examples is in [`docs/v0.2_trials_summary.md`](docs/v0.2_trials_summary.md).
 
 | Stage | What it does | Traceable to | Status in v0.2.0-alpha |
 |---|---|---|---|
@@ -45,17 +60,6 @@ Each stage has its own `README.md` describing inputs, outputs, prompts, and disc
 
 See [`CHANGELOG.md`](CHANGELOG.md) for full version history.
 
----
-
-## Why this design
-
-**AI-assisted evidence synthesis is easy to generate but challenging to evaluate.** SAES addresses this by:
-
-1. Forcing every coded field to be paired with the verbatim text it came from.
-2. Splitting generation from evaluation at every stage — extraction is followed by audit; consolidation is followed by disagreement surfacing.
-3. Logging the inputs (search strings, screening decisions, source row IDs) so any consolidated claim can be traced back to the papers it draws on.
-
-See examples: https://github.com/grahamprescott/structured-evidence-synthesis/tree/main/examples
 
 ---
 
