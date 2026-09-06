@@ -12,8 +12,11 @@ authors:
   - family-names: Prescott
     given-names: Graham
     email: graham.prescott@gmail.com
-version: 0.2.0-alpha
-date-released: 2026-05-19
+  - family-names: Mei
+    given-names: Tara
+    email: taramei.mf@gmail.com
+version: 0.2.1-alpha
+date-released: 2026-09-06
 license: MIT
 repository-code: "https://github.com/grahamprescott/structured-evidence-synthesis"
 keywords:
