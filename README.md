@@ -1,14 +1,14 @@
 # Structured AI-Assisted Evidence Synthesis (SAES)
 
-**Version 0.2.0-alpha**
+**Version 0.2.1-alpha**
 
 When we ask an LLM a question, the LLM searches and screens the available evidence, extracts claims, weighs conflicting evidence, and consolidates what it finds into a fluent narrative to answer the question. We currently receive the LLM's answer, but the process behind arriving at that answer is opaque. We don't know what the LLM searched or extracted, or what conflicts it had to resolve. 
 
-SAES is an open protocol that makes each of those steps explicit and auditable, tracing every claim to its source text, logging every search and screening decision, surfacing every disagreement, and building a map of how the evidence connects across the whole corpus.
+SAES is an open protocol that makes each of those steps explicit and auditable, tracing every claim to its source text, logging every search and screening decision, surfacing disagreements between sources, and building a map of how the evidence connects across the whole corpus.
 
-This protocol has been tested on three questions spanning medicine, agriculture and enviornmental impact. It is applicable to any literature that makes causal claims. The intention is develop and test it can be used wherever people ask an LLM "what does the evidence say about x?"
+This protocol has been tested on three questions spanning medicine, agriculture and environmental impact. It is applicable to any literature that makes causal claims. The intention is to develop and test it can be used wherever people ask an LLM "what does the evidence say about x?"
 
-> **Scope.** SAES runs from research question to consolidated evidence base. It is not indended for use in simulation, theory-building, and forward synthesis.
+> **Scope.** SAES runs from research question to consolidated evidence base. It is not intended for use in simulation, theory-building, or forward synthesis.
 
 ---
 
@@ -17,7 +17,7 @@ This protocol has been tested on three questions spanning medicine, agriculture 
 **AI-assisted evidence synthesis is easy to generate but challenging to evaluate.** SAES addresses this by:
 
 1. Forcing every coded field to be paired with the verbatim text it came from.
-2. Splitting generation from evaluation at every stage. Extraction is followed by audit and consolidation is followed by disagreement surfacing.
+2. Splitting generation from evaluation at every stage. Extraction is followed by audit and consolidation is followed by disagreement surfacing. (in he v0.2 trials the audit ran in the same LLM session as the extraction; they will separated in the next release). 
 3. Logging the inputs (search strings, screening decisions, source row IDs) so any consolidated claim can be traced back to the papers it draws on.
 
 See examples: https://github.com/grahamprescott/structured-evidence-synthesis/tree/main/examples
@@ -27,9 +27,8 @@ See examples: https://github.com/grahamprescott/structured-evidence-synthesis/tr
 ## Further development needed 
 
 - Benchmark against human coding
-- Separate the audit stage from the extraction stage
-- Add effect size calculation (currently uses vote counting as a summary statistic)
-- Meta-analysis capability
+- Run the audit independently of extraction (different session or model)
+- Specify a meta-analytic step. The current effect-size field is a vote count, rather than a pooled estimate. 
 - Automation 
 
 ---
@@ -76,7 +75,7 @@ See [`CHANGELOG.md`](CHANGELOG.md) for full version history.
 
 ## Quick start
 
-This protocol is currently hand-generated, with users copying prompts, papers, and schemas into LLM sessions. Future development will tackle automation when the prompts and protocol have stabilised. 
+This protocol is currently operated by hand, with users copying prompts, papers, and schemas into LLM sessions. Future development will tackle automation when the prompts and protocol have stabilised. 
 
 1. **SETUP** Work through [`setup/prompts/01_question_framing.md`](setup/prompts/01_question_framing.md), then [`02_openalex_search.md`](setup/prompts/02_openalex_search.md), then [`03_screening.md`](setup/prompts/03_screening.md). For bulk PDF downloads from OpenAlex, see [`setup/scripts/openalex_pdf_download.py`](setup/scripts/openalex_pdf_download.py).
 2. **EXTRACTION** For each screened paper, run [`extraction/prompts/extraction.md`](extraction/prompts/extraction.md) followed by [`extraction/prompts/audit.md`](extraction/prompts/audit.md).
@@ -91,4 +90,5 @@ Worked examples live in [`examples/`](examples/).
 If you use or build on this protocol, please cite the repository and get in touch. See [`CITATION.cff`](CITATION.cff). Bug reports, suggestions for ontology revisions, and benchmark contributions especially welcome.
 
 Graham Prescott · graham.prescott@gmail.com · [grahamprescott.substack.com](https://grahamprescott.substack.com/)
+
 Tara Mei · taramei.mf@gmail.com
