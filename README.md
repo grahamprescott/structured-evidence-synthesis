@@ -86,6 +86,7 @@ Work through [`setup/prompts/01_question_framing.md`](setup/prompts/01_question_
 For each screened paper, run [`extraction/prompts/extraction.md`](extraction/prompts/extraction.md) followed by [`extraction/prompts/audit.md`](extraction/prompts/audit.md).
 
 3. **ACCUMULATION**
+   
 Over the row-set, run [`accumulation/prompts/01_consolidation.md`](accumulation/prompts/01_consolidation.md), then [`02_disagreement_surfacing.md`](accumulation/prompts/02_disagreement_surfacing.md), optionally [`03_dag_construction.md`](accumulation/prompts/03_dag_construction.md).
 
 Worked examples live in [`examples/`](examples/).
