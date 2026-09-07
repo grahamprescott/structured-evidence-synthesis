@@ -91,7 +91,7 @@
       "description": "True if the edge contains a valence conflict, existence conflict, magnitude conflict, or direction conflict (as defined in 02_disagreement_surfacing.md). When true, the edge is referenced from disagreement_report.md."
     },
 
-    "effect_size_pooled_within_stratum": {
+    "effect_size_summary_within_stratum": {
       "type": "array",
       "description": "Optional. Within-stratum effect-size summaries. Only populated for strata that meet the pooling policy declared in 01_consolidation.md (same metric, numeric magnitudes, >=3 rows). Never pool across strata.",
       "items": {

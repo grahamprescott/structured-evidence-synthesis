@@ -32,7 +32,7 @@
       }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Experiment; causal_inference_level=Intervention or Controlled comparison; cited classical trials",
         "n": 2,
@@ -81,7 +81,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Review",
         "n": 5,
@@ -126,7 +126,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
         "n": 4,
@@ -165,7 +165,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Observation; bisseleua2013 plot-level regressions",
         "n": 2,
@@ -198,7 +198,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; bisseleua2013 plot-level regressions",
         "n": 2,
@@ -232,7 +232,7 @@
       }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "tree_provenance=Native",
         "n": 1,
@@ -275,7 +275,7 @@
       }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "tree_provenance=Native",
         "n": 1,
@@ -318,7 +318,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Jagoret 2017 multiple regression",
         "n": 2,
@@ -349,7 +349,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "narrative direction only",
         "n": 2,
@@ -380,7 +380,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Review",
         "n": 2,
@@ -411,7 +411,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["abah2025:r3", "setyowati2025:r3"],
     "top_contributing_paper": "abah2025",
     "date_range_of_papers": "2025",
@@ -429,7 +429,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling",
         "n": 1,
@@ -455,7 +455,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling",
         "n": 1,
@@ -481,7 +481,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["bisseleua2013:r11"],
     "top_contributing_paper": "bisseleua2013",
     "date_range_of_papers": "2013",
@@ -499,7 +499,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "indeterminate": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["bisseleua2013:r12"],
     "top_contributing_paper": "bisseleua2013",
     "date_range_of_papers": "2013"
@@ -516,7 +516,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling",
         "n": 1,
@@ -542,7 +542,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["bisseleua2013:r14"],
     "top_contributing_paper": "bisseleua2013",
     "date_range_of_papers": "2013"
@@ -559,7 +559,7 @@
       "by_method_type": { "Observation": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["bisseleua2013:r15"],
     "top_contributing_paper": "bisseleua2013",
     "date_range_of_papers": "2013"
@@ -576,7 +576,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling",
         "n": 1,
@@ -602,7 +602,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Jagoret 2017 multiple regression",
         "n": 1,
@@ -629,7 +629,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "negative": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Jagoret 2017 multiple regression",
         "n": 1,
@@ -655,7 +655,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Jagoret 2017, forest-tree basal area",
         "n": 1,
@@ -681,7 +681,7 @@
       "by_method_type": { "Experiment": { "n": 1, "valence": { "negative": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Cited experimental on-farm comparison",
         "n": 1,
@@ -707,7 +707,7 @@
       "by_method_type": { "Review": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Tabular review summary",
         "n": 1,
@@ -734,7 +734,7 @@
       "by_method_type": { "Review": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["abah2025:r4"],
     "top_contributing_paper": "abah2025",
     "date_range_of_papers": "2025"
@@ -751,7 +751,7 @@
       "by_method_type": { "Review": { "n": 1, "valence": { "negative": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["abah2025:r5"],
     "top_contributing_paper": "abah2025",
     "date_range_of_papers": "2025"
@@ -768,7 +768,7 @@
       "by_method_type": { "Review": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["abah2025:r6"],
     "top_contributing_paper": "abah2025",
     "date_range_of_papers": "2025"
@@ -785,7 +785,7 @@
       "by_method_type": { "Experiment": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Cited experimental hand-pollination trial",
         "n": 1,
@@ -812,7 +812,7 @@
       "by_method_type": { "Experiment": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Cited experimental",
         "n": 1,
@@ -838,7 +838,7 @@
       "by_method_type": { "Review": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": ["kongor2024:r7"],
     "top_contributing_paper": "kongor2024",
     "date_range_of_papers": "2024 (citing Niether 2020)"
@@ -855,7 +855,7 @@
       "by_method_type": { "Statistical modelling": { "n": 1, "valence": { "positive": 1 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "Avadi 2023 LCA",
         "n": 1,

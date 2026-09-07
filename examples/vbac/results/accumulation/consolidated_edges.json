@@ -22,7 +22,7 @@
       }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
         "n": 7,
@@ -58,7 +58,7 @@
       "by_geographic_scope_code": { "Country": { "n": 6, "valence": { "positive": 6 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
         "n": 6,
@@ -94,7 +94,7 @@
       "by_geographic_scope_code": { "Country": { "n": 11, "valence": { "negative": 9, "indeterminate": 2 } } }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
         "n": 6,
@@ -126,7 +126,7 @@
       "by_geographic_scope_code": { "Country": { "n": 4, "valence": { "positive": 4 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
         "n": 4,
@@ -154,7 +154,7 @@
       "by_geographic_scope_code": { "Country": { "n": 9, "valence": { "negative": 6, "indeterminate": 3 } } }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
         "n": 4,
@@ -186,7 +186,7 @@
       "by_geographic_scope_code": { "Country": { "n": 6, "valence": { "negative": 6 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
         "n": 6,
@@ -217,7 +217,7 @@
       "by_geographic_scope_code": { "Country": { "n": 7, "valence": { "negative": 5, "indeterminate": 2 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
         "n": 4,
@@ -251,7 +251,7 @@
       "by_geographic_scope_code": { "Country": { "n": 9, "valence": { "negative": 7, "indeterminate": 2 } } }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [
+    "effect_size_summary_within_stratum": [
       {
         "stratum": "method_type=Statistical modelling; causal_inference_level=Association (current birth weight >4000g)",
         "n": 5,

@@ -59,7 +59,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r3",
       "castilhos2006:r12",
@@ -142,7 +142,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r3",
       "castilhos2006:r1",
@@ -222,7 +222,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r19",
       "castilhos2006:r2",
@@ -290,7 +290,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r1",
       "asner2016:r5",
@@ -351,7 +351,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r10",
       "tarras-wahlberg2001:r4",
@@ -423,7 +423,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r4",
       "castilhos2006:r15",
@@ -482,7 +482,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r21",
       "regine2006:r4",
@@ -540,7 +540,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r9",
       "castilhos2006:r20",
@@ -622,7 +622,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r9",
       "fearnside2001:r4",
@@ -680,7 +680,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r24",
       "tarras-wahlberg2001:r2",
@@ -743,7 +743,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r4",
       "asner2016:r15",
@@ -806,7 +806,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r7",
       "asner2016:r22",
@@ -863,7 +863,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "schwartzmann2005:r1",
       "schwartzmann2005:r4",
@@ -920,7 +920,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r18",
       "castilhos2006:r19"
@@ -976,7 +976,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r12",
       "asner2016:r21"
@@ -1032,7 +1032,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r2",
       "asner2016:r18"
@@ -1100,7 +1100,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r24",
       "lacher1997:r7"
@@ -1156,7 +1156,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r7",
       "castilhos2006:r8"
@@ -1224,7 +1224,7 @@
       }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r8",
       "schwartzmann2005:r2"
@@ -1280,7 +1280,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r25"
     ],
@@ -1335,7 +1335,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "tarras-wahlberg2001:r6"
     ],
@@ -1390,7 +1390,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r23"
     ],
@@ -1445,7 +1445,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "castilhos2006:r5"
     ],
@@ -1500,7 +1500,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "schwartzmann2005:r11"
     ],
@@ -1555,7 +1555,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r6"
     ],
@@ -1610,7 +1610,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r10"
     ],
@@ -1665,7 +1665,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "fearnside2001:r7"
     ],
@@ -1720,7 +1720,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "schwartzmann2005:r9"
     ],
@@ -1775,7 +1775,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "fearnside2001:r6"
     ],
@@ -1830,7 +1830,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "schwartzmann2005:r6"
     ],
@@ -1885,7 +1885,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "schwartzmann2005:r8"
     ],
@@ -1940,7 +1940,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "fearnside2001:r1"
     ],
@@ -1995,7 +1995,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "fearnside2001:r2"
     ],
@@ -2050,7 +2050,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r13"
     ],
@@ -2105,7 +2105,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "schwartzmann2005:r3"
     ],
@@ -2160,7 +2160,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r20"
     ],
@@ -2215,7 +2215,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r11"
     ],
@@ -2270,7 +2270,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r16"
     ],
@@ -2325,7 +2325,7 @@
       }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "schwartzmann2005:r5"
     ],
@@ -2380,7 +2380,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "fearnside2001:r3"
     ],
@@ -2435,7 +2435,7 @@
       }
     },
     "disagreement_flag": false,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "asner2016:r23"
     ],
@@ -2490,7 +2490,7 @@
       }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "lacher1997:r2"
     ],
@@ -2545,7 +2545,7 @@
       }
     },
     "disagreement_flag": true,
-    "effect_size_pooled_within_stratum": [],
+    "effect_size_summary_within_stratum": [],
     "provenance_row_ids": [
       "tarras-wahlberg2001:r8"
     ],

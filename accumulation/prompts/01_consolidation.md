@@ -178,7 +178,7 @@ Example (illustrative):
     }
   },
   "disagreement_flag": false,
-  "effect_size_pooled_within_stratum": [
+  "effect_size_summary_within_stratum": [
     {
       "stratum": "method_type=Statistical modelling; causal_inference_level=Association",
       "n": 4,
