@@ -1,6 +1,6 @@
 # Structured AI-Assisted Evidence Synthesis (SAES)
 
-**Version 0.2.1-alpha**
+**Version 0.2.1-alpha** · Status: prototype, operated by hand, unbenchmarked. An adversarial audit (11 Sept 2026) found real provenance failures in one of three examples; see [KNOWN_ISSUES.md](KNOWN_ISSUES.md) before relying on any output.
 
 When we ask an LLM a question, the LLM searches and screens the available evidence, extracts claims, weighs conflicting evidence, and consolidates what it finds into a fluent narrative to answer the question. We currently receive the LLM's answer, but the process behind arriving at that answer is opaque. We don't know what the LLM searched or extracted, or what conflicts it had to resolve. 
 

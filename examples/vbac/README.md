@@ -1,3 +1,5 @@
+> **Status (11 Sept 2026): preliminary — do not cite.** The consolidation in `results/accumulation/` does not reconcile with `extracted_rows.csv` (27 of 63 edges; 10 miscounted; one edge with no source row; DOIs unverified). Details in `/KNOWN_ISSUES.md`.
+
 # VBAC example
 
 **Research question:** what predicts vaginal birth after caesarean (VBAC)?

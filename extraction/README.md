@@ -1,6 +1,6 @@
 # Extraction — the SAES core
 
-The middle stage of the SAES pipeline, and the one that has been run end-to-end and benchmarked against human coding (v0.1.2 release).
+The middle stage of the SAES pipeline, and the one that has been run end-to-end on three corpora. No LLM-vs-human comparison exists yet; see KNOWN_ISSUES.md.
 
 Per paper: an LLM reads the paper and codes every claimed relationship between variables against a defined schema, with every coded field paired with the verbatim text it was derived from. A second LLM pass then audits the extraction against the schema and the source paper, producing an issue list rather than a silently revised output.
 
@@ -65,7 +65,7 @@ For these operations to work, the `subject_code` and `object_code` controlled vo
 
 ## Worked example
 
-The Asner & Tupayachi (2017) paper on gold mining in the Peruvian Amazon was the v0.1.1 worked example. Extraction and audit have been run end-to-end, and the LLM extraction has been compared against an independent human-coded extraction. See [`examples/gold-mining/`](../examples/gold-mining/) for the run.
+The Asner & Tupayachi (2017) paper on gold mining in the Peruvian Amazon was the v0.1.1 worked example. That example is a migration of a prior human coding into the v0.2 schema, not a comparison against LLM extraction. See [`examples/gold-mining/`](../examples/gold-mining/) for the run.
 
 ## What's not yet here
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1-alpha — 2026-09-11
+- Adversarial audit of all worked examples; findings and fix plan in KNOWN_ISSUES.md.
+- Removed incorrect 'benchmarked against human coding' wording.
+- VBAC accumulation outputs marked preliminary.
+
+
 All notable changes to the SAES protocol are recorded in this file.
 
 The protocol uses semantic-ish versioning: major versions for backwards-incompatible changes to the pipeline shape, minor versions for new stages or substantive ontology revisions, patch versions for vocabulary tweaks and bug fixes. `-alpha` indicates proof-of-concept that has not been tested at scale.
