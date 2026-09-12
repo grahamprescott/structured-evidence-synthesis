@@ -20,7 +20,7 @@ Before submitting this protocol for external review I ran an adversarial audit o
 9. Schema/output mismatches: extra properties on consolidated edges; effect-size summaries populated below the n≥3 rule; no `row_id`, so provenance is positional.
 
 ## Fix plan
-- [ ] `validate.py`: schema-check every CSV and recompute edge counts from rows (target: 14 Sept)
+- [x] `validate.py`: schema-check every CSV and recompute edge counts from rows (target: 14 Sept)
 - [ ] Regenerate VBAC consolidation from rows, audit in a separate session/model
 - [ ] Correct VBAC DOIs; identify or drop `girma2021`
 - [ ] Add `screening_decisions.csv` for cocoa; fix REPORT wording
