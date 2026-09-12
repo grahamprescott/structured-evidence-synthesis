@@ -17,7 +17,7 @@ This protocol has been tested on three questions spanning medicine, agriculture 
 **AI-assisted evidence synthesis is easy to generate but challenging to evaluate.** SAES addresses this by:
 
 1. Forcing every coded field to be paired with the verbatim text it came from.
-2. Splitting generation from evaluation at every stage. Extraction is followed by audit and consolidation is followed by disagreement surfacing. (in the v0.2 trials the audit ran in the same LLM session as the extraction; they will separated in the next release). 
+2. Splitting generation from evaluation at every stage. Extraction is followed by audit and consolidation is followed by disagreement surfacing. (in the v0.2 trials the audit ran in the same LLM session as the extraction; they will be separated in the next release). 
 3. Logging the inputs (search strings, screening decisions, source row IDs) so any consolidated claim can be traced back to the papers it draws on.
 
 See examples: https://github.com/grahamprescott/structured-evidence-synthesis/tree/main/examples
